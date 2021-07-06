@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Domainamex e-commerce and portfolio project overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Live link](https://github.com/c-moX).
 
 ## Available Scripts
 
