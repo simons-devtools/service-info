@@ -1,0 +1,51 @@
+article {
+    padding: 100px 0;
+    color: #c2c2c2;
+}
+
+article h1 {
+    font-size: 30px;
+}
+
+article h2 {
+    font-size: 20px;
+}
+
+article p {
+    font-size: 16px;
+}
+
+.outline-btn {
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #c2c2c2;
+    padding: 10px 20px;
+    margin: 10px 20px 10px 0;
+    background-color: transparent;
+    border: 1px solid #c2c2c2;
+    transition: all 1s;
+}
+
+.outline-btn:hover {
+    color: #000;
+    background-color: #66b1ee;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    article {
+        padding: 50px 0;
+    }
+    article h1 {
+        font-size: 18px;
+        line-height: 40px;
+    }
+    article h2 {
+        font-size: 16px;
+    }
+    article p {
+        font-size: 14px;
+    }
+}
