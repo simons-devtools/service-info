@@ -25,16 +25,16 @@ const HAbout = () => {
                         </div>
                         <div className="home-about-left-bottom-content">
                             <div className="two-column-about-content">
-                                <Link to="/"><img src={appIcon} alt="" /></Link>
+                                <img src={appIcon} alt="" />
                                 <h4>About node applications</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/">Show more<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
-                                <Link to="/"><img src={webIcon} alt="" /></Link>
+                                <img src={webIcon} alt="" />
                                 <h4>About react applications</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/">Show more<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                         </div>
                     </div>

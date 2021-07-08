@@ -18,6 +18,8 @@ const Projects = () => {
         { "_id": 1, "title": "Rajshopnil", "image": project4 },
         { "_id": 1, "title": "Vanila-books", "image": project5 },
         { "_id": 1, "title": "Consultations", "image": project6 },
+        { "_id": 1, "title": "Ema-john", "image": project1 },
+        { "_id": 1, "title": "Vanila-books", "image": project5 },
     ];
 
     return (
