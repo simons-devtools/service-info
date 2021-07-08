@@ -23,7 +23,10 @@
     line-height: 20px;
 }
 
-/* .home-about-left-top-content {} */
+.home-about-left-top-content {
+    margin-top: -16px;
+    padding-bottom: 25px;
+}
 
 .home-about-left-bottom-content {
     display: flex;
@@ -33,13 +36,17 @@
 }
 
 .two-column-about-content img {
-    width: 60%;
-    height: 60%;
+    height: 60px;
+}
+
+.two-column-about-content h4 {
+    text-transform: uppercase;
 }
 
 .two-column-about-content a {
     text-decoration: none;
 }
+
 .two-column-about-content a:hover {
     color: #66b1ee;
 }
