@@ -1,0 +1,41 @@
+.services-wrapper {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../Assets/Backgrounds/bg-services.jpg") fixed center center;
+    background-size: cover;
+    color: #c2c2c2;
+    padding: 20px 0;
+}
+
+.services-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.services-header h1 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service {
+    text-align: center;
+    margin: 10px 15px;
+}
+
+.service img {
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .services-content {
+        flex-wrap: wrap;
+    }
+}
