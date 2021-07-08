@@ -22,10 +22,14 @@
 }
 
 .navbar-main li {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     list-style: none;
     text-transform: uppercase;
     margin-right: 20px;
+}
+
+.navbar-main li:first-child a {
+    color: tomato;
 }
 
 .navbar-main li:last-child {
@@ -34,6 +38,7 @@
 
 .navbar-main li a {
     color: #c2c2c2;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -48,7 +53,7 @@
 
 @media (max-width: 768px) {
     .navbar-main li {
-        font-size: 10px;
+        margin-right: 10px;
         letter-spacing: 1px;
     }
     .navbar-main img {

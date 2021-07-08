@@ -5,6 +5,7 @@ import appIcon from '../../../Assets/Icons/about-app-icon.png';
 import webIcon from '../../../Assets/Icons/about-web-icon.png';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 const HAbout = () => {
     return (
@@ -26,12 +27,14 @@ const HAbout = () => {
                             <div className="two-column-about-content">
                                 <Link to="/"><img src={appIcon} alt="" /></Link>
                                 <h4>About our node applications</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website.....</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
+                                <Link to="/">Show more<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
                                 <Link to="/"><img src={webIcon} alt="" /></Link>
                                 <h4>About our react applications</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website.....</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
+                                <Link to="/">Show more<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                         </div>
                     </div>

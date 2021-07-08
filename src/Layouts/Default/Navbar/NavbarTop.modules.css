@@ -49,15 +49,8 @@
     color: #9b9999;
     list-style: none;
     font-size: 10px;
-    font-weight: normal;
     border-right: 1px solid #757575;
     text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-    .navbar-top-right li {
-        font-size: 10px;
-    }
 }
 
 .navbar-top-right li:last-child {
@@ -67,6 +60,13 @@
 .phone {
     padding-right: 15px;
     margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    .phone {
+        padding-right: 7px;
+        margin-right: 7px;
+    }
 }
 
 .left-icon {
