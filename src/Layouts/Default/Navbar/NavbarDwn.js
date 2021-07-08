@@ -3,7 +3,7 @@ import './NavbarDwn.modules.css';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/Icons/logo.png';
-import profile from '../../../Assets/Icons/profile.png';
+// import profile from '../../../Assets/Icons/profile.png';
 
 const NavbarDwn = () => {
     return (
@@ -21,9 +21,9 @@ const NavbarDwn = () => {
                         <li><Link to="/blogs">Blogs</Link></li>
                         <li><Link to="/document">Documentation</Link></li>
                         <li><Link to="/dashboard">Dashboard</Link></li>
-                        <li>
+                        {/* <li>
                             <img src={profile} alt="" />
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </Container>

@@ -1,0 +1,49 @@
+import React from 'react';
+import '../HStylies/HAbout.modules.css';
+import about from '../../../Assets/Home-images/home-about.png';
+import appIcon from '../../../Assets/Icons/about-app-icon.png';
+import webIcon from '../../../Assets/Icons/about-web-icon.png';
+import { Container } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+
+const HAbout = () => {
+    return (
+        <section>
+            <Container>
+                {/* Header contents */}
+                <div className="home-about-header">
+                    <h1>Who we are?</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
+                </div>
+
+                <div className="home-about-body">
+                    {/* Left contents */}
+                    <div className="home-about-left">
+                        <div className="home-about-left-top-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odit velit error tempore incidunt necessitatibus quod et facere eligendi maiores autem ex esse porro impedit eius minima temporibus fugiat quis! Doloremque deleniti ipsum quos voluptatibus rerum, aperiam quas adipisci ex consequuntur sit nobis accusamus pariatur deserunt laboriosam?</p>
+                        </div>
+                        <div className="home-about-left-bottom-content">
+                            <div className="two-column-about-content">
+                                <Link to="/"><img src={appIcon} alt="" /></Link>
+                                <h4>About our node applications</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website.....</p>
+                            </div>
+                            <div className="two-column-about-content">
+                                <Link to="/"><img src={webIcon} alt="" /></Link>
+                                <h4>About our react applications</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website.....</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right contents */}
+                    <div className="home-about-right">
+                        <img src={about} alt="" />
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+};
+
+export default HAbout;
