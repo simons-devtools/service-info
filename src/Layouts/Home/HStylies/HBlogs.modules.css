@@ -1,0 +1,41 @@
+.blog-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.blog-header h1 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.blogs-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.blog {
+    width: 300px;
+    height: auto;
+    margin: 15px 0;
+}
+
+.blog img {
+    width: 300px;
+    height: 200px;
+}
+
+.blog a {
+    color: #bd1010;
+    text-decoration: none;
+}
+.blog a:hover {
+    color: #66b1ee;
+}
+
+.read-more-icons {
+    vertical-align: middle;
+}
