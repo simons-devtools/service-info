@@ -1,0 +1,33 @@
+.learn-more-wrapper {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../Assets/Backgrounds/bg-learnmor.jpg") fixed center center;
+    background-size: cover;
+    color: #c2c2c2;
+}
+
+.learn-more-body {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.learn-more-body h1 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.learn-btn {
+    height: 40px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 10px 15px;
+    color: azure;
+    border: 1px solid #bd1010;
+    background-color: #bd1010;
+    transition: all 1s;
+}
+
+.learn-btn:hover {
+    border-color: azure;
+    background-color: transparent;
+    cursor: pointer;
+}

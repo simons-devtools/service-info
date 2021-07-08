@@ -3,15 +3,17 @@ import HAbout from './HSections/HAbout';
 import Header from './HSections/Header';
 import Services from './HSections/Services';
 import Projects from './HSections/Projects';
+import Learn from './HSections/Learn';
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Header />
             <HAbout />
             <Services />
             <Projects />
-        </div>
+            <Learn />
+        </main>
     );
 };
 
