@@ -9,7 +9,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 const HAbout = () => {
     return (
-        <section>
+        <section className="about-wrapper">
             <Container>
                 {/* Header contents */}
                 <div className="home-about-header">

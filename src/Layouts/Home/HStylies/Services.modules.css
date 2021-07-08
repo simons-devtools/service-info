@@ -2,7 +2,7 @@
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../../Assets/Backgrounds/bg-services.jpg") fixed center center;
     background-size: cover;
     color: #c2c2c2;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 .services-header {
@@ -30,8 +30,8 @@
 }
 
 .service img {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 @media (max-width: 768px) {
