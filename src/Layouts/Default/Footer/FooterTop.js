@@ -2,6 +2,9 @@ import React from 'react';
 import './FooterTop.modules.css';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PhoneIcon from '@material-ui/icons/Phone';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const FooterTop = () => {
     return (
@@ -13,9 +16,9 @@ const FooterTop = () => {
                             <h2>Ours project info</h2>
                             <p>Suspendisse potenti ut tempus consequat accumsan donec.</p>
                             <ul>
-                                <li>Street Name & Number, Town, Postcode/Zip</li>
-                                <li>+880 17xx-xxxxxx</li>
-                                <li>info.domainamex@gmail.com</li>
+                                <li><LocationOnIcon className="f-icons" /> Street Name & Number, Town, Postcode/Zip</li>
+                                <li><PhoneIcon className="f-icons" /> +880 17xx-xxxxxx</li>
+                                <li><MailOutlineIcon className="f-icons" /> info.domainamex@gmail.com</li>
                             </ul>
                         </div>
                         <div className="footer-info">

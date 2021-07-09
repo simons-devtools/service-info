@@ -55,6 +55,11 @@
     margin: 0 50px;
 }
 
+.f-icons {
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
 @media (max-width: 768px) {
     .footer-bottom-content {
         margin: 0;
