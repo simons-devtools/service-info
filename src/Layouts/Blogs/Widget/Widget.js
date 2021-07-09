@@ -1,7 +1,7 @@
 import React from 'react';
-import './BSidebar.modules.css';
+import './Widget.modules.css';
 
-const BSidebar = () => {
+const Widget = () => {
     return (
         <div>
             <h2>Blog sidebar content</h2>
@@ -9,4 +9,4 @@ const BSidebar = () => {
     );
 };
 
-export default BSidebar;
+export default Widget;
