@@ -9,8 +9,8 @@ import image3 from '../../../Assets/Home-images/blog-3.jpg';
 const HBlogs = () => {
     const blogs = [
         { "_id": 1, "title": "What and why is react.js", "image": image1 },
-        { "_id": 1, "title": "What and why is node.js", "image": image2 },
-        { "_id": 1, "title": "What is mongodb cloud.js", "image": image3 },
+        { "_id": 2, "title": "What and why is node.js", "image": image2 },
+        { "_id": 3, "title": "What is mongodb cloud.js", "image": image3 },
     ];
 
     return (

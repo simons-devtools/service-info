@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ServiceContent = (props) => {
-    const { _id, name, icon } = props.service;
+    const { name, icon } = props.service;
 
     return (
         <div className="service">

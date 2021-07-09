@@ -5,6 +5,7 @@ import Services from './HSections/Services';
 import Projects from './HSections/Projects';
 import Learn from './HSections/Learn';
 import HBlogs from './HSections/HBlogs';
+import FooterTop from '../Default/Footer/FooterTop';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Projects />
             <Learn />
             <HBlogs />
+            <FooterTop />
         </main>
     );
 };
