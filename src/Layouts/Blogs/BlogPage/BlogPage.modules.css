@@ -1,0 +1,25 @@
+.blog-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-contents {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 65%;
+}
+
+.blog-widgets {
+    flex-basis: 30%;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .blog-contents {
+        flex-basis: 100%;
+    }
+    .blog-widgets {
+        display: none;
+    }
+}

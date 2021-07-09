@@ -1,12 +1,12 @@
 import React from 'react';
-import './FooterTop.modules.css';
+import './Footer.modules.css';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
-const FooterTop = () => {
+const Footer = () => {
     return (
         <footer>
             <div className="footer-wrapper">
@@ -55,4 +55,4 @@ const FooterTop = () => {
     );
 };
 
-export default FooterTop;
+export default Footer;

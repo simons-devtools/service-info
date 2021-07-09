@@ -1,0 +1,25 @@
+.search-input {
+    width: 300px;
+    height: 24px;
+    letter-spacing: 2px;
+    padding: 5px 10px 6px 10px;
+    border: 1px solid #66b1ee;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-submit {
+    width: 46px;
+    height: 38px;
+    color: azure;
+    background-color: #66b1ee;
+    border: 1px solid #66b1ee;
+    vertical-align: middle;
+}
+
+.search-submit:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
