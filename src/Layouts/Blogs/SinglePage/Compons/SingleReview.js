@@ -1,7 +1,7 @@
 import React from 'react';
-import './Reviews.modules.css';
+import './SingleReview.modules.css';
 
-const Reviews = () => {
+const SingleReview = () => {
     return (
         <div>
             <h2>Blog single review content</h2>
@@ -9,4 +9,4 @@ const Reviews = () => {
     );
 };
 
-export default Reviews;
+export default SingleReview;

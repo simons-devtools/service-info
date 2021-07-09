@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './BlogContent.modules.css';
+import './SingleContent.modules.css';
 
-const BlogContent = (props) => {
+const SingleContent = (props) => {
     const { title, image } = props.blog;
 
     return (
-        <div className="blog-posts">
-            <Link to="/blog-single">
-                <img src={image} alt="" />
-                <h2>{title}</h2>
-            </Link>
+        <div className="blog-single-post">
+            <img src={image} alt="" />
+            <h2>{title}</h2>
             <p>
                 Make your productive teams Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit. Fusce pharetra ligula vitae mattis commodo.
@@ -20,4 +17,4 @@ const BlogContent = (props) => {
     );
 };
 
-export default BlogContent;
+export default SingleContent;

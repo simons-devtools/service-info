@@ -1,0 +1,26 @@
+.blog-single-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-single-contents {
+    flex-basis: 65%;
+    flex-direction: column;
+}
+
+.blog-single-widgets {
+    flex-basis: 30%;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .blog-single-contents {
+        flex-basis: 100%;
+    }
+    .blog-single-widgets {
+        display: none;
+    }
+}
+
+/* Blog single content styles */
