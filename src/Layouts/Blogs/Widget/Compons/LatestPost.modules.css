@@ -1,0 +1,31 @@
+.posts-wrapper h2 {
+    color: #757575;
+    text-transform: uppercase;
+}
+
+.posts-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts-body {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.posts-body li {
+    width: 118px;
+    height: 72px;
+    margin: 0 5px 2px 0;
+    overflow: hidden;
+}
+
+.posts-body img {
+    width: 118px;
+    height: 68px;
+}
+
+.posts-body img:hover {
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
