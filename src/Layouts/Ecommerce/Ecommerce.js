@@ -1,5 +1,4 @@
 import React from 'react';
-import './Ecommerce.modules.css';
 
 const Ecommerce = () => {
     return (

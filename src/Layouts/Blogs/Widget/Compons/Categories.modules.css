@@ -1,6 +1,9 @@
 .categories-wrapper h2 {
-    color: #757575;
+    color: #999;
+    font-size: 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-top: 30px;
 }
 
 .category-body ul {
@@ -9,16 +12,16 @@
 }
 
 .category-body ul li {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
     padding: 10px 0 10px 10px;
     margin: 10px 0;
     background-color: #fff;
 }
 
 .category-body ul li a {
-    color: #757575;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #b3b3b3;
     text-decoration: none;
     transition: all 0.5s;
 }
