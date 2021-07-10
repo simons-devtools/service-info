@@ -3,9 +3,9 @@ import './MultiplePageApp.modules.css';
 
 const MultiplePageApp = () => {
     return (
-        <div>
+        <section>
             <h2>E-commerce multiple page app</h2>
-        </div>
+        </section>
     );
 };
 

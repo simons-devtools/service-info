@@ -6,21 +6,11 @@ import EcommerceWebApp from './Compons/EcommerceWebApp';
 
 const EcomPage = () => {
     return (
-        <section className="commerce-wrapper">
-            <Container>
-                <div className="commerce-main-body">
-                    <div className="single-page-app">
-                        <OnePageApp />
-                    </div>
-                    <div className="multiple-page-app">
-                        <MultiplePageApp />
-                    </div>
-                    <div className="ecommerce-web-app">
-                        <EcommerceWebApp />
-                    </div>
-                </div>
-            </Container>
-        </section>
+        <Container>
+            <OnePageApp />
+            <MultiplePageApp />
+            <EcommerceWebApp />
+        </Container>
     );
 };
 

@@ -3,9 +3,9 @@ import './EcommerceWebApp.modules.css';
 
 const EcommerceWebApp = () => {
     return (
-        <div>
+        <section>
             <h2>E-commerce Web Application</h2>
-        </div>
+        </section>
     );
 };
 
