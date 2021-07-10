@@ -5,6 +5,7 @@
 }
 
 .blog-single-contents {
+    display: flex;
     flex-basis: 65%;
     flex-direction: column;
 }
@@ -22,5 +23,3 @@
         display: none;
     }
 }
-
-/* Blog single content styles */

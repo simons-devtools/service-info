@@ -10,6 +10,12 @@ const BlogSingle = () => {
         "title": "What and why react.js",
         "image": image,
         "features": "",
+        "tags": [
+            "Business",
+            "Financial",
+            "Investment",
+            "Consult"
+        ],
     };
 
     return (

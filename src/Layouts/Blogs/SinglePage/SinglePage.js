@@ -14,7 +14,7 @@ const SinglePage = ({ blog }) => {
                 {/* Blog single contents */}
                 <div className="blog-single-contents">
                     <SingleContent blog={blog} />
-                    <SingleTag />
+                    <SingleTag blog={blog} />
                     <SingleReview />
                     <CommentForm />
                 </div>
