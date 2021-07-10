@@ -1,10 +1,15 @@
 import React from 'react';
+import Header2 from '../Default/Header2/Header2';
+import EcomPage from './EcomPage/EcomPage';
+import Footer from '../Default/Footer/Footer';
 
 const Ecommerce = () => {
     return (
-        <div>
-            <h2>Ecommerce content</h2>
-        </div>
+        <main>
+            <Header2 />
+            <EcomPage />
+            <Footer />
+        </main>
     );
 };
 

@@ -4,11 +4,15 @@ import Home from './Layouts/Home/Home';
 import NotFound from './Layouts/Default/NotFound/NotFound';
 import Blog from './Layouts/Blogs/Blog';
 import BlogSingle from './Layouts/Blogs/BlogSingle';
+import Ecommerce from './Layouts/Ecommerce/Ecommerce';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/ecommerce">
+          <Ecommerce />
+        </Route>
         <Route path="/blogs">
           <Blog />
         </Route>

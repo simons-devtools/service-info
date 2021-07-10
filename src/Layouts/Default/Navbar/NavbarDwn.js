@@ -19,7 +19,7 @@ const NavbarDwn = () => {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/services">Services</Link></li>
                         <li><Link to="/blogs">Blogs</Link></li>
-                        <li><Link to="/document">Documentation</Link></li>
+                        <li><Link to="/ecommerce">E-commerce</Link></li>
                         <li><Link to="/dashboard">Dashboard</Link></li>
                         {/* <li>
                             <img src={profile} alt="" />

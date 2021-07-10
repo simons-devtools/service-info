@@ -1,5 +1,4 @@
 import React from 'react';
-import './ESingle.modules.css';
 
 const ESingle = () => {
     return (
