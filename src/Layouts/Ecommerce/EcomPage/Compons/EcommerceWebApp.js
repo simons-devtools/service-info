@@ -3,8 +3,11 @@ import './EcommerceWebApp.modules.css';
 
 const EcommerceWebApp = () => {
     return (
-        <section>
-            <h2>E-commerce Web Application</h2>
+        <section className="ecom-web-app-wrapper">
+            <h2>E-commerce web applications</h2>
+            <div className="ecom-web-app-body">
+                {/* ..... */}
+            </div>
         </section>
     );
 };
