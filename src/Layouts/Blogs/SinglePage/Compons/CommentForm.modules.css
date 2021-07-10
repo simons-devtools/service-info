@@ -1,0 +1,78 @@
+.blog-comment-wrapper h2 {
+    color: #4e4e4e;
+    text-transform: uppercase;
+}
+
+.comment-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment-info input {
+    width: 230px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dfdfdf;
+}
+
+.comment-info input:focus {
+    outline: none;
+    border: 1px solid #66b1ee;
+    transition: all 1s;
+}
+
+.comment-detail textarea {
+    width: 98%;
+    height: 200px;
+    font-size: 16px;
+    padding: 5px 8px;
+    border: 1px solid #dfdfdf;
+}
+
+.comment-detail textarea:focus {
+    outline: none;
+    border: 1px solid #66b1ee;
+    transition: all 1s;
+}
+
+.cmt-submit-btn {
+    width: 140px;
+    height: 40px;
+    color: #999;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 8px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+}
+
+.cmt-submit-btn:hover {
+    color: azure;
+    background-color: #66b1ee;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.cmt-submit-btn:focus {
+    background-color: #96d0ff;
+}
+
+@media (max-width: 768px) {
+    .blog-comment-wrapper {
+        margin-right: 20px;
+    }
+    .comment-info {
+        flex-direction: column;
+    }
+    .comment-info input {
+        width: 100%;
+    }
+    .comment-detail textarea {
+        width: 100%;
+    }
+}
