@@ -32,7 +32,7 @@ const Archive = () => {
                     id="month"
                     label="Input any month or year"
                     type="month"
-                    defaultValue="input month or year"
+                    defaultValue={new Date()}
                     className={classes.textField}
                     InputLabelProps={{
                         shrink: true,
