@@ -11,7 +11,6 @@
 
 .learn-more-body h1 {
     font-size: 30px;
-    font-weight: 900;
     text-transform: uppercase;
 }
 
@@ -30,4 +29,10 @@
     border-color: azure;
     background-color: transparent;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .learn-more-body h1 {
+        line-height: 40px;
+    }
 }

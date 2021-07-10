@@ -2,7 +2,7 @@
     font-size: 14px;
     font-weight: 500;
     padding: 20px 0;
-    color: #a8a8a8;
+    color: #c2c2c2;
     background-color: #616161;
 }
 
@@ -32,8 +32,9 @@
 }
 
 .footer-info li a {
+    color: tomato;
+    font-weight: 600;
     text-decoration: none;
-    color: #d64949;
 }
 
 .footer-info li a:hover {

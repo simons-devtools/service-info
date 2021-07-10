@@ -16,6 +16,7 @@ article h2 {
 article p {
     font-weight: normal;
     font-size: 16px;
+    line-height: 30px;
 }
 
 .outline-btn {

@@ -9,7 +9,7 @@ const HBContent = (props) => {
         <div className="blog">
             <img src={image} alt="" />
             <h2>{title}</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quasi omnis perferendis saepe optio vero.</p>
+            <p>Lorem ipsum dolor sit amet consectetur consectetur adipisicing elit. Ut quasi quasi omnis perferendis saepe optio vero.</p>
             <Link to="/">Read More<ArrowRightAltIcon className="read-more-icons" /></Link>
         </div>
     );

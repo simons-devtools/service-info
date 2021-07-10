@@ -22,7 +22,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-info">
-                            <h2>Ours project info</h2>
+                            <h2>E-commerce support</h2>
                             <ul>
                                 <li><Link to="/">Footer menu items</Link></li>
                                 <li><Link to="/">Footer menu items</Link></li>
@@ -31,7 +31,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-info">
-                            <h2>Ours project info</h2>
+                            <h2>Blogger support</h2>
                             <ul>
                                 <li><Link to="/">Footer menu items</Link></li>
                                 <li><Link to="/">Footer menu items</Link></li>
