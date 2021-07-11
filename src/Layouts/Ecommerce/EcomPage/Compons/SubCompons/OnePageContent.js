@@ -1,7 +1,7 @@
 import React from 'react';
 import './OnePageContent.modules.css';
 
-const OnePageContent = ({ application }) => {
+const OnePageContent = ({ application, handleFeatureBtn }) => {
     const { name, category, image } = application;
 
     return (
@@ -13,7 +13,7 @@ const OnePageContent = ({ application }) => {
                 <h3>{name}</h3>
                 <p>Category: {category}</p>
                 <button className="ecommerce-btn">Live demo</button>
-                <button className="ecommerce-btn">Buy now</button>
+                <button onClick={() => handleFeatureBtn(application)} className="ecommerce-btn">Features</button>
             </div>
         </div>
     );

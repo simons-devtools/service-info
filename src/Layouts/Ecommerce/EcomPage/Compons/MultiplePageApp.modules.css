@@ -3,8 +3,18 @@
     text-transform: uppercase;
 }
 
+.multiple-page-app-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media (max-width: 768px) {
     .multiple-page-app-wrapper h2 {
         font-size: 20px;
+    }
+    .multiple-page-app-body {
+        flex-direction: column;
     }
 }

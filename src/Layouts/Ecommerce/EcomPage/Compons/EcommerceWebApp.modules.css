@@ -3,8 +3,18 @@
     text-transform: uppercase;
 }
 
+.ecom-web-app-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media (max-width: 768px) {
     .ecom-web-app-wrapper h2 {
         font-size: 20px;
+    }
+    .ecom-web-app-body {
+        flex-direction: column;
     }
 }

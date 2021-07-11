@@ -2,7 +2,7 @@ import React from 'react';
 import './OnePageApp.modules.css';
 import OnePageContent from './SubCompons/OnePageContent';
 
-const OnePageApp = ({ applications }) => {
+const OnePageApp = ({ applications, handleFeatureBtn }) => {
     return (
         <section className="one-page-app-wrapper">
             <h2>Single page applications</h2>
@@ -11,6 +11,7 @@ const OnePageApp = ({ applications }) => {
                     applications.map(app => app.category === 'single' ? <OnePageContent
                         key={app._id}
                         application={app}
+                        handleFeatureBtn={handleFeatureBtn}
                     /> : '')
                 }
             </div>

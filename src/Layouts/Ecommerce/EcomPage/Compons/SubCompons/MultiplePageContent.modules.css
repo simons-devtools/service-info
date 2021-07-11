@@ -1,0 +1,47 @@
+.multiple-app-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.multiple-template-div {
+    height: 190px;
+    overflow: hidden;
+}
+
+.multiple-template-div img {
+    height: 190px;
+}
+
+.ecommerce-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.multiple-template-info {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background: linear-gradient( #00000099, #00000099);
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+.multiple-app-container:hover .multiple-template-div img {
+    transform: scale(1.5);
+    transition: all 1s;
+}
+
+.multiple-app-container:hover .multiple-template-info {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .multiple-template-div img {
+        width: 100%;
+    }
+}
