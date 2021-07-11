@@ -4,12 +4,12 @@ import OnePageApp from './Compons/OnePageApp';
 import MultiplePageApp from './Compons/MultiplePageApp';
 import EcommerceWebApp from './Compons/EcommerceWebApp';
 
-const EcomPage = () => {
+const EcomPage = ({ applications }) => {
     return (
         <Container>
-            <OnePageApp />
-            <MultiplePageApp />
-            <EcommerceWebApp />
+            <OnePageApp applications={applications} />
+            <MultiplePageApp applications={applications} />
+            <EcommerceWebApp applications={applications} />
         </Container>
     );
 };

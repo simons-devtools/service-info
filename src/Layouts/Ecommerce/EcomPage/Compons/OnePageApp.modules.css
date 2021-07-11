@@ -2,3 +2,19 @@
     color: #4e4e4e;
     text-transform: uppercase;
 }
+
+.one-page-app-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .one-page-app-wrapper h2 {
+        font-size: 20px;
+    }
+    .one-page-app-body {
+        flex-direction: column;
+    }
+}

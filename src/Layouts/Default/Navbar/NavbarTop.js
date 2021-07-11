@@ -3,7 +3,6 @@ import './NavbarTop.modules.css';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 

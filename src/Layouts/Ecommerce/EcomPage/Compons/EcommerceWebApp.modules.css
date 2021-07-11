@@ -2,3 +2,9 @@
     color: #4e4e4e;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .ecom-web-app-wrapper h2 {
+        font-size: 20px;
+    }
+}
