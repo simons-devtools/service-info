@@ -23,22 +23,6 @@
     animation: zoomIn 0.5s both;
 }
 
-.close {
-    color: #fff;
-    font-size: 20px;
-    padding: 5px 10px;
-    margin: 20px 50px 0 0;
-    float: right;
-}
-
-.close:hover {
-    color: red;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
 /* Animation modal open */
 @-webkit-keyframes zoomIn {
     0% {
@@ -59,6 +43,74 @@
     }
     50% {
         opacity: 1;
+    }
+}
+
+.close {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 20px 50px 0 0;
+    float: right;
+}
+
+.close:hover {
+    color: red;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.modal-two {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient( #000000e6, #000000e6);
+}
+
+.modal-body-two {
+    position: fixed;
+    top: 10%;
+    right: 8%;
+    bottom: 10%;
+    left: 8%;
+    padding: 20px 25px;
+    background-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-animation: fadeInDown 0.5s both;
+    animation: fadeInDown 0.5s both;
+}
+
+/* Animation modal two open */
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
     }
 }
 
