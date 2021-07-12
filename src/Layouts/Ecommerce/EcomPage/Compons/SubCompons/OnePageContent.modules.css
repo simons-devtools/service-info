@@ -1,15 +1,7 @@
 .single-app-container {
-    position: relative;
+    width: 385px;
+    height: 190px;
     margin-bottom: 20px;
-}
-
-.single-template-div {
-    height: 190px;
-    overflow: hidden;
-}
-
-.single-template-div img {
-    height: 190px;
 }
 
 .ecommerce-btn {
@@ -18,30 +10,22 @@
     cursor: pointer;
 }
 
-.single-template-info {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.single-app-info {
+    width: 385px;
+    height: 190px;
     color: #fff;
     background: linear-gradient( #00000099, #00000099);
     text-align: center;
-    position: absolute;
-    z-index: 1;
+    padding-top: 1px;
     display: none;
 }
 
-.single-app-container:hover .single-template-div img {
-    transform: scale(1.5);
-    transition: all 1s;
-}
-
-.single-app-container:hover .single-template-info {
+.single-app-container:hover .single-app-info {
     display: block;
 }
 
 @media (max-width: 768px) {
-    .single-template-div img {
+    .single-app-container {
         width: 100%;
     }
 }
