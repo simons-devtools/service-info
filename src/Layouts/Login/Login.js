@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
 import OldUsers from './OldUsers/OldUsers';
+import background from '../../Assets/Backgrounds/bg-learnmor.jpg';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -85,14 +86,18 @@ const Login = () => {
     }
 
     return (
-        <div className="">
-            <section>
-                <OldUsers
-                    user={user}
-                    googleSignIn={googleSignIn}
-                    googleSignOut={googleSignOut}
-                />
-            </section>
+        <div style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
+            backgroundSize: 'cover',
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+        }}>
+            <OldUsers
+                user={user}
+                googleSignIn={googleSignIn}
+                googleSignOut={googleSignOut}
+            />
         </div>
     );
 };

@@ -1,15 +1,21 @@
 import React from 'react';
 import './OldUsers.modules.css';
+import logo from '../../../Assets/Icons/logo.png';
+import { Container } from '@material-ui/core';
 
 const OldUsers = ({ user, googleSignIn, googleSignOut }) => {
     return (
-        <div style={{ textAlign: 'center', marginTop: '100px' }}>
-            <h1>Google authentication</h1>
-            {
-                user.isSiggedIn ? <button onClick={googleSignOut}>Google Sign Out</button> :
-                    <button onClick={googleSignIn} style={{ padding: "10px 30px" }}>Google Sign In</button>
-            }
-        </div>
+        <Container>
+            <div className="login-wrapper">
+                <img src={logo} alt="" />
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo qui consequuntur aspernatur quis ex esse sit cum velit saepe dolor?</p>
+                <h3>Login your google verification account</h3>
+                {
+                    user.isSiggedIn ? <button onClick={googleSignOut}>Sign Out Now</button> :
+                        <button onClick={googleSignIn} style={{ padding: "10px 30px" }}>Sign In Now</button>
+                }
+            </div>
+        </Container>
     );
 };
 

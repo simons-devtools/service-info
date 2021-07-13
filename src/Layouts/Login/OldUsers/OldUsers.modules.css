@@ -1,0 +1,42 @@
+.login-wrapper {
+    width: 50%;
+    height: 100%;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 15px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 10px solid red;
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-wrapper {
+        width: 90%;
+        height: 100%;
+    }
+}
