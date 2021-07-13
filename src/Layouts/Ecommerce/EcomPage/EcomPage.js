@@ -11,10 +11,10 @@ import OrderCrossing from '../OrderCrossing/OrderCrossing';
 const EcomPage = ({ applications }) => {
     const [modalApp, setModalApp] = useState([]);
     const [modalTwoApp, setModalTwoApp] = useState([]);
+    const [paymentMethod, setPaymentMethod] = useState(null);
 
     // Handle featutes modal button:
     const handleFeatureBtn = (addedApp) => {
-        // console.log(addedApp);
         const myModal = document.getElementById('myModal');
         myModal.style.display = 'block';
         setModalApp(addedApp);
@@ -23,21 +23,20 @@ const EcomPage = ({ applications }) => {
     // Handle Buy modal button:
     const handleBuyBtn = (addedApp) => {
         handleModalClose();
-        // console.log(addedApp);
         const myModalTwo = document.getElementById('myModalTwo');
         myModalTwo.style.display = 'block';
         setModalTwoApp(addedApp);
     }
 
     // Handle modal close button:
-    function handleModalClose() {
+    function handleModalClose(addedProps) {
         const modal = document.getElementById('myModal');
         modal.style.display = "none";
-        
+
         const modalTwo = document.getElementById('myModalTwo');
         modalTwo.style.display = "none";
+        setPaymentMethod(addedProps)
     }
-    // console.log(modalTwoApp);
 
     return (
         <Container>
@@ -56,6 +55,8 @@ const EcomPage = ({ applications }) => {
                     <OrderCrossing
                         modalTwoApp={modalTwoApp}
                         handleModalClose={handleModalClose}
+                        paymentMethod={paymentMethod}
+                        setPaymentMethod={setPaymentMethod}
                     />
                 </div>
             </div>

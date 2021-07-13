@@ -99,23 +99,19 @@ const ELEMENTS_OPTIONS = {
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe("pk_test_51J5mg7E45xXIJL6Pken4BAGMxaEfhq0JtHZ9dTuk9YFdpUD6R0B1PAZi0aeKPHJAlWuLZjkDy4xiEBdDr1MdylSU005q9Xyyif");
 
-const OrderCrossing = ({ modalTwoApp, handleModalClose }) => {
-    console.log(modalTwoApp);
-
+const OrderCrossing = ({ modalTwoApp, handleModalClose, paymentMethod, setPaymentMethod }) => {
     const CheckoutForm = () => {
         const stripe = useStripe();
         const elements = useElements();
         const [error, setError] = useState(null);
         const [cardComplete, setCardComplete] = useState(false);
         const [processing, setProcessing] = useState(false);
-        const [paymentMethod, setPaymentMethod] = useState(null);
+        // const [paymentMethod, setPaymentMethod] = useState(null);
         const [billingDetails, setBillingDetails] = useState({
             email: "",
             phone: "",
             name: ""
         });
-        console.log('Payment method', paymentMethod); // Payment info
-        console.log('Billing method', billingDetails); // Billing info
 
         const handleSubmit = async (event) => {
             event.preventDefault();
@@ -155,10 +151,9 @@ const OrderCrossing = ({ modalTwoApp, handleModalClose }) => {
                 {
                     paymentMethod ?
                         <div className="payment-body-input">
-                            {/* {alert(`Thanks for trying Stripe Elements. No money was charged, but we generated a PaymentMethod: ${paymentMethod.id}`)} */}
                             <Shipment
                                 modalTwoApp={modalTwoApp}
-                                orderId={paymentMethod.id}
+                                paymentMethod={paymentMethod}
                                 handleModalClose={handleModalClose}
                             />
                         </div> :
