@@ -6,7 +6,7 @@ import OnePageApp from './Compons/OnePageApp';
 import MultiplePageApp from './Compons/MultiplePageApp';
 import EcommerceWebApp from './Compons/EcommerceWebApp';
 import EcomModal from './Compons/EcomModal';
-import BuyAppModal from './Compons/BuyAppModal';
+import OrderCrossing from '../OrderCrossing/OrderCrossing';
 
 const EcomPage = ({ applications }) => {
     const [modalApp, setModalApp] = useState([]);
@@ -53,7 +53,7 @@ const EcomPage = ({ applications }) => {
             <div id="myModalTwo" className="modal-two">
                 <strong onClick={handleModalClose} className="close">X</strong>
                 <div className="modal-body-two">
-                    <BuyAppModal
+                    <OrderCrossing
                         modalTwoApp={modalTwoApp}
                     />
                 </div>
