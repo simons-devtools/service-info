@@ -1,10 +1,12 @@
 import React from 'react';
 import './BuyAppModal.modules.css';
 
-const BuyAppModal = () => {
+const BuyAppModal = ({ modalTwoApp }) => {
+    // console.log(modalTwoApp);
+
     return (
         <div>
-            <h2>This is buy apps modal compons</h2>
+            <h2>Buy {modalTwoApp.name} modal compons</h2>
         </div>
     );
 };

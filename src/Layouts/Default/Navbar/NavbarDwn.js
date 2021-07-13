@@ -17,7 +17,7 @@ const NavbarDwn = () => {
                     </div>
                     <ul className="navbar-main">
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/login">Login</Link></li>
                         <li><Link to="/blogs">Blogs</Link></li>
                         <li><Link to="/ecommerce">E-commerce</Link></li>
                         <li><Link to="/dashboard">Dashboard</Link></li>

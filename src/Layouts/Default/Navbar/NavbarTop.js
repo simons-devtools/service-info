@@ -11,7 +11,7 @@ const NavbarTop = () => {
         <Container>
             <nav className="navbar-top-wrapper">
                 <ul className="navbar-top-left">
-                    <li><Link to="/home"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link></li>
+                    <li><Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/login">Login</Link></li>

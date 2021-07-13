@@ -10,6 +10,7 @@ import BuyAppModal from './Compons/BuyAppModal';
 
 const EcomPage = ({ applications }) => {
     const [modalApp, setModalApp] = useState([]);
+    const [modalTwoApp, setModalTwoApp] = useState([]);
 
     // Handle featutes modal button:
     const handleFeatureBtn = (addedApp) => {
@@ -25,6 +26,7 @@ const EcomPage = ({ applications }) => {
         // console.log(addedApp);
         const myModalTwo = document.getElementById('myModalTwo');
         myModalTwo.style.display = 'block';
+        setModalTwoApp(addedApp);
     }
 
     // Handle modal close button:
@@ -35,7 +37,7 @@ const EcomPage = ({ applications }) => {
         const modalTwo = document.getElementById('myModalTwo');
         modalTwo.style.display = "none";
     }
-    // console.log(modalApp);
+    // console.log(modalTwoApp);
 
     return (
         <Container>
@@ -52,8 +54,7 @@ const EcomPage = ({ applications }) => {
                 <strong onClick={handleModalClose} className="close">X</strong>
                 <div className="modal-body-two">
                     <BuyAppModal
-                        modalApp={modalApp}
-                        handleBuyBtn={handleBuyBtn}
+                        modalTwoApp={modalTwoApp}
                     />
                 </div>
             </div>
