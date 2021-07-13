@@ -55,6 +55,7 @@ const EcomPage = ({ applications }) => {
                 <div className="modal-body-two">
                     <OrderCrossing
                         modalTwoApp={modalTwoApp}
+                        handleModalClose={handleModalClose}
                     />
                 </div>
             </div>
