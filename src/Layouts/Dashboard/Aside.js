@@ -1,6 +1,7 @@
 import React from 'react';
 import './Aside.modules.css';
-import { Container } from '@material-ui/core';
+import HorizontalSplitIcon from '@material-ui/icons/HorizontalSplit';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Main from './DashSections/Main/Main';
 import OrdersList from './DashSections/OrdersList/OrdersList';
 import Profile from './DashSections/Profile/Profile';
@@ -17,100 +18,96 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { useState } from 'react';
 
 const Aside = () => {
+    const [toggle, setToggle] = useState(false);
+
+    // Sidebar menu routes:
     const routes = [
         {
             path: "/",
             exact: true,
-            sidebar: () => '',
+            menu: 'Home',
             main: () => <Main />
         },
         {
             path: "/order-list",
-            sidebar: () => '',
+            menu: 'Order list',
             main: () => <OrdersList />
         },
         {
             path: "/my-account",
-            sidebar: () => '',
+            menu: 'My account',
             main: () => <Profile />
         },
         {
             path: "/add-blog",
-            sidebar: () => '',
+            menu: 'Add blogs',
             main: () => <AddBlogs />
         },
         {
             path: "/add-ecommerce",
-            sidebar: () => '',
+            menu: 'Add e-Commerce',
             main: () => <AddEcommerce />
         },
         {
             path: "/add-admin",
-            sidebar: () => '',
+            menu: 'Add admins',
             main: () => <AddAdmins />
         },
         {
             path: "/blog-list",
-            sidebar: () => '',
+            menu: 'Blog list',
             main: () => <BlogsList />
         },
         {
             path: "/all-application",
-            sidebar: () => '',
+            menu: 'All application',
             main: () => <EcommerceList />
         },
         {
             path: "/user-board",
-            sidebar: () => '',
+            menu: 'Users board',
             main: () => <UsersList />
         },
         {
             path: "/admin-manage",
-            sidebar: () => '',
+            menu: 'Admins manage',
             main: () => <AdminsList />
-        },
-        {
-            path: "/logout",
-            sidebar: () => '',
-            main: () => <h2>Logout 11</h2>
         },
     ];
 
+    // Humbarger toggle button func:
+    function bargerBtn(condison) {
+        const dashMenu = document.getElementById('dashMenu');
+        if (toggle) {
+            condison = false;
+            setToggle(condison);
+        } else {
+            setToggle(condison);
+        }
+        toggle ? dashMenu.style.display = 'block' : dashMenu.style.display = 'none';
+    };
+
     return (
-        <Container>
+        <div className="dashboard-container">
+            <div
+                onClick={() => bargerBtn(true)}
+                id="humbargerBtn"
+                className="humbarger">
+                <HorizontalSplitIcon />
+            </div>
             <Router>
-                <div className="dash-nav-container">
-                    <div className="dash-nav-aside">
-                        <div>
-                            <h1>Dashboard</h1>
-                            <ul className="dash-navbar">
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/order-list">Order list</Link></li>
-                                <li><Link to="/my-account">My account</Link></li>
-                                <li><Link to="/add-blog">Add blogs</Link></li>
-                                <li><Link to="/add-ecommerce">Add e-commerce</Link></li>
-                                <li><Link to="/add-admin">Add admins</Link></li>
-                                <li><Link to="/blog-list">Blog list</Link></li>
-                                <li><Link to="/all-application">All application</Link></li>
-                                <li><Link to="/user-board">Users board</Link></li>
-                                <li><Link to="/admin-manage">Admins manage</Link></li>
-                                <li><Link to="/logout">Log out 1</Link></li>
-                                <li><Link to="/logout">Log out 2</Link></li>
-                                <li><Link to="/logout">Log out 3</Link></li>
-                            </ul>
-                        </div>
-                        <Switch>
-                            {routes.map((route, index) => (
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    children={<route.sidebar />}
-                                />
-                            ))}
-                        </Switch>
+                <div className="dash-nav-wrapper">
+                    <div id="dashMenu" className="dash-nav-aside">
+                        <h1>Dashboard</h1>
+                        <ul className="dash-navbar">
+                            {
+                                routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
+                            }
+                        </ul>
+                        <button className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
                     </div>
 
                     <div className="dash-nav-main">
@@ -127,8 +124,19 @@ const Aside = () => {
                     </div>
                 </div>
             </Router>
-        </Container>
+        </div>
     );
 };
 
 export default Aside;
+
+                                // <li><Link to="/">Home</Link></li>
+                                // <li><Link to="/order-list">Order list</Link></li>
+                                // <li><Link to="/my-account">My account</Link></li>
+                                // <li><Link to="/add-blog">Add blogs</Link></li>
+                                // <li><Link to="/add-ecommerce">Add e-commerce</Link></li>
+                                // <li><Link to="/add-admin">Add admins</Link></li>
+                                // <li><Link to="/blog-list">Blog list</Link></li>
+                                // <li><Link to="/all-application">All application</Link></li>
+                                // <li><Link to="/user-board">Users board</Link></li>
+                                // <li><Link to="/admin-manage">Admins manage</Link></li>
