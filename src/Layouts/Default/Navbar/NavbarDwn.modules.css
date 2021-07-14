@@ -1,6 +1,6 @@
 .navbar-main-wrapper {
-    padding: 15px 0;
-    margin-top: 15px;
+    padding: 30px 0;
+    margin-top: 30px;
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background-color: overlay;
 }
@@ -53,6 +53,10 @@
 }
 
 @media (max-width: 768px) {
+    .navbar-main-wrapper {
+        padding: 0;
+        margin: 0;
+    }
     .navbar-main li {
         margin-right: 10px;
         letter-spacing: 0;
