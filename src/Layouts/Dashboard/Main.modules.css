@@ -1,0 +1,42 @@
+.dash-nav-wrapper {
+    position: fixed;
+    width: 250px;
+    height: 600px;
+    background-color: #fff;
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.dash-nav-wrapper h1 {
+    position: sticky;
+    top: 0;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin: 0;
+    padding: 5px 5px 0 10px;
+    color: #999;
+    background-color: #fff;
+}
+
+.dash-navbar {
+    list-style: circle;
+    padding-inline-start: 30px;
+}
+
+.dash-navbar li {
+    color: #999;
+    font-weight: 600;
+    margin: 0 5px 20px 0;
+}
+
+.dash-navbar li:hover {
+    color: #66b1ee;
+    cursor: pointer;
+}
+
+.dash-navbar:last-child {
+    padding-bottom: 20px;
+}
+
+/* .dash-navbar li a {} */
