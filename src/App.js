@@ -10,6 +10,7 @@ import PrivateRoute from './Layouts/Login/PrivateRoute';
 import Login from './Layouts/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
+import BlogTopics from './Layouts/Blogs/BlogTopics';
 
 export const UserContext = createContext();
 
@@ -31,7 +32,10 @@ function App() {
           <Route path="/blogs">
             <Blog />
           </Route>
-          <Route path="/blog-single">
+          <Route path="/bloggers/:blogTopics">
+            <BlogTopics />
+          </Route>
+          <Route path="/blog-single/:blogId">
             <BlogSingle />
           </Route>
           <Route path="/login">

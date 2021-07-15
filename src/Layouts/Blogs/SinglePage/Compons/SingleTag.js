@@ -6,17 +6,21 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 
-const SingleTag = (props) => {
-    const { tags } = props.blog;
+const SingleTag = ({ singleBlog }) => {
+    // console.log(singleBlog.tags)
+    const { tags } = singleBlog;
+    console.log(tags)
 
     return (
         <div>
+            <div id="tags"></div>
             <ul className="blog-single-tag">
-                {
+                <li><Link to="/blogs">This is tags place</Link></li>
+                {/* {
                     tags.map(tag => <li key={tag.length}>
-                        <Link to="/blog-single">{tag}</Link>
+                        <Link to="/blogs">Name</Link>
                     </li>)
-                }
+                } */}
             </ul>
 
             <div className="blog-share-option">

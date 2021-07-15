@@ -1,18 +1,11 @@
-import React, { useEffect } from 'react';
-import './BlogPage.modules.css';
+import React from 'react';
+import '../BlogPage/BlogPage.modules.css';
 import { Container } from '@material-ui/core';
-import BlogContent from './Compons/BlogContent';
 import Widget from '../Widget/Widget';
-import { useState } from 'react';
+import BlogContent from '../BlogPage/Compons/BlogContent';
 
-const BlogPage = () => {
-    const [blogs, setBlogs] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/blogs')
-            .then(response => response.json())
-            .then(data => setBlogs(data))
-    }, [])
+const BlogTopicsPage = ({ blogs, allBlogs }) => {
+    // console.log(blogs)
 
     return (
         <Container>
@@ -29,11 +22,11 @@ const BlogPage = () => {
 
                 {/* Blogs widgets */}
                 <div className="blog-widgets">
-                    <Widget blogs={blogs} />
+                    <Widget blogs={allBlogs} />
                 </div>
             </section>
         </Container>
     );
 };
 
-export default BlogPage;
+export default BlogTopicsPage;

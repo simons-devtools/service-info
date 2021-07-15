@@ -4,13 +4,13 @@ import Categories from './Compons/Categories';
 import LatestPost from './Compons/LatestPost';
 import Archive from './Compons/Archive';
 
-const Widget = () => {
+const Widget = ({ blogs }) => {
     return (
-        <div style={{ margin: '18px 0' }}>
+        <div style={{ position: 'sticky', top: '0', margin: '18px 0' }}>
             <BSearch />
-            <Categories />
-            <LatestPost />
-            <Archive />
+            <Categories blogs={blogs} />
+            <LatestPost blogs={blogs} />
+            <Archive blogs={blogs} />
         </div>
     );
 };
