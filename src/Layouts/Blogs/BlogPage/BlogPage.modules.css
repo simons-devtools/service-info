@@ -6,7 +6,7 @@
 
 .blog-contents {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex-basis: 65%;
 }
 

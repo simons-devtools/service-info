@@ -7,7 +7,7 @@ import SingleReview from './Compons/SingleReview';
 import CommentForm from './Compons/CommentForm';
 import Widget from '../Widget/Widget';
 
-const SinglePage = ({ singleBlog, blogs }) => {
+const SinglePage = ({ singleBlog }) => {
     // console.log(singleBlog)
 
     return (
@@ -23,7 +23,7 @@ const SinglePage = ({ singleBlog, blogs }) => {
 
                 {/* Blog single widgets */}
                 <div className="blog-single-widgets">
-                    <Widget blogs={blogs} />
+                    <Widget />
                 </div>
             </section>
         </Container>

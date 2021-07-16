@@ -9,28 +9,18 @@ import Header2 from '../Default/Header2/Header2';
 const BlogTopics = () => {
     const { blogTopics } = useParams();
     const [blogs, setBlogs] = useState([]);
-    const [allBlogs, setAllBlogs] = useState([]);
 
+    // Loaded the (same-topics) blogs:
     useEffect(() => {
         fetch(`http://localhost:5000/bloggers/${blogTopics}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [blogTopics])
 
-    // .....
-    useEffect(() => {
-        fetch('http://localhost:5000/blogs')
-            .then(response => response.json())
-            .then(data => setAllBlogs(data))
-    }, [])
-
     return (
         <main>
             <Header2 />
-            <BlogTopicsPage
-                blogs={blogs}
-                allBlogs={allBlogs}
-            />
+            <BlogTopicsPage blogs={blogs} />
             <Footer />
         </main>
     );

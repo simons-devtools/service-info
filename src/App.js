@@ -23,21 +23,21 @@ function App() {
       <Router>
         {/* <p>{loggedInUser.email}</p>s */}
         <Switch>
-          <PrivateRoute path="/dashboard">
-            <Dashboard />
-          </PrivateRoute>
-          <PrivateRoute path="/ecommerce">
-            <Ecommerce />
-          </PrivateRoute>
-          <Route path="/blogs">
-            <Blog />
-          </Route>
           <Route path="/bloggers/:blogTopics">
             <BlogTopics />
           </Route>
           <Route path="/blog-single/:blogId">
             <BlogSingle />
           </Route>
+          <Route path="/blogs">
+            <Blog />
+          </Route>
+          <PrivateRoute path="/ecommerce">
+            <Ecommerce />
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>

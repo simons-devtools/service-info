@@ -4,7 +4,7 @@ import { Container } from '@material-ui/core';
 import Widget from '../Widget/Widget';
 import BlogContent from '../BlogPage/Compons/BlogContent';
 
-const BlogTopicsPage = ({ blogs, allBlogs }) => {
+const BlogTopicsPage = ({ blogs }) => {
     // console.log(blogs)
 
     return (
@@ -22,7 +22,7 @@ const BlogTopicsPage = ({ blogs, allBlogs }) => {
 
                 {/* Blogs widgets */}
                 <div className="blog-widgets">
-                    <Widget blogs={allBlogs} />
+                    <Widget />
                 </div>
             </section>
         </Container>
