@@ -6,9 +6,20 @@ import SingleTag from './Compons/SingleTag';
 import SingleReview from './Compons/SingleReview';
 import CommentForm from './Compons/CommentForm';
 import Widget from '../Widget/Widget';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import AuthorReview from './Compons/AuthorReview';
 
 const SinglePage = ({ singleBlog }) => {
-    // console.log(singleBlog)
+    const [comments, setComments] = useState([]);
+    const newComments = comments.filter((comment => comment.blogID === singleBlog._id))
+
+    // Loaded the blog single comments:
+    useEffect(() => {
+        fetch('http://localhost:5000/comments')
+            .then(res => res.json())
+            .then(data => setComments(data))
+    }, [])
 
     return (
         <Container>
@@ -17,8 +28,13 @@ const SinglePage = ({ singleBlog }) => {
                 <div className="blog-single-contents">
                     <SingleContent singleBlog={singleBlog} />
                     <SingleTag singleBlog={singleBlog} />
-                    <SingleReview />
-                    <CommentForm />
+                    {
+                        newComments.length > 0 ? newComments.map(comment => <SingleReview
+                            key={comment._id}
+                            comment={comment}
+                        />) : <AuthorReview />
+                    }
+                    <CommentForm singleBlog={singleBlog} />
                 </div>
 
                 {/* Blog single widgets */}
