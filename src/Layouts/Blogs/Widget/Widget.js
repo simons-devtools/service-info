@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Widget = () => {
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState([]);
+    const newBlogs = blogs.slice(0).reverse();
 
     // Loaded all blogs:
     useEffect(() => {
@@ -19,9 +20,9 @@ const Widget = () => {
     return (
         <div style={{ position: 'sticky', top: '0', margin: '18px 0' }}>
             <BSearch />
-            <Categories blogs={blogs} />
-            <LatestPost blogs={blogs} />
-            <Archive blogs={blogs} />
+            <Categories blogs={newBlogs} />
+            <LatestPost blogs={newBlogs} />
+            <Archive blogs={newBlogs} />
         </div>
     );
 };

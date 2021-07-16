@@ -5,7 +5,7 @@ import './Categories.modules.css';
 const Categories = ({ blogs }) => {
     return (
         <div className="categories-wrapper">
-            <h2>Categories</h2>
+            <h2>Blogs topics</h2>
             <div className="category-body">
                 <ul>
                     {

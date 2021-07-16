@@ -7,16 +7,19 @@ import { useEffect } from 'react';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    const newBlogs = blogs.slice(0).reverse();
+
 
     useEffect(() => {
         fetch('http://localhost:5000/blogs')
             .then(response => response.json())
             .then(data => setBlogs(data))
     }, [])
+
     return (
         <main>
             <Header2 />
-            <BlogPage blogs={blogs} />
+            <BlogPage blogs={newBlogs} />
             <Footer />
         </main>
     );

@@ -12,7 +12,6 @@
 
 .blog-widgets {
     flex-basis: 30%;
-    flex-direction: column;
 }
 
 @media (max-width: 768px) {

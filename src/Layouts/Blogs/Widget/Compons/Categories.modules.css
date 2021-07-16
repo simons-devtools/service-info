@@ -9,8 +9,6 @@
 .category-body ul {
     list-style: none;
     padding-inline-start: 0;
-    display: flex;
-    flex-direction: column-reverse;
 }
 
 .category-body ul li {
