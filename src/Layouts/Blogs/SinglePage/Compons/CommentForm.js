@@ -34,9 +34,6 @@ const CommentForm = ({ singleBlog }) => {
                 body: JSON.stringify(commentsData)
             })
                 .then(res => {
-                    if (res) {
-                        commentsData = {};
-                    }
                     alert('Your are successfully review our project');
                 });
         }
