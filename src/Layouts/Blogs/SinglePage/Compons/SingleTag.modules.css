@@ -8,16 +8,12 @@
 }
 
 .blog-single-tag li {
-    padding: 5px 8px;
-    margin: 10px 15px 10px 0;
-    background-color: #66b1ee;
-}
-
-.blog-single-tag li a {
     color: azure;
     font-size: 16px;
     font-weight: 600;
-    text-decoration: none;
+    padding: 5px 8px;
+    margin: 10px 15px 10px 0;
+    background-color: #66b1ee;
 }
 
 .blog-share-option h2 {

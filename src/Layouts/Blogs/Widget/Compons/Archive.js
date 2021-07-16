@@ -1,44 +1,34 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import { useState } from 'react';
 
-const useStyles = makeStyles((theme) => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    heading: {
+
+const Archive = ({ blogs }) => {
+    const [archived, setArchived] = useState([])
+
+    // .....
+
+
+    // Handle blur func:
+    const handleGetMonth = (event) => {
+        let newMonth = event.target.value;
+        const newBlogs = blogs.filter(blog => blog.date === newMonth)
+        setArchived(newBlogs);
+    }
+    console.log(archived);
+
+    // Archived styles:
+    const heading = {
         color: '#999',
         fontSize: '20px',
         letterSpacing: '2px',
         textTransform: 'uppercase',
         marginTop: '30px',
-    },
-    textField: {
-        marginLeft: theme.spacing(0),
-        marginRight: theme.spacing(1),
-        width: 233,
-    },
-}));
-
-const Archive = () => {
-    const classes = useStyles();
+    }
 
     return (
         <div>
-            <h2 className={classes.heading}>Archived</h2>
-            <form className={classes.container} noValidate>
-                <TextField
-                    id="month"
-                    label="Input any month or year"
-                    type="month"
-                    defaultValue={new Date()}
-                    className={classes.textField}
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                />
-            </form>
+            <h2 className={heading}>Archived</h2>
+            <input onBlur={handleGetMonth} type="month" name="month" id="month" />
         </div>
     );
 }
