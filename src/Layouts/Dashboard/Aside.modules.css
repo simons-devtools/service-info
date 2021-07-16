@@ -9,7 +9,7 @@
     height: 70%;
     margin-left: 17%;
     overflow: scroll;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     z-index: -1;
 }
@@ -21,7 +21,7 @@
     height: 70%;
     background-color: #fff;
     overflow: scroll;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 

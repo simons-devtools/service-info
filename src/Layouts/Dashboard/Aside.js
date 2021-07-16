@@ -19,6 +19,7 @@ import {
     Link
 } from "react-router-dom";
 import { useState } from 'react';
+import { Container } from '@material-ui/core';
 
 const Aside = () => {
     const [toggle, setToggle] = useState(false);
@@ -91,40 +92,42 @@ const Aside = () => {
     };
 
     return (
-        <div className="dashboard-container">
-            <div
-                onClick={() => bargerBtn(true)}
-                id="humbargerBtn"
-                className="humbarger">
-                <HorizontalSplitIcon />
-            </div>
-            <Router>
-                <div className="dash-nav-wrapper">
-                    <div id="dashMenu" className="dash-nav-aside">
-                        <h1>Dashboard</h1>
-                        <ul className="dash-navbar">
-                            {
-                                routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
-                            }
-                        </ul>
-                        <button className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
-                    </div>
-
-                    <div className="dash-nav-main">
-                        <Switch>
-                            {routes.map((route, index) => (
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    children={<route.main />}
-                                />
-                            ))}
-                        </Switch>
-                    </div>
+        // <Container>
+            <div className="dashboard-container">
+                <div
+                    onClick={() => bargerBtn(true)}
+                    id="humbargerBtn"
+                    className="humbarger">
+                    <HorizontalSplitIcon />
                 </div>
-            </Router>
-        </div>
+                <Router>
+                    <div className="dash-nav-wrapper">
+                        <div id="dashMenu" className="dash-nav-aside">
+                            <h1>Dashboard</h1>
+                            <ul className="dash-navbar">
+                                {
+                                    routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
+                                }
+                            </ul>
+                            <button className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
+                        </div>
+
+                        <div className="dash-nav-main">
+                            <Switch>
+                                {routes.map((route, index) => (
+                                    <Route
+                                        key={index}
+                                        path={route.path}
+                                        exact={route.exact}
+                                        children={<route.main />}
+                                    />
+                                ))}
+                            </Switch>
+                        </div>
+                    </div>
+                </Router>
+            </div>
+        // </Container>
     );
 };
 

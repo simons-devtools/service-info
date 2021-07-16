@@ -9,9 +9,6 @@
 .posts-body {
     display: flex;
     flex-wrap: wrap;
-}
-
-.posts-body {
     list-style: none;
     padding-inline-start: 0;
 }
