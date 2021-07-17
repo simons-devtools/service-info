@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../HStylies/HBlogs.modules.css';
 import { Container } from '@material-ui/core';
 import HBContent from '../HComponents/HBContent';
-import image1 from '../../../Assets/Home-images/blog-1.jpg';
-import image2 from '../../../Assets/Home-images/blog-2.jpg';
-import image3 from '../../../Assets/Home-images/blog-3.jpg';
+import { useState } from 'react';
 
 const HBlogs = () => {
-    const blogs = [
-        { "_id": 1, "title": "What and why is react.js", "image": image1 },
-        { "_id": 2, "title": "What and why is node.js", "image": image2 },
-        { "_id": 3, "title": "What is mongodb cloud.js", "image": image3 },
-    ];
+    const [blogs, setBlogs] = useState([]);
+    const newBlogs = blogs.slice(0).reverse();
+    const fixedBlogs = newBlogs.splice(0, 3);
+
+    // Loaded the blog post for home page:
+    useEffect(() => {
+        fetch('http://localhost:5000/blogs')
+            .then(response => response.json())
+            .then(data => setBlogs(data))
+    }, [])
 
     return (
         <section>
@@ -22,7 +25,7 @@ const HBlogs = () => {
                 </div>
                 <div className="blogs-content">
                     {
-                        blogs.map(blog => <HBContent
+                        fixedBlogs.map(blog => <HBContent
                             key={blog._id}
                             blog={blog}
                         />)

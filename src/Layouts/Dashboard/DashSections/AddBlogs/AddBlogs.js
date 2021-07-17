@@ -1,3 +1,4 @@
+import './AddBlogs.modules.css';
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -12,9 +13,10 @@ const AddEcommerce = () => {
             title: data.title,
             category: data.category,
             author: data.author,
-            date: data.date,
+            date: data.month,
             image: photoUrl,
             description: data.description,
+            topics: data.topic,
             tags: [
                 data.tag1,
                 data.tag2,
@@ -62,7 +64,8 @@ const AddEcommerce = () => {
                     <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
                     <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
                     <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
-                    <input type="date" placeholder={new Date()} {...register("date", { required: true })} /> <br />
+                    <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
+                    <input type="month" {...register("month", { required: true })} /> <br />
                     <input type="file" onChange={handleImageUpload} /> <br />
                     <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
                     <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
