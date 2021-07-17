@@ -1,13 +1,90 @@
-import React from 'react';
-import './AddAdmins.modules.css';
+import axios from "axios";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import '../AddStyles/AddStyles.modules.css.css';
 
-const AddAdmins = () => {
+const AddEcommerce = () => {
+    const { register, handleSubmit } = useForm();
+    const [photoUrl, setPhotoUrl] = useState(null);
+
+    // Handle form Submition:
+    const onSubmit = (data) => {
+        const blogsData = {
+            title: data.title,
+            category: data.category,
+            author: data.author,
+            date: data.month,
+            image: photoUrl,
+            description: data.description,
+            topics: data.topic,
+            tags: [
+                data.tag1,
+                data.tag2,
+                data.tag3,
+                data.tag4,
+            ],
+        };
+        const url = `http://localhost:5000/addBlogs`;
+        // console.log(blogsData);
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(blogsData)
+        })
+            .then(res => {
+                alert('Your blog is added to the mongodb blogs storage!');
+            });
+    };
+
+    // Handle Images Upload:
+    const handleImageUpload = (e) => {
+        // console.log(e.target.files[0]);
+        const photoData = new FormData();
+        photoData.set('key', '7d2598c0cf9adb7c67d11745142e540b'); // For the img hosting provider site api key here!!
+        photoData.append('image', e.target.files[0])
+
+        // GET imgbb photo-url and POST to MDB server:
+        axios.post('https://api.imgbb.com/1/upload', photoData)
+            .then(function (response) {
+                setPhotoUrl(response.data.data.display_url);
+                // console.log(response.data.data.display_url); // for img url
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     return (
-        <div>
-            <h2>Add admins contents</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur rerum voluptatem totam, numquam necessitatibus eos recusandae soluta accusamus cum corrupti harum. Vel suscipit earum mollitia velit corrupti, aperiam, modi exercitationem esse, libero minus aut beatae pariatur magni commodi impedit alias veniam sapiente quaerat error inventore facere soluta iusto nostrum dolore. Sint odit consequuntur recusandae, repellat ipsa beatae iste amet fuga dolorem id labore qui repudiandae! Corrupti consequatur officia consequuntur nesciunt necessitatibus suscipit voluptatem expedita ad porro magni. Vero placeat illo tenetur deleniti nulla nihil fugiat, voluptatem nobis error enim incidunt voluptatum laboriosam. Maiores aspernatur cum nesciunt obcaecati, iusto distinctio minima quo quae tempore explicabo eveniet libero repudiandae asperiores nostrum adipisci, ea consequatur nisi culpa, dolorum nam quam amet. Blanditiis esse eos assumenda. Esse repellendus nisi necessitatibus voluptatem tenetur consequatur possimus accusantium ut molestias saepe iusto, quia minus corrupti atque ea, commodi, in illum illo. Eos in nam corrupti atque assumenda mollitia. Minus voluptatum saepe, eaque neque sit numquam unde corporis dolor asperiores repellat perspiciatis, inventore dolorum deleniti enim omnis non eligendi exercitationem repellendus expedita culpa blanditiis cumque nesciunt maiores vero? Tenetur rem, earum voluptatibus numquam quaerat nisi alias delectus officia sint totam facere est sapiente quis, laboriosam repellat. Dolore est tempore odio maiores delectus inventore dicta necessitatibus, voluptate asperiores ad iure officia neque beatae laborum alias quod velit assumenda consectetur ipsum voluptatum maxime? Quam nihil, eos earum et nam ipsum ex. Officia expedita, facere harum eum ipsa earum atque soluta cumque nemo quia nesciunt possimus enim eius totam dignissimos voluptatum ut, dolorem necessitatibus vel, aperiam recusandae? Maiores iusto, beatae eligendi quidem amet quibusdam sapiente ipsum pariatur nulla excepturi autem numquam quo, voluptatum suscipit omnis dolore! Non dolore sapiente, maxime omnis rem corporis eius ea explicabo maiores a, tenetur tempore consequuntur, eaque amet quibusdam cum. Molestias nam beatae, aut dignissimos officia quia odit nostrum aliquam, reiciendis repellendus provident, unde eos ab quas maiores! Voluptatibus quibusdam minima animi rerum voluptates saepe ut iusto labore distinctio aperiam? Iure nihil eos blanditiis maiores, voluptatem amet ipsa unde soluta praesentium dolores sed a perspiciatis accusamus eius at aliquam, error ratione, minima harum reprehenderit commodi repudiandae omnis veritatis cupiditate. Voluptates excepturi architecto ex repudiandae optio expedita rerum illum itaque? Non quidem suscipit id magni deleniti quo dolorum vel eius nemo modi. Modi quo quos aut cum voluptas recusandae. Amet soluta saepe veniam? Laborum tempore repellat sed a quasi ratione ipsam quidem dolorum quae quod accusantium accusamus asperiores, blanditiis nobis est eum recusandae voluptatum iste! Soluta nihil error inventore odit quod exercitationem, consectetur illo ab cumque voluptas amet tempora voluptatibus hic aut reprehenderit cupiditate? At facilis nemo animi tempora quam reprehenderit quisquam iste in amet eveniet fugit quos magni necessitatibus laudantium ab tempore laborum saepe dicta, eligendi vitae aperiam numquam quaerat quibusdam voluptatum! Magni quidem beatae fugiat vitae dolorem exercitationem officiis expedita cumque minima, accusantium consequatur ullam distinctio nam quia a, nemo optio voluptate. Tempore eveniet, quibusdam dolore exercitationem iusto voluptates accusantium atque. Quo, vero, dignissimos nisi ratione voluptas minima perspiciatis voluptatum aliquam explicabo ipsam ducimus et?</h3>
+        <div style={{ margin: '20px 10px' }}>
+            <h2>Add admins to the cloud storage</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="form-contents">
+                    <div className="left-input">
+                        <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
+                        <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
+                        <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
+                        <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
+                        <input type="month" {...register("month", { required: true })} /> <br />
+                    </div>
+
+                    <div className="middle-input">
+                        <input type="file" onChange={handleImageUpload} /> <br />
+                        <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
+                        <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
+                        <input type="tag3" placeholder="Tag3" {...register("tag3", { required: true })} /> <br />
+                        <input type="tag4" placeholder="Tag4" {...register("tag4", { required: true })} /> <br />
+                    </div>
+
+                    <div className="right-input">
+                        <textarea type="description" placeholder="Blog Description" {...register("description", { required: true })} />
+                        <button type="submit" className="submit-button">Post now</button>
+                    </div>
+                </div>
+            </form>
         </div>
     );
 };
 
-export default AddAdmins;
+export default AddEcommerce;

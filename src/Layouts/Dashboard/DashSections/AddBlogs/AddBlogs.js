@@ -1,7 +1,7 @@
-import './AddBlogs.modules.css';
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import '../AddStyles/AddStyles.modules.css.css';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
@@ -58,21 +58,29 @@ const AddEcommerce = () => {
 
     return (
         <div style={{ margin: '20px 10px' }}>
-            <h2>Add your themes/applicatins</h2>
+            <h2>Add blogs to the cloud storage</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
-                    <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
-                    <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
-                    <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
-                    <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
-                    <input type="month" {...register("month", { required: true })} /> <br />
-                    <input type="file" onChange={handleImageUpload} /> <br />
-                    <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
-                    <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
-                    <input type="tag3" placeholder="Tag3" {...register("tag3", { required: true })} /> <br />
-                    <input type="tag4" placeholder="Tag4" {...register("tag4", { required: true })} /> <br />
-                    <textarea type="description" placeholder="Blog Description" {...register("description", { required: true })} />
-                    <button type="submit" className="submit-button">Post now</button>
+                    <div className="left-input">
+                        <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
+                        <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
+                        <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
+                        <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
+                        <input type="month" {...register("month", { required: true })} /> <br />
+                    </div>
+
+                    <div className="middle-input">
+                        <input type="file" onChange={handleImageUpload} /> <br />
+                        <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
+                        <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
+                        <input type="tag3" placeholder="Tag3" {...register("tag3", { required: true })} /> <br />
+                        <input type="tag4" placeholder="Tag4" {...register("tag4", { required: true })} /> <br />
+                    </div>
+
+                    <div className="right-input">
+                        <textarea type="description" placeholder="Blog Description" {...register("description", { required: true })} />
+                        <button type="submit" className="submit-button">Post now</button>
+                    </div>
                 </div>
             </form>
         </div>

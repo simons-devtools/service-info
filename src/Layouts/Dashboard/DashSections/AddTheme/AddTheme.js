@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import '../AddStyles/AddStyles.modules.css.css';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
@@ -52,18 +53,24 @@ const AddEcommerce = () => {
 
     return (
         <div style={{ margin: '20px 10px' }}>
-            <h2>Add your themes/applicatins</h2>
+            <h2>Add themes to the cloud storage</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
-                    <input type="name" placeholder="Theme Name" {...register("name", { required: true })} /> <br />
-                    <input type="price" placeholder="Theme Price" {...register("price", { required: true })} /> <br />
-                    <input type="brand" placeholder="Theme brand" {...register("brand", { required: true })} /> <br />
-                    <input type="category" placeholder="Theme category" {...register("category", { required: true })} /> <br />
-                    <input type="date" placeholder="Theme category" {...register("date", { required: true })} /> <br />
-                    <input type="url" placeholder="Theme url" {...register("url", { required: true })} /> <br />
-                    <input type="file" onChange={handleImageUpload} /> <br />
-                    <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />
-                    <button type="submit" className="submit-button">Post now</button>
+                    <div className="left-input">
+                        <input type="name" placeholder="Theme Name" {...register("name", { required: true })} /> <br />
+                        <input type="price" placeholder="Theme Price" {...register("price", { required: true })} /> <br />
+                        <input type="brand" placeholder="Theme brand" {...register("brand", { required: true })} /> <br />
+                        <input type="category" placeholder="Theme category" {...register("category", { required: true })} /> <br />
+                    </div>
+                    <div className="middle-input">
+                        <input type="date" placeholder="Theme category" {...register("date", { required: true })} /> <br />
+                        <input type="url" placeholder="Theme url" {...register("url", { required: true })} /> <br />
+                        <input type="file" onChange={handleImageUpload} /> <br />
+                    </div>
+                    <div className="right-input">
+                        <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />
+                        <button type="submit" className="submit-button">Post now</button>
+                    </div>
                 </div>
             </form>
         </div>

@@ -6,10 +6,10 @@ import Main from './DashSections/Main/Main';
 import OrdersList from './DashSections/OrdersList/OrdersList';
 import Profile from './DashSections/Profile/Profile';
 import AddBlogs from './DashSections/AddBlogs/AddBlogs';
-import AddEcommerce from './DashSections/AddEcommerce/AddEcommerce';
+import AddTheme from './DashSections/AddTheme/AddTheme';
 import AddAdmins from './DashSections/AddAdmins/AddAdmins';
 import BlogsList from './DashSections/BlogsList/BlogsList';
-import EcommerceList from './DashSections/EcommerceList/EcommerceList';
+import ThemeList from './DashSections/ThemeList/ThemeList';
 import UsersList from './DashSections/UsersList/UsersList';
 import AdminsList from './DashSections/AdminsList/AdminsList';
 import {
@@ -48,9 +48,9 @@ const Aside = () => {
             main: () => <AddBlogs />
         },
         {
-            path: "/add-ecommerce",
-            menu: 'Add e-Commerce',
-            main: () => <AddEcommerce />
+            path: "/add-theme",
+            menu: 'Add themes',
+            main: () => <AddTheme />
         },
         {
             path: "/add-admin",
@@ -63,9 +63,9 @@ const Aside = () => {
             main: () => <BlogsList />
         },
         {
-            path: "/all-application",
-            menu: 'All application',
-            main: () => <EcommerceList />
+            path: "/theme-list",
+            menu: 'Theme list',
+            main: () => <ThemeList />
         },
         {
             path: "/user-board",
@@ -92,7 +92,7 @@ const Aside = () => {
     };
 
     return (
-        // <Container>
+        <Container>
             <div className="dashboard-container">
                 <div
                     onClick={() => bargerBtn(true)}
@@ -127,19 +127,8 @@ const Aside = () => {
                     </div>
                 </Router>
             </div>
-        // </Container>
+        </Container>
     );
 };
 
 export default Aside;
-
-                                // <li><Link to="/">Home</Link></li>
-                                // <li><Link to="/order-list">Order list</Link></li>
-                                // <li><Link to="/my-account">My account</Link></li>
-                                // <li><Link to="/add-blog">Add blogs</Link></li>
-                                // <li><Link to="/add-ecommerce">Add e-commerce</Link></li>
-                                // <li><Link to="/add-admin">Add admins</Link></li>
-                                // <li><Link to="/blog-list">Blog list</Link></li>
-                                // <li><Link to="/all-application">All application</Link></li>
-                                // <li><Link to="/user-board">Users board</Link></li>
-                                // <li><Link to="/admin-manage">Admins manage</Link></li>
