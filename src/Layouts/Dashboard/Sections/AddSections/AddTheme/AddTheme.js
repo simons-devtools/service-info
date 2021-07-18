@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import '../AddStyles/AddStyles.modules.css.css';
+import '../AddStyles.modules.css.css';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
@@ -9,32 +9,28 @@ const AddEcommerce = () => {
 
     // Handle form Submition:
     const onSubmit = (data) => {
-        const blogsData = {
-            title: data.title,
+        const themesData = {
+            name: data.name,
+            price: data.price,
+            brand: data.brand,
             category: data.category,
-            author: data.author,
-            date: data.month,
-            image: photoUrl,
-            description: data.description,
-            topics: data.topic,
-            tags: [
-                data.tag1,
-                data.tag2,
-                data.tag3,
-                data.tag4,
-            ],
+            date: data.date,
+            url: data.url,
+            detail: data.detail,
+            version: data.version,
+            image: photoUrl
         };
-        const url = `http://localhost:5000/addBlogs`;
-        // console.log(blogsData);
+        const url = `http://localhost:5000/addThemes`;
+        // console.log(themesData);
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(blogsData)
+            body: JSON.stringify(themesData)
         })
             .then(res => {
-                alert('Your blog is added to the mongodb blogs storage!');
+                alert('Your theme is added to the mongodb products storage!');
             });
     };
 
@@ -58,29 +54,25 @@ const AddEcommerce = () => {
 
     return (
         <div className="form-main-div">
-            <h2>Add blogs to the cloud storage</h2>
-            <small>Note: Topics must be have [ 1. creative-design / 2. font-end / 3. back-end / 4. data-storage / 5. basic-javaScript ]</small>
-            
+            <h2>Add themes to the cloud storage</h2>
+            <small>Note: Category must be have [ 1. single / 2. multiple / 3. ecommerce ]</small>
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
-                        <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
+                        <input type="name" placeholder="Name" {...register("name", { required: true })} /> <br />
+                        <input type="price" placeholder="Price" {...register("price", { required: true })} /> <br />
+                        <input type="brand" placeholder="Brand" {...register("brand", { required: true })} /> <br />
                         <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
-                        <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
-                        <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
-                        <input type="month" {...register("month", { required: true })} /> <br />
                     </div>
-
                     <div className="middle-input">
                         <input type="file" onChange={handleImageUpload} /> <br />
-                        <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
-                        <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
-                        <input type="tag3" placeholder="Tag3" {...register("tag3", { required: true })} /> <br />
-                        <input type="tag4" placeholder="Tag4" {...register("tag4", { required: true })} /> <br />
+                        <input type="date" {...register("date", { required: true })} /> <br />
+                        <input type="url" placeholder="Url" {...register("url", { required: true })} /> <br />
+                        <input type="version" placeholder="Version" {...register("version", { required: true })} /> <br />
                     </div>
-
                     <div className="right-input">
-                        <textarea type="description" placeholder="Blog Description" {...register("description", { required: true })} />
+                        <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />
                         <button type="submit" className="submit-button">Post now</button>
                     </div>
                 </div>

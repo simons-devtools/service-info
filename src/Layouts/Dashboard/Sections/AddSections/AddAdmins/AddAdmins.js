@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import '../AddStyles/AddStyles.modules.css.css';
+import '../AddStyles.modules.css.css';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
