@@ -57,7 +57,7 @@ const AddEcommerce = () => {
     }
 
     return (
-        <div style={{ margin: '20px 10px' }}>
+        <div>
             <h2>Add admins to the cloud storage</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
