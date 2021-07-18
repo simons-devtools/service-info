@@ -1,6 +1,12 @@
+.form-main-div small {
+    font-weight: bold;
+    color: #66b1aa;
+}
+
 .form-contents {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .middle-input {

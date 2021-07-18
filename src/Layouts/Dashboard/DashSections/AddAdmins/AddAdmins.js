@@ -9,32 +9,24 @@ const AddEcommerce = () => {
 
     // Handle form Submition:
     const onSubmit = (data) => {
-        const blogsData = {
-            title: data.title,
-            category: data.category,
-            author: data.author,
-            date: data.month,
+        const adminsData = {
+            name: data.name,
+            email: data.email,
+            role: data.role,
+            date: data.date,
+            biodata: data.biodata,
             image: photoUrl,
-            description: data.description,
-            topics: data.topic,
-            tags: [
-                data.tag1,
-                data.tag2,
-                data.tag3,
-                data.tag4,
-            ],
         };
-        const url = `http://localhost:5000/addBlogs`;
-        // console.log(blogsData);
+        const url = `http://localhost:5000/addAdmins`;
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(blogsData)
+            body: JSON.stringify(adminsData)
         })
             .then(res => {
-                alert('Your blog is added to the mongodb blogs storage!');
+                alert('Your admin is added to the mongodb admins storage!');
             });
     };
 
@@ -57,28 +49,25 @@ const AddEcommerce = () => {
     }
 
     return (
-        <div>
+        <div className="form-main-div">
             <h2>Add admins to the cloud storage</h2>
+            <small>Note: Roles must be have [ 1. manager / 2. designer / 3. developer ]</small>
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
-                        <input type="title" placeholder="Title" {...register("title", { required: true })} /> <br />
-                        <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
-                        <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
-                        <input type="topic" placeholder="Topic" {...register("topic", { required: true })} /> <br />
-                        <input type="month" {...register("month", { required: true })} /> <br />
+                        <input type="name" placeholder="Name" {...register("name", { required: true })} /> <br />
+                        <input type="email" placeholder="Email" {...register("email", { required: true })} /> <br />
+                        <input type="role" placeholder="Role" {...register("role", { required: true })} /> <br />
                     </div>
 
                     <div className="middle-input">
                         <input type="file" onChange={handleImageUpload} /> <br />
-                        <input type="tag1" placeholder="Tag1" {...register("tag1", { required: true })} /> <br />
-                        <input type="tag2" placeholder="Tag2" {...register("tag2", { required: true })} /> <br />
-                        <input type="tag3" placeholder="Tag3" {...register("tag3", { required: true })} /> <br />
-                        <input type="tag4" placeholder="Tag4" {...register("tag4", { required: true })} /> <br />
+                        <input type="date" {...register("date", { required: true })} /> <br />
                     </div>
 
                     <div className="right-input">
-                        <textarea type="description" placeholder="Blog Description" {...register("description", { required: true })} />
+                        <textarea type="biodata" placeholder="Admin Biodata" {...register("biodata", { required: true })} />
                         <button type="submit" className="submit-button">Post now</button>
                     </div>
                 </div>

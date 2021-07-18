@@ -17,6 +17,7 @@ const AddEcommerce = () => {
             date: data.date,
             url: data.url,
             detail: data.detail,
+            version: data.version,
             image: photoUrl
         };
         const url = `http://localhost:5000/addThemes`;
@@ -52,20 +53,23 @@ const AddEcommerce = () => {
     }
 
     return (
-        <div>
+        <div className="form-main-div">
             <h2>Add themes to the cloud storage</h2>
+            <small>Note: Category must be have [ 1. single / 2. multiple / 3. ecommerce ]</small>
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
-                        <input type="name" placeholder="Theme Name" {...register("name", { required: true })} /> <br />
-                        <input type="price" placeholder="Theme Price" {...register("price", { required: true })} /> <br />
-                        <input type="brand" placeholder="Theme brand" {...register("brand", { required: true })} /> <br />
-                        <input type="category" placeholder="Theme category" {...register("category", { required: true })} /> <br />
+                        <input type="name" placeholder="Name" {...register("name", { required: true })} /> <br />
+                        <input type="price" placeholder="Price" {...register("price", { required: true })} /> <br />
+                        <input type="brand" placeholder="Brand" {...register("brand", { required: true })} /> <br />
+                        <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
                     </div>
                     <div className="middle-input">
-                        <input type="date" placeholder="Theme category" {...register("date", { required: true })} /> <br />
-                        <input type="url" placeholder="Theme url" {...register("url", { required: true })} /> <br />
                         <input type="file" onChange={handleImageUpload} /> <br />
+                        <input type="date" {...register("date", { required: true })} /> <br />
+                        <input type="url" placeholder="Url" {...register("url", { required: true })} /> <br />
+                        <input type="version" placeholder="Version" {...register("version", { required: true })} /> <br />
                     </div>
                     <div className="right-input">
                         <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />

@@ -73,8 +73,8 @@ const Aside = () => {
             main: () => <UsersList />
         },
         {
-            path: "/admin-manage",
-            menu: 'Admins manage',
+            path: "/admin-board",
+            menu: 'Admins board',
             main: () => <AdminsList />
         },
     ];

@@ -57,8 +57,10 @@ const AddEcommerce = () => {
     }
 
     return (
-        <div>
+        <div className="form-main-div">
             <h2>Add blogs to the cloud storage</h2>
+            <small>Note: Topics must be have [ 1. creative-design / 2. font-end / 3. back-end / 4. data-storage / 5. basic-javaScript ]</small>
+            
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
