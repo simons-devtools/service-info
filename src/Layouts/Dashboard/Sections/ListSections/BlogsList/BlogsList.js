@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import '../ListStyles.modules.css';
 import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import BlogListCompon from './BlogListCompon';
 
 const BlogsList = () => {
     const [blogs, setBlogs] = useState([]);
+    const [singleBlog, setSingleBlog] = useState({});
+    // .....
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
 
     // Loaded the all blog:
     useEffect(() => {
@@ -14,35 +18,63 @@ const BlogsList = () => {
             .then(response => response.json())
             .then(data => setBlogs(data))
     }, [])
-    // console.log(blogs);
+
+    // .....
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = (option, addedBlog) => {
+        setSingleBlog(addedBlog);
+        setAnchorEl(null);
+
+        const myOption = document.getElementById('myOption');
+        myOption.style.display = 'block';
+        console.log(option);
+        console.log(addedBlog);
+    };
 
     return (
-        <div className="list-container">
+        <div>
             <h2>Blogs list contents</h2>
-            <table>
-                <tr>
-                    <th>Image</th>
-                    <th>Author</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Date</th>
-                    <th><SettingsEthernetIcon
-                        style={{ verticalAlign: 'middle' }} />
-                    </th>
-                </tr>
-                {
-                    blogs.map(blog =>
-                        <tr>
-                            <td><img src={blog.image} alt="" /></td>
-                            <td>{blog.author}</td>
-                            <td>{blog.title}</td>
-                            <td>{blog.category}</td>
-                            <td>{blog.date}</td>
-                            <td><MoreVertIcon /></td>
-                        </tr>
-                    )
-                }
-            </table>
+            <div id="myOption" className="option">
+                <div className="option-body">
+                    <h2>{singleBlog.title}</h2>
+                </div>
+            </div>
+
+            <div className="list-container">
+                <table>
+                    <tr>
+                        <th>Image</th>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th><SettingsEthernetIcon
+                            style={{ verticalAlign: 'middle' }} />
+                        </th>
+                    </tr>
+                    {
+                        blogs.map(blog =>
+                            <tr>
+                                <td><img src={blog.image} alt="" /></td>
+                                <td>{blog.author}</td>
+                                <td>{blog.title}</td>
+                                <td>{blog.category}</td>
+                                <td>{blog.date}</td>
+                                <td><BlogListCompon
+                                    blog={blog}
+                                    anchorEl={anchorEl}
+                                    open={open}
+                                    handleClick={handleClick}
+                                    handleClose={handleClose}
+                                /></td>
+                            </tr>
+                        )
+                    }
+                </table>
+            </div>
         </div >
     );
 };

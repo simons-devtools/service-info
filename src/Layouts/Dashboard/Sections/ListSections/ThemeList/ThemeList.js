@@ -32,7 +32,7 @@ const ThemeList = () => {
                 </tr>
                 {
                     themes.map(theme =>
-                        <tr>
+                        <tr key={theme._id}>
                             <td><img src={theme.image} alt="" /></td>
                             <td>{theme.name}</td>
                             <td>{theme.brand}</td>
