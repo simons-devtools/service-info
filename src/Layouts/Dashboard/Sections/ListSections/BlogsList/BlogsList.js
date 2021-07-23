@@ -1,16 +1,19 @@
 import React from 'react';
+import '../ListStyles.modules.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import '../ListStyles.modules.css';
 import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
 import BlogListCompon from './BlogListCompon';
+import View from '../Modals/View';
+import Edit from '../Modals/Edit';
+import Delete from '../Modals/Delete';
 
 const BlogsList = () => {
     const [blogs, setBlogs] = useState([]);
     const [singleBlog, setSingleBlog] = useState({});
-    // .....
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
+    const [optionValue, setOptionValue] = useState('');
 
     // Loaded the all blog:
     useEffect(() => {
@@ -20,29 +23,68 @@ const BlogsList = () => {
     }, [])
 
     // .....
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = (option, addedBlog) => {
-        setSingleBlog(addedBlog);
+    const handleClose = (addedValue) => {
+        setOptionValue(addedValue);
+        if (addedValue === 'View') {
+            const optionView = document.getElementById('optionView')
+            optionView.style.display = 'block';
+        }
+        else if (addedValue === 'Edit') {
+            const optionEdit = document.getElementById('optionEdit')
+            optionEdit.style.display = 'block';
+        }
+        else if (addedValue === 'Delete') {
+            const optionDelete = document.getElementById('optionDelete')
+            optionDelete.style.display = 'block';
+        }
+        else {
+            console.log('Value of null');
+        }
         setAnchorEl(null);
-
-        const myOption = document.getElementById('myOption');
-        myOption.style.display = 'block';
-        console.log(option);
-        console.log(addedBlog);
     };
+
+    // .....
+    const modalClose = (addedClose) => {
+        if (optionValue === 'View') {
+            const optionView = document.getElementById('optionView')
+            optionView.style.display = 'none';
+        }
+        else if (optionValue === 'Edit') {
+            const optionEdit = document.getElementById('optionEdit')
+            optionEdit.style.display = 'none';
+        }
+        else if (addedClose === 'Delete') {
+            const optionDelete = document.getElementById('optionDelete')
+            optionDelete.style.display = 'none';
+        }
+        else {
+            setOptionValue('');
+        }
+    }
+
 
     return (
         <div>
             <h2>Blogs list contents</h2>
-            <div id="myOption" className="option">
-                <div className="option-body">
-                    <h2>{singleBlog.title}</h2>
+            <div>
+                <div id="optionView" className="option">
+                    <strong onClick={modalClose} className="cross">X</strong>
+                    <View
+                        singleBlog={singleBlog}
+                        modalClose={modalClose}
+                    />
+                </div>
+                <div id="optionEdit" className="option">
+                    <strong onClick={modalClose} className="cross">X</strong>
+                    <Edit singleBlog={singleBlog} />
+                </div>
+                <div id="optionDelete" className="option">
+                    <strong onClick={modalClose} className="cross">X</strong>
+                    <Delete singleBlogId={singleBlog._id} />
                 </div>
             </div>
 
+            {/* ..... */}
             <div className="list-container">
                 <table>
                     <tr>
@@ -65,10 +107,11 @@ const BlogsList = () => {
                                 <td>{blog.date}</td>
                                 <td><BlogListCompon
                                     blog={blog}
-                                    anchorEl={anchorEl}
-                                    open={open}
-                                    handleClick={handleClick}
+                                    setSingleBlog={setSingleBlog}
                                     handleClose={handleClose}
+                                    anchorEl={anchorEl}
+                                    setAnchorEl={setAnchorEl}
+                                    open={open}
                                 /></td>
                             </tr>
                         )

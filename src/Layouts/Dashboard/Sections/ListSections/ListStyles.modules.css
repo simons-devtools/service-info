@@ -4,8 +4,9 @@
 }
 
 .list-container table th {
-    position: sticky;
-    top: 0;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /* top: 0; */
     font-size: 18px;
     padding: 10px;
     text-align: left;
@@ -33,6 +34,29 @@
 
 .option {
     display: none;
+    position: fixed;
+    top: 29.3%;
+    right: 0;
+    bottom: 0;
+    left: 16%;
+    background-color: #000;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+}
+
+.cross {
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.cross:hover {
+    color: red;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -13,7 +13,12 @@ const options = [
 const ITEM_HEIGHT = 48;
 
 const BlogListCompon = (props) => {
-    const { blog, anchorEl, open, handleClick, handleClose } = props;
+    const { blog, setSingleBlog, handleClose, anchorEl, setAnchorEl, open } = props;
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+        setSingleBlog(blog);
+    };
 
     return (
         <div>
@@ -39,7 +44,7 @@ const BlogListCompon = (props) => {
                 }}
             >
                 {options.map((option) => (
-                    <MenuItem key={option} selected={option === 'Pyxis'} onClick={() => handleClose(option, blog)}>
+                    <MenuItem key={option} selected={option === 'Pyxis'} onClick={() => handleClose(option)}>
                         {option}
                     </MenuItem>
                 ))}
