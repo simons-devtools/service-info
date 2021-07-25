@@ -12,12 +12,12 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-const BlogListCompon = (props) => {
-    const { blog, setSingleBlog, handleClose, anchorEl, setAnchorEl, open } = props;
+const Options = (props) => {
+    const { post, setSinglePost, handleClose, anchorEl, setAnchorEl, open } = props;
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-        setSingleBlog(blog);
+        setSinglePost(post);
     };
 
     return (
@@ -53,4 +53,4 @@ const BlogListCompon = (props) => {
     );
 }
 
-export default BlogListCompon;
+export default Options;

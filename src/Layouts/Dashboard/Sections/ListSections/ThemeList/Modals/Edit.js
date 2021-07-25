@@ -3,38 +3,36 @@ import React, { useState } from "react";
 import './ModalStyles.modules.css';
 import { useForm } from "react-hook-form";
 
-const Edit = ({ singleBlog, modalClose }) => {
-    const { _id, author, category, title, description, date, topics, tags, image } = singleBlog;
+const Edit = ({ singleTheme, modalClose }) => {
+    const { _id, name, price, category, image, date, detail, features, version, author, discount, brand } = singleTheme;
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
 
     // Handle form Submition:
     const onSubmit = (data) => {
         const modifyData = {
-            title: data.title || title,
+            name: data.name || name,
+            price: data.price || price,
             category: data.category || category,
             author: data.author || author,
             date: data.month || date,
             image: photoUrl || image,
-            description: data.description || description,
-            topics: data.topic || topics,
-            tags: [
-                data.tag1 || tags[0],
-                data.tag2 || tags[1],
-                data.tag3 || tags[2],
-                data.tag4 || tags[3],
-            ],
+            detail: data.detail || detail,
+            features: data.features || features,
+            version: data.version || version,
+            discount: data.discount || discount,
+            brand: data.brand || brand,
         };
         // console.log(modifyData);
-        fetch(`http://localhost:5000/updateBlog/${_id}`, {
+        fetch(`http://localhost:5000/updateTheme/${_id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(modifyData)
         })
             .then(response => {
                 // console.log(response);
-                alert('Your blog is updated to the mongodb blogs storage!');
                 modalClose('Edit');
+                alert('Your theme is updated to the mongodb themes storage!');
             });
     };
 
@@ -58,28 +56,28 @@ const Edit = ({ singleBlog, modalClose }) => {
 
     return (
         <div className="view-body">
-            <h2>EDIT: {singleBlog.title}</h2>
+            <h2>EDIT: {singleTheme.name}</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
-                        <input type="title" defaultValue={title} {...register("title")} /> <br />
+                        <input type="name" defaultValue={name} {...register("name")} /> <br />
+                        <input type="price" defaultValue={price} {...register("price")} /> <br />
                         <input type="category" defaultValue={category} {...register("category")} /> <br />
                         <input type="author" defaultValue={author} {...register("author")} /> <br />
-                        <input type="topic" defaultValue={topics} {...register("topic")} /> <br />
                         <input type="month" defaultValue={date} {...register("month")} /> <br />
                     </div>
 
                     <div className="middle-input">
                         <input type="file" onChange={handleImageUpload} /> <br />
-                        <input type="tag1" defaultValue={tags && tags[0]} {...register("tag1")} /> <br />
-                        <input type="tag2" defaultValue={tags && tags[1]} {...register("tag2")} /> <br />
-                        <input type="tag3" defaultValue={tags && tags[2]} {...register("tag3")} /> <br />
-                        <input type="tag4" defaultValue={tags && tags[3]} {...register("tag4")} /> <br />
+                        <input type="brand" defaultValue={brand} {...register("brand")} /> <br />
+                        <input type="features" defaultValue={features} {...register("features")} /> <br />
+                        <input type="version" defaultValue={version} {...register("version")} /> <br />
+                        <input type="discount" defaultValue={discount} {...register("discount")} /> <br />
                     </div>
 
                     <div className="right-input">
-                        <textarea type="description" defaultValue={description} {...register("description")} />
+                        <textarea type="detail" defaultValue={detail} {...register("detail")} />
                         <button type="submit" className="submit-button">Update now</button>
                     </div>
                 </div>

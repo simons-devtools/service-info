@@ -3,14 +3,15 @@ import '../ListStyles.modules.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
-import BlogListCompon from './BlogListCompon';
-import View from '../Modals/View';
-import Edit from '../Modals/Edit';
-import Delete from '../Modals/Delete';
+import Options from './Options';
+import View from './Modals/View';
+import Edit from './Modals/Edit';
+import Delete from './Modals/Delete';
 
 const BlogsList = () => {
     const [blogs, setBlogs] = useState([]);
-    const [singleBlog, setSingleBlog] = useState({});
+    const newBlogs = blogs.slice(0).reverse();
+    const [singlePost, setSinglePost] = useState({});
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const [optionValue, setOptionValue] = useState('');
@@ -47,7 +48,7 @@ const BlogsList = () => {
 
     // Modal close:
     const modalClose = (addedValue) => {
-        console.log(addedValue);
+        // console.log(addedValue);
         if (optionValue === 'View') {
             const optionView = document.getElementById('optionView')
             optionView.style.display = 'none';
@@ -65,7 +66,6 @@ const BlogsList = () => {
         }
     }
 
-
     return (
         <div>
             <h2>Blogs list contents</h2>
@@ -74,20 +74,20 @@ const BlogsList = () => {
                 <div id="optionView" className="option">
                     <strong onClick={modalClose} className="cross">X</strong>
                     <View
-                        singleBlog={singleBlog}
+                        singleBlog={singlePost}
                         modalClose={modalClose}
                     />
                 </div>
                 <div id="optionEdit" className="option">
                     <strong onClick={modalClose} className="cross">X</strong>
                     <Edit
-                        singleBlog={singleBlog}
+                        singleBlog={singlePost}
                         modalClose={modalClose}
                     />
                 </div>
                 <div id="optionDelete" className="option">
                     <Delete
-                        singleBlogId={singleBlog._id}
+                        singleBlogId={singlePost._id}
                         modalClose={modalClose}
                     />
                 </div>
@@ -107,16 +107,16 @@ const BlogsList = () => {
                         </th>
                     </tr>
                     {
-                        blogs.map(blog =>
+                        newBlogs.map(blog =>
                             <tr>
                                 <td><img src={blog.image} alt="" /></td>
                                 <td>{blog.author}</td>
                                 <td>{blog.title}</td>
                                 <td>{blog.category}</td>
                                 <td>{blog.date}</td>
-                                <td><BlogListCompon
-                                    blog={blog}
-                                    setSingleBlog={setSingleBlog}
+                                <td><Options
+                                    post={blog}
+                                    setSinglePost={setSinglePost}
                                     handleClose={handleClose}
                                     anchorEl={anchorEl}
                                     setAnchorEl={setAnchorEl}

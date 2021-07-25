@@ -2,7 +2,6 @@ import React from 'react';
 import './ModalStyles.modules.css';
 
 const View = ({ singleBlog }) => {
-    // console.log(singleBlog);
     const { author, category, date, description, image, title, topics, tags, _id } = singleBlog;
 
     return (
