@@ -14,11 +14,13 @@ const AddEcommerce = () => {
             price: data.price,
             brand: data.brand,
             category: data.category,
+            author: data.author,
             date: data.date,
             url: data.url,
             detail: data.detail,
             version: data.version,
-            image: photoUrl
+            image: photoUrl,
+            discount: data.discount,
         };
         const url = `http://localhost:5000/addThemes`;
         // console.log(themesData);
@@ -64,12 +66,14 @@ const AddEcommerce = () => {
                         <input type="price" placeholder="Price" {...register("price", { required: true })} /> <br />
                         <input type="brand" placeholder="Brand" {...register("brand", { required: true })} /> <br />
                         <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
+                        <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
                     </div>
                     <div className="middle-input">
                         <input type="file" onChange={handleImageUpload} /> <br />
                         <input type="date" {...register("date", { required: true })} /> <br />
                         <input type="url" placeholder="Url" {...register("url", { required: true })} /> <br />
                         <input type="version" placeholder="Version" {...register("version", { required: true })} /> <br />
+                        <input type="discount" placeholder="Discount" {...register("discount", { required: true })} /> <br />
                     </div>
                     <div className="right-input">
                         <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />
