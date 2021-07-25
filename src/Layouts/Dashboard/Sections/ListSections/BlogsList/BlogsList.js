@@ -22,38 +22,41 @@ const BlogsList = () => {
             .then(data => setBlogs(data))
     }, [])
 
-    // .....
+    // Options close and Modal open:
     const handleClose = (addedValue) => {
-        setOptionValue(addedValue);
         if (addedValue === 'View') {
+            setOptionValue(addedValue);
             const optionView = document.getElementById('optionView')
             optionView.style.display = 'block';
         }
         else if (addedValue === 'Edit') {
+            setOptionValue(addedValue);
             const optionEdit = document.getElementById('optionEdit')
             optionEdit.style.display = 'block';
         }
         else if (addedValue === 'Delete') {
+            setOptionValue(addedValue);
             const optionDelete = document.getElementById('optionDelete')
             optionDelete.style.display = 'block';
         }
         else {
-            console.log('Value of null');
+            setOptionValue('');
         }
         setAnchorEl(null);
     };
 
-    // .....
-    const modalClose = (addedClose) => {
+    // Modal close:
+    const modalClose = (addedValue) => {
+        console.log(addedValue);
         if (optionValue === 'View') {
             const optionView = document.getElementById('optionView')
             optionView.style.display = 'none';
         }
-        else if (optionValue === 'Edit') {
+        else if (optionValue === 'Edit' || addedValue === 'Edit') {
             const optionEdit = document.getElementById('optionEdit')
             optionEdit.style.display = 'none';
         }
-        else if (addedClose === 'Delete') {
+        else if (addedValue === 'Delete') {
             const optionDelete = document.getElementById('optionDelete')
             optionDelete.style.display = 'none';
         }
@@ -66,6 +69,7 @@ const BlogsList = () => {
     return (
         <div>
             <h2>Blogs list contents</h2>
+            {/* Modal content below */}
             <div>
                 <div id="optionView" className="option">
                     <strong onClick={modalClose} className="cross">X</strong>
@@ -76,15 +80,20 @@ const BlogsList = () => {
                 </div>
                 <div id="optionEdit" className="option">
                     <strong onClick={modalClose} className="cross">X</strong>
-                    <Edit singleBlog={singleBlog} />
+                    <Edit
+                        singleBlog={singleBlog}
+                        modalClose={modalClose}
+                    />
                 </div>
                 <div id="optionDelete" className="option">
-                    <strong onClick={modalClose} className="cross">X</strong>
-                    <Delete singleBlogId={singleBlog._id} />
+                    <Delete
+                        singleBlogId={singleBlog._id}
+                        modalClose={modalClose}
+                    />
                 </div>
             </div>
 
-            {/* ..... */}
+            {/* Main content below */}
             <div className="list-container">
                 <table>
                     <tr>

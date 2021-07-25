@@ -34,7 +34,7 @@ const Edit = ({ singleBlog, modalClose }) => {
             .then(response => {
                 // console.log(response);
                 alert('Your blog is updated to the mongodb blogs storage!');
-                modalClose('Delete');
+                modalClose('Edit');
             });
     };
 
