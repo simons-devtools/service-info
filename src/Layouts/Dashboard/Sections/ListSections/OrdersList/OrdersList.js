@@ -2,11 +2,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import '../ListStyles.modules.css';
-import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import OrderStatus from './OrderStatus';
 
 const AdminsList = () => {
     const [orders, setOrders] = useState([]);
+    const [singleOrder, setSingleOrder] = useState({});
 
     // Loaded the all orders:
     useEffect(() => {
@@ -14,10 +14,30 @@ const AdminsList = () => {
             .then(response => response.json())
             .then(data => setOrders(data))
     }, [])
-    // console.log(orders);
+
+    // Handle status modal open button:
+    const handleStatus = (addedOrder) => {
+        setSingleOrder(addedOrder);
+        const statusModal = document.getElementById("statusModal");
+        statusModal.style.display = 'block';
+    }
+
+    // Handle status modal close button:
+    const handleCancel = () => {
+        const statusModal = document.getElementById("statusModal");
+        statusModal.style.display = 'none';
+    }
 
     return (
         <div className="list-container">
+            <div id="statusModal" className="option">
+                <strong onClick={handleCancel} className="cross">X</strong>
+                <OrderStatus
+                    singleOrder={singleOrder}
+                    handleCancel={handleCancel}
+                />
+            </div>
+
             <h2>Orders list contents</h2>
             <table>
                 <tr>
@@ -26,9 +46,7 @@ const AdminsList = () => {
                     <th>Phone</th>
                     <th>Order ID</th>
                     <th>Status</th>
-                    <th><SettingsEthernetIcon
-                        style={{ verticalAlign: 'middle' }} />
-                    </th>
+                    <th>Action</th>
                 </tr>
                 {
                     orders.map(order =>
@@ -37,13 +55,15 @@ const AdminsList = () => {
                             <td>{order.shipment.email}</td>
                             <td>{order.shipment.phone}</td>
                             <td>{order.orderId}</td>
-                            <td>{order.status}</td>
-                            <td><MoreVertIcon /></td>
+                            <td className="status-bar">{order.status}</td>
+                            <td>
+                                <button onClick={() => handleStatus(order)} className="btn-modify">Update</button>
+                            </td>
                         </tr>
                     )
                 }
             </table>
-        </div >
+        </div>
     );
 };
 

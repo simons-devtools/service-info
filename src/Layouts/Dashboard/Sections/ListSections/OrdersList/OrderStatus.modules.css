@@ -1,0 +1,36 @@
+.status-body {
+    position: fixed;
+    top: 40%;
+    left: 20%;
+    bottom: 20%;
+    right: 5%;
+    padding: 10px 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.status-body input {
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    padding: 2.5px 0 0 5px;
+    border: 1px solid green;
+}
+
+.update-button {
+    width: 80px;
+    height: 45px;
+    font-size: 20px;
+    padding: 5px 5px;
+    margin: 5px 20px 5px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.update-button {
+    background-color: green;
+}
+
+.update-button:hover {
+    opacity: 50%;
+}

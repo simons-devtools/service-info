@@ -12,16 +12,19 @@ import ThemeList from './Sections/ListSections/ThemeList/ThemeList';
 import UsersList from './Sections/ListSections/UsersList/UsersList';
 import AdminsList from './Sections/ListSections/AdminsList/AdminsList';
 import OrdersList from './Sections/ListSections/OrdersList/OrdersList';
+import { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
-import { useState } from 'react';
 
 const Aside = () => {
     const [toggle, setToggle] = useState(false);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     // Sidebar menu routes:
     const routes = [
@@ -107,7 +110,7 @@ const Aside = () => {
                                 routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
                             }
                         </ul>
-                        <button className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
+                        <button onClick={() => setLoggedInUser({})} className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
                     </div>
 
                     <div className="dash-nav-main">
