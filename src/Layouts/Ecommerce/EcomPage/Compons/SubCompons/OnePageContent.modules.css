@@ -4,9 +4,15 @@
     margin-bottom: 20px;
 }
 
-.ecommerce-btn {
-    padding: 5px 10px;
+.hover-btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: #6d6060;
+    background-color: #fff;
+    padding: 6.5px 10px;
     margin: 0 5px;
+    text-decoration: none;
+    letter-spacing: 2px;
     cursor: pointer;
 }
 

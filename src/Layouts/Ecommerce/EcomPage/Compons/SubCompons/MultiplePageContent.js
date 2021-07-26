@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MultiplePageContent.modules.css';
 
 const MultiplePageContent = ({ application, handleFeatureBtn }) => {
-    const { name, category, image } = application;
+    const { name, brand, image, url } = application;
+
+    // For the live demo:
+    let element = url ? <a href={url} className="hover-btn">Live demo</a> : <Link to="/ecommerce" className="hover-btn">No demo</Link>;
 
     return (
         <div
@@ -13,11 +17,11 @@ const MultiplePageContent = ({ application, handleFeatureBtn }) => {
             }}>
             <div className="multiple-app-info">
                 <h3>{name}</h3>
-                <p>Category: {category}</p>
-                <button className="ecommerce-btn">Live demo</button>
+                <p>Brand: {brand}</p>
+                {element}
                 <button
                     onClick={() => handleFeatureBtn(application)}
-                    className="ecommerce-btn">Features
+                    className="hover-btn">Features
                 </button>
             </div>
         </div>

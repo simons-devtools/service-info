@@ -4,7 +4,7 @@ import ModalLeft from './SubCompons/ModalLeft';
 import ModalRight from './SubCompons/ModalRight';
 
 const EcomModal = ({ modalApp, handleBuyBtn }) => {
-    const { name, category, image } = modalApp;
+    const { name, price, brand, date, version, image, discount } = modalApp;
 
     return (
         <div className="modal-app-container">
@@ -13,15 +13,19 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                 <div className="modal-app-contents">
                     <div className="content-header">
                         <h1>{name}</h1>
-                        <h4>Category: {category} | <small>version 1.5.2</small></h4>
+                        <h4>
+                            Brand: {brand} |
+                            <small> Released: {date} |</small>
+                            <small> Version: {version}</small>
+                        </h4>
                         <img src={image} alt="" />
                         <button className="modal-btn">Add cart</button>
                         <button onClick={() => handleBuyBtn(modalApp)} className="modal-btn">Buy now</button>
                     </div>
                     {/* ..1 + 1.. */}
                     <div className="content-info">
-                        <h2>{name} contents sample</h2>
-                        <ModalLeft />
+                        <h2>{name} contents details</h2>
+                        <ModalLeft modalApp={modalApp} />
                     </div>
                 </div>
 
@@ -29,14 +33,14 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                 {/* Modal right contents */}
                 <div className="modal-app-features">
                     <div className="feature-header">
-                        <p><span className="strong">Price: </span><span>$350</span></p>
+                        <p><span className="strong">Price: </span><span>${price} - {discount}%</span></p>
                         <p><span className="strong">Support: </span><span>Any time</span></p>
                         <p><span className="strong">Demand: </span><span>high athurized</span></p>
                         <p><span className="strong">Guarranty: </span><span>Life time</span></p>
                     </div>
                     {/* ..1 + 1.. */}
                     <div className="feature-info">
-                        <ModalRight />
+                        <ModalRight modalApp={modalApp} />
                     </div>
                 </div>
             </div>

@@ -4,7 +4,9 @@ import features1 from '../../../../../Assets/Ecom-images/app-features-1.png';
 import features2 from '../../../../../Assets/Ecom-images/app-features-2.png';
 import features3 from '../../../../../Assets/Ecom-images/app-features-3.png';
 
-const ModalRight = () => {
+const ModalRight = ({ modalApp }) => {
+    // console.log(modalApp);
+
     return (
         <div className="features-body">
             <div className="features-one">

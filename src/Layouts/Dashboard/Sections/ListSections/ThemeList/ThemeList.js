@@ -10,6 +10,7 @@ import Delete from './Modals/Delete';
 
 const ThemeList = () => {
     const [themes, setThemes] = useState([]);
+    const newThemes = themes.slice(0).reverse();
     const [singlePost, setSinglePost] = useState({});
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -106,7 +107,7 @@ const ThemeList = () => {
                         </th>
                     </tr>
                     {
-                        themes.map(theme =>
+                        newThemes.map(theme =>
                             <tr key={theme._id}>
                                 <td><img src={theme.image} alt="" /></td>
                                 <td>{theme.name}</td>
