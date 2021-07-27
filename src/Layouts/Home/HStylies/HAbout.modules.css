@@ -14,8 +14,6 @@
     text-transform: uppercase;
 }
 
-/* .home-about-header p {} */
-
 .home-about-body {
     display: flex;
     flex-direction: row;
@@ -30,7 +28,6 @@
 .home-about-left-top-content {
     margin-top: -16px;
     padding-bottom: 25px;
-    /* line-height: 25px; */
 }
 
 .home-about-left-bottom-content {
@@ -63,6 +60,9 @@
 
 .home-about-right img {
     height: 400px;
+    padding: 0 3px 5px 0;
+    border-right: 5px solid tomato;
+    border-bottom: 5px solid tomato;
 }
 
 @media (max-width: 768px) {

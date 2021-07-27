@@ -12,7 +12,11 @@ const OldUsers = ({ user, googleSignIn, googleSignOut }) => {
                 <h3>Login your google verification account</h3>
                 {
                     user.isSiggedIn ? <button onClick={googleSignOut}>Sign Out Now</button> :
-                        <button onClick={googleSignIn} style={{ padding: "10px 30px" }}>Sign In Now</button>
+                        <button
+                            onClick={googleSignIn}
+                            style={{ padding: "10px 30px", border: '1px solid #66b1ee', cursor: 'pointer' }}
+                        >
+                            Sign In Now</button>
                 }
             </div>
         </Container>

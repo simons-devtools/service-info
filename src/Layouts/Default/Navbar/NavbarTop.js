@@ -18,8 +18,8 @@ const NavbarTop = () => {
                     <li><Link to="/register">Register</Link></li>
                 </ul>
                 <ul className="navbar-top-right">
-                    <li className="phone"><PhoneIcon className="right-icon" style={{ fontSize: 'medium' }} /> +880 17xx-xxxxxx</li>
-                    <li><MailOutlineIcon className="right-icon" style={{ fontSize: 'medium' }} /> info.domainamex@gmail.com</li>
+                    <li className="phone"><PhoneIcon className="right-icon" style={{ fontSize: 'medium' }} /> +880 1799-867752</li>
+                    <li><MailOutlineIcon className="right-icon" style={{ fontSize: 'medium' }} /> simon.hembrom52@gmail.com</li>
                 </ul>
             </nav>
         </Container>

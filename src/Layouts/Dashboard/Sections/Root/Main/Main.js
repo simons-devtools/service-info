@@ -1,6 +1,5 @@
 import React from 'react';
 import './Main.modules.css';
-import { Container as div } from '@material-ui/core';
 
 const Main = () => {
     return (

@@ -33,7 +33,6 @@
 
 .footer-info li a {
     color: tomato;
-    font-weight: 600;
     text-decoration: none;
 }
 
@@ -59,6 +58,24 @@
 .f-icons {
     padding-right: 5px;
     vertical-align: middle;
+}
+
+.footer-share-option, .footer-share-option ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-share-option ul li {
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.footer-share-option ul li:hover {
+    color: #66b1ee;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

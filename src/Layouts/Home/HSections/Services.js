@@ -10,7 +10,7 @@ import ServiceContent from '../HComponents/ServiceContent';
 
 const Services = () => {
     const services = [
-        { "_id": 1, "name": "Consultations", "icon": consult },
+        { "_id": 1, "name": "Free Consultation", "icon": consult },
         { "_id": 2, "name": "Portfolio theme", "icon": portfolio },
         { "_id": 3, "name": "blog website", "icon": blog },
         { "_id": 4, "name": "E-commerce app", "icon": ecommerce },
@@ -21,7 +21,7 @@ const Services = () => {
         <section className="services-wrapper">
             <Container>
                 <div className="services-header">
-                    <h1>We are provided</h1>
+                    <h1>I am provided</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
                 </div>
                 <div className="services-body">

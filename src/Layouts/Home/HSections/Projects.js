@@ -26,7 +26,7 @@ const Projects = () => {
         <section>
             <Container>
                 <div className="projects-header">
-                    <h1>Our projects sample</h1>
+                    <h1>My project sample</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
                 </div>
                 <div className="projects-content">

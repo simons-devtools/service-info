@@ -20,7 +20,7 @@ const HBlogs = () => {
         <section>
             <Container>
                 <div className="blog-header">
-                    <h1>Ours blog services</h1>
+                    <h1>My blog services</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
                 </div>
                 <div className="blogs-content">

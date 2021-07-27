@@ -44,7 +44,8 @@ const AdminsList = () => {
                     <th>Avater</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Order ID</th>
+                    <th>Price</th>
+                    <th>Order Id</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -54,6 +55,7 @@ const AdminsList = () => {
                             <td><img src={order.photo} alt="" /></td>
                             <td>{order.shipment.email}</td>
                             <td>{order.shipment.phone}</td>
+                            <td>${order.application.price}</td>
                             <td>{order.orderId}</td>
                             <td className="status-bar">{order.status}</td>
                             <td>

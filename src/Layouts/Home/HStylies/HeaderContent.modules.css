@@ -33,9 +33,9 @@ article p {
 }
 
 .outline-btn:hover {
-    color: azure;
+    color: #000;
     background-color: #bd1010;
-    border: 1px solid #bd1010;
+    border: 1px solid #000;
     cursor: pointer;
 }
 

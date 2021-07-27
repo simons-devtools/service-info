@@ -10,7 +10,7 @@ import OrderCrossing from '../OrderCrossing/OrderCrossing';
 
 const EcomPage = ({ applications }) => {
     const [modalApp, setModalApp] = useState([]);
-    const [modalTwoApp, setModalTwoApp] = useState([]);
+    const [modalTwoApp, setModalTwoApp] = useState({});
     const [paymentMethod, setPaymentMethod] = useState(null);
 
     // Handle featutes modal button:

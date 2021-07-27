@@ -16,12 +16,10 @@ export const UserContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  // console.log(loggedInUser);
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        {/* <p>{loggedInUser.email}</p>s */}
         <Switch>
           <Route path="/bloggers/:blogTopics">
             <BlogTopics />

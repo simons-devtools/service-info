@@ -13,7 +13,7 @@ const HAbout = () => {
             <Container>
                 {/* Header contents */}
                 <div className="home-about-header">
-                    <h1>Who we are?</h1>
+                    <h1>Who I am?</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
                 </div>
 
@@ -21,18 +21,18 @@ const HAbout = () => {
                     {/* Left contents */}
                     <div className="home-about-left">
                         <div className="home-about-left-top-content">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odit velit error tempore incidunt necessitatibus quod et facere eligendi maiores autem ex esse porro impedit eius minima temporibus fugiat quis! Doloremque deleniti ipsum quos voluptatibus rerum, aperiam quas adipisci ex consequuntur sit nobis accusamus pariatur deserunt laboriosam?</p>
+                            <p>Sit amet consectetur adipisicing elit. Laboriosam odit velit error tempore incidunt necessitatibus quod et facere eligendi maiores autem ex esse porro impedit eius minima temporibus fugiat quis! Doloremque deleniti ipsum quos voluptatibus rerum, aperiam quas adipisci ex consequuntur sit nobis accusamus pariatur deserunt laboriosam?</p>
                         </div>
                         <div className="home-about-left-bottom-content">
                             <div className="two-column-about-content">
                                 <img src={appIcon} alt="" />
-                                <h4>About node applications</h4>
+                                <h4>About my all applications</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
                                 <img src={webIcon} alt="" />
-                                <h4>About react applications</h4>
+                                <h4>Learn with my blog posts</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
                                 <Link to="/">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
