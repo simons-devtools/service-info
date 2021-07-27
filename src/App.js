@@ -11,6 +11,7 @@ import Login from './Layouts/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
 import BlogTopics from './Layouts/Blogs/BlogTopics';
+import About from './Layouts/Pages/About/About';
 
 export const UserContext = createContext();
 
@@ -21,6 +22,9 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
           <Route path="/bloggers/:blogTopics">
             <BlogTopics />
           </Route>
