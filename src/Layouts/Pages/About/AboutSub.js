@@ -1,6 +1,10 @@
 import React from 'react';
 import './AboutSub.modules.css';
 import Resume from './AboutCompons/Resume/Resume';
+import Contact from './AboutCompons/Contact/Contact';
+import Skills from './AboutCompons/Skills/Skills';
+import Experience from './AboutCompons/Experience/Experience';
+import Portfolio from './AboutCompons/Portfolio/Portfolio';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,30 +17,30 @@ const AboutSub = () => {
     // Sidebar menu routes:
     const routes = [
         {
-            path: "/",
+            path: "/about",
             exact: true,
             menu: 'About',
             main: () => <Resume />
         },
         {
-            path: "/BBBBB",
+            path: "/contact",
             menu: 'Contact',
-            main: () => <h2>Contact</h2>
+            main: () => <Contact />
         },
         {
-            path: "/DDDDD",
+            path: "/skills",
             menu: 'Skills',
-            main: () => <h2>Skills</h2>
+            main: () => <Skills />
         },
         {
-            path: "/EEEEE",
+            path: "/experience",
             menu: 'Experience',
-            main: () => <h2>Experience</h2>
+            main: () => <Experience />
         },
         {
-            path: "/FFFFF",
+            path: "/portfolio",
             menu: 'Portfolio',
-            main: () => <h2>Portfolio</h2>
+            main: () => <Portfolio />
         }
     ];
 

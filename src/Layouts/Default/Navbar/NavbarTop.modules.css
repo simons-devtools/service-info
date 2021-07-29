@@ -71,8 +71,7 @@
 }
 
 @media (max-width: 768px) {
-    .phone {
-        padding-right: 7px;
-        margin-right: 7px;
+    .navbar-top-right li {
+        font-size: 11px;
     }
 }

@@ -1,18 +1,100 @@
 .resume-container {
     display: flex;
-    vertical-align: middle;
+    flex-direction: row;
+    background-color: #fff;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .resume-img img {
-    width: 500px;
-    height: 440px;
+    width: 450px;
+    height: 100%;
     margin-right: 20px;
 }
 
-.resume-body {
-    width: 100%;
-    height: 435px;
-    overflow: scroll;
-    overflow-y: auto;
-    overflow-x: hidden;
+.about-info {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.about-info li {
+    padding-top: 8px;
+    display: flex;
+}
+
+.about-info li strong {
+    width: 150px;
+}
+
+.cv-btn {
+    color: #fff;
+    background-color: #66b1ee;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    margin-right: 15px;
+    border: 1px solid #66b1ee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cv-btn:hover {
+    color: #66b1ee;
+    background-color: #f5f5f5;
+    border: 1px solid #66b1ee;
+    transition: all 1s;
+}
+
+.download-icon {
+    vertical-align: middle;
+}
+
+.download-follow, .follow-option, .follow-option ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+.follow-option ul li {
+    margin-right: 10px;
+}
+
+.follow-option ul li:hover {
+    color: #66b1ee;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+    .resume-img img {
+        width: 100%;
+        margin-right: 0;
+    }
 }

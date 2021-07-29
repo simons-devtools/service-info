@@ -29,9 +29,9 @@ const Aside = () => {
     // Sidebar menu routes:
     const routes = [
         {
-            path: "/",
+            path: "/dashboard",
             exact: true,
-            menu: 'Home',
+            menu: 'Dashboard',
             main: () => <Main />
         },
         {
