@@ -1,0 +1,21 @@
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.experience-img img {
+    width: 450px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .experience-img img {
+        width: 100%;
+    }
+}
