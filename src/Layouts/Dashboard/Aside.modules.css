@@ -6,7 +6,7 @@
 .dash-nav-main {
     position: fixed;
     flex-basis: 85%;
-    height: 70%;
+    height: 75%;
     margin-left: 17%;
     overflow: scroll;
     overflow-y: auto;
@@ -18,7 +18,7 @@
     display: block;
     position: fixed;
     flex-basis: 15%;
-    height: 70%;
+    height: 75%;
     background-color: #fff;
     overflow: scroll;
     overflow-y: auto;

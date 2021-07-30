@@ -1,6 +1,6 @@
 import React from 'react';
 import './Skills.modules.css';
-import image from '../../../../../Assets/Home-images/portfolio.jpg';
+import image from '../../../../../Assets/About-me/skills.jpg';
 import html5 from '../../../../../Assets/Icons/html.png';
 import css3 from '../../../../../Assets/Icons/css.png';
 import bootstrap from '../../../../../Assets/Icons/bootstrap.png';

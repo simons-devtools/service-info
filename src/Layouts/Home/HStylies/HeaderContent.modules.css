@@ -34,8 +34,8 @@ article p {
 
 .outline-btn:hover {
     color: #000;
-    background-color: #bd1010;
-    border: 1px solid #000;
+    /* background-color: #5c5f61; */
+    border: 1px solid #fff;
     cursor: pointer;
 }
 

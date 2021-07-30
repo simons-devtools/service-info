@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.modules.css';
-import image from '../../../../../Assets/Home-images/bigCommerce.png';
+import image from '../../../../../Assets/About-me/contact.jpg';
 import { useForm } from "react-hook-form";
 import PhoneInTalkRoundedIcon from '@material-ui/icons/PhoneInTalkRounded';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';

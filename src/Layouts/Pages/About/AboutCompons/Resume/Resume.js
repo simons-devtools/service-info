@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resume.modules.css';
-import image from '../../../../../Assets/Home-images/me.png';
+import image from '../../../../../Assets/About-me/me.png';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';

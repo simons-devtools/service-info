@@ -79,6 +79,11 @@ const Aside = () => {
             menu: 'Admins board',
             main: () => <AdminsList />
         },
+        {
+            path: "/extra-route",
+            menu: 'Extra-route',
+            main: () => <h2>Extra route contents</h2>
+        },
     ];
 
     // Humbarger toggle button func:
@@ -110,7 +115,7 @@ const Aside = () => {
                                 routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
                             }
                         </ul>
-                        <button onClick={() => setLoggedInUser({})} className="logout-btn">Log out <ExitToAppIcon className="exit" /></button>
+                        <button onClick={() => setLoggedInUser({})} className="logout-btn"><ExitToAppIcon className="exit" /> Log out</button>
                     </div>
 
                     <div className="dash-nav-main">

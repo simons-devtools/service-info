@@ -1,6 +1,6 @@
 import React from 'react';
 import './Experience.modules.css';
-import image from '../../../../../Assets/Home-images/consult.jpg';
+import image from '../../../../../Assets/About-me/experience.jpg';
 
 const Experience = () => {
     return (

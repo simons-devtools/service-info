@@ -1,8 +1,8 @@
 .navbar-main-wrapper {
     padding: 30px 0;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    background-color: overlay;
+    background-size: cover;
 }
 
 .nav-main-body {
