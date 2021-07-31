@@ -14,14 +14,14 @@ import project8 from '../../../Assets/Extra-img/project-8.png';
 
 const Projects = () => {
     const projects = [
-        { "_id": 1, "title": "Ema-john", "image": project1 },
-        { "_id": 2, "title": "Desh-tourism", "image": project2 },
-        { "_id": 3, "title": "Child-care", "image": project3 },
-        { "_id": 4, "title": "Rajshopnil", "image": project4 },
-        { "_id": 5, "title": "Vanila-books", "image": project5 },
-        { "_id": 6, "title": "Consultations", "image": project6 },
-        { "_id": 7, "title": "Ema-john", "image": project7 },
-        { "_id": 8, "title": "Vanila-books", "image": project8 },
+        { _id: 1, title: "Ema-john", date: 'Released: 05-01-2020', image: project1 },
+        { _id: 2, title: "Desh-tourism", date: 'Released: 05-03-2020', image: project2 },
+        { _id: 3, title: "Child-care", date: 'Released: 05-06-2020', image: project3 },
+        { _id: 4, title: "Rajshopnil", date: 'Released: 05-09-2020', image: project4 },
+        { _id: 5, title: "Vanila-books", date: 'Released: 05-12-2020', image: project5 },
+        { _id: 6, title: "Consultations", date: 'Released: 05-03-2021', image: project6 },
+        { _id: 7, title: "Ema-john", date: 'Released: 05-06-2021', image: project7 },
+        { _id: 8, title: "Vanila-books", date: 'Comming soon...', image: project8 },
     ];
 
     return (

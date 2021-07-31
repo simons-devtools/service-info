@@ -20,9 +20,6 @@ const HAbout = () => {
                 <div className="home-about-body">
                     {/* Left contents */}
                     <div className="home-about-left">
-                        <div className="home-about-left-top-content">
-                            <p>Sit amet consectetur adipisicing elit. Laboriosam odit velit error tempore incidunt necessitatibus quod et facere eligendi maiores autem ex esse porro impedit eius minima temporibus fugiat quis! Doloremque deleniti ipsum quos voluptatibus rerum, aperiam quas adipisci ex consequuntur sit nobis accusamus pariatur deserunt laboriosam?</p>
-                        </div>
                         <div className="home-about-left-bottom-content">
                             <div className="two-column-about-content">
                                 <img src={appIcon} alt="" />
