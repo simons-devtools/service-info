@@ -1,37 +1,78 @@
-.ecom-app-container {
-    width: 385px;
-    height: 190px;
+.themes-container {
+    width: 395px;
     margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-.hover-btn {
-    font-size: 15px;
+.themes-container:hover {
+    margin-top: -10px;
+    box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+    transition: .5s;
+}
+
+.themes img {
+    width: 395px;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.themes-wrapper {
+    padding: 10px 12px 20px 12px;
+}
+
+.themes-info strong span {
+    font-size: 20px;
+}
+
+.themes-info p {
+    color: #000;
+}
+
+.themes-info strong small {
+    float: right;
+}
+
+.themes-btn {
+    color: #fff;
+    padding: 8px 23px;
     font-weight: bold;
-    color: #6d6060;
-    background-color: #fff;
-    padding: 6.5px 10px;
-    margin: 0 5px;
-    text-decoration: none;
-    letter-spacing: 2px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.ecom-app-info {
-    width: 385px;
-    height: 190px;
+.themes-btn a {
     color: #fff;
-    background: linear-gradient( #00000099, #00000099);
-    text-align: center;
-    padding-top: 1px;
-    display: none;
+    text-decoration: none;
 }
 
-.ecom-app-container:hover .ecom-app-info {
-    display: block;
+.live {
+    background-color: #175891;
+}
+
+.more {
+    margin: 0 16px;
+    background-color: #175891;
+}
+
+.shop {
+    background-color: #00C560;
+}
+
+.live:hover, .more:hover, .shop:hover {
+    background-color: #023b6d;
+    transition: .5s;
 }
 
 @media (max-width: 768px) {
-    .ecom-app-container {
+    .themes-container {
         width: 100%;
+    }
+    .themes img {
+        width: 100%;
+    }
+    .themes-btn {
+        padding: 8px 14px;
     }
 }

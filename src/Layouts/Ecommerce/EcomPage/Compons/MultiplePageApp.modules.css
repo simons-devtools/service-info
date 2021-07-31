@@ -1,7 +1,20 @@
 .multiple-page-app-wrapper h2 {
-    color: #4e4e4e;
-    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+    border-bottom: 2px solid #cfe8fd;
+    /* position: relative; */
 }
+
+/* .multiple-page-app-wrapper h2:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 105px;
+    height: 3px;
+    background: tomato;
+    border-right: 5px solid #fff;
+    bottom: -2px;
+    left: 0;
+} */
 
 .multiple-page-app-body {
     display: flex;

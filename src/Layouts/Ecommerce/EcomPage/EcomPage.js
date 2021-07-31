@@ -66,14 +66,17 @@ const EcomPage = ({ applications }) => {
                 <OnePageApp
                     applications={applications}
                     handleFeatureBtn={handleFeatureBtn}
+                    handleBuyBtn={handleBuyBtn}
                 />
                 <MultiplePageApp
                     applications={applications}
                     handleFeatureBtn={handleFeatureBtn}
+                    handleBuyBtn={handleBuyBtn}
                 />
                 <EcommerceWebApp
                     applications={applications}
                     handleFeatureBtn={handleFeatureBtn}
+                    handleBuyBtn={handleBuyBtn}
                 />
             </div>
         </Container>
