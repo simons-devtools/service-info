@@ -9,14 +9,8 @@ const Portfolio = () => {
                 <img src={image} alt="" />
             </div>
             <div className="portfolio-info">
-                <h2>This is portfolio info</h2>
-                <ul>
-                    <li>One</li>
-                    <li>Two</li>
-                    <li>Three</li>
-                    <li>Four</li>
-                    <li>Five</li>
-                </ul>
+                <h2>My portfolio information</h2>
+                <p>Please! follow my home page, header section 'applications' button and finally click the link and show more portfolio themes.....</p>
             </div>
         </div>
     );

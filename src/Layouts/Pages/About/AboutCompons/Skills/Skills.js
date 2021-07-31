@@ -45,8 +45,8 @@ const Skills = () => {
     ];
 
     const topics = [
-        { _id: 1, title: 'Front-end/design - 80%', info: 'Comfortable for the front-end applications design.' },
-        { _id: 2, title: 'Back-end/server - 60%', info: 'Server site web applications apis developed with mongodb.' },
+        { _id: 1, title: 'Front-end design - 80%', info: 'Comfortable for the front-end applications design.' },
+        { _id: 2, title: 'Back-end server - 60%', info: 'Server site web applications apis developed with mongodb.' },
         { _id: 3, title: 'Popular tools used - 70%', info: 'Comfortable for the front-end website/applications design.' },
     ];
 
