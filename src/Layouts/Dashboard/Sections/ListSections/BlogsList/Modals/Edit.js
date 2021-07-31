@@ -61,7 +61,7 @@ const Edit = ({ singleBlog, modalClose }) => {
             <h2>EDIT: {singleBlog.title}</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="form-contents">
+                <div className="form-content">
                     <div className="left-input">
                         <input type="title" defaultValue={title} {...register("title")} /> <br />
                         <input type="category" defaultValue={category} {...register("category")} /> <br />
@@ -70,7 +70,7 @@ const Edit = ({ singleBlog, modalClose }) => {
                         <input type="month" defaultValue={date} {...register("month")} /> <br />
                     </div>
 
-                    <div className="middle-input">
+                    <div className="middles-input">
                         <input type="file" onChange={handleImageUpload} /> <br />
                         <input type="tag1" defaultValue={tags && tags[0]} {...register("tag1")} /> <br />
                         <input type="tag2" defaultValue={tags && tags[1]} {...register("tag2")} /> <br />
