@@ -28,13 +28,13 @@ const HAbout = () => {
                                 <img src={appIcon} alt="" />
                                 <h4>About my all applications</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/blogs">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
                                 <img src={webIcon} alt="" />
                                 <h4>Learn with my blog posts</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/blogs">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                         </div>
                     </div>

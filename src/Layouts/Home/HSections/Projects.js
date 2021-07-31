@@ -2,12 +2,14 @@ import React from 'react';
 import '../HStylies/Projects.modules.css';
 import { Container } from '@material-ui/core';
 import ProjectContent from '../HComponents/ProjectContent';
-import project1 from '../../../Assets/Home-images/project-1.png';
-import project2 from '../../../Assets/Home-images/project-2.png';
-import project3 from '../../../Assets/Home-images/project-3.png';
-import project4 from '../../../Assets/Home-images/project-4.png';
-import project5 from '../../../Assets/Home-images/project-5.png';
-import project6 from '../../../Assets/Home-images/project-6.png';
+import project1 from '../../../Assets/Extra-img/project-1.png';
+import project2 from '../../../Assets/Extra-img/project-2.png';
+import project3 from '../../../Assets/Extra-img/project-3.png';
+import project4 from '../../../Assets/Extra-img/project-4.png';
+import project5 from '../../../Assets/Extra-img/project-5.png';
+import project6 from '../../../Assets/Extra-img/project-6.png';
+import project7 from '../../../Assets/Extra-img/project-7.png';
+import project8 from '../../../Assets/Extra-img/project-8.png';
 
 
 const Projects = () => {
@@ -18,8 +20,8 @@ const Projects = () => {
         { "_id": 4, "title": "Rajshopnil", "image": project4 },
         { "_id": 5, "title": "Vanila-books", "image": project5 },
         { "_id": 6, "title": "Consultations", "image": project6 },
-        { "_id": 7, "title": "Ema-john", "image": project1 },
-        { "_id": 8, "title": "Vanila-books", "image": project5 },
+        { "_id": 7, "title": "Ema-john", "image": project7 },
+        { "_id": 8, "title": "Vanila-books", "image": project8 },
     ];
 
     return (
