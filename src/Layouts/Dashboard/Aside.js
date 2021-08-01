@@ -25,61 +25,78 @@ import {
 const Aside = () => {
     const [toggle, setToggle] = useState(false);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [classId, setClassId] = useState(1);
+
+    // Identity route link:
+    const handleChange = (addedId) => {
+        setClassId(addedId);
+    };
 
     // Sidebar menu routes:
     const routes = [
         {
+            id: 1,
             path: "/dashboard",
             exact: true,
             menu: 'Dashboard',
             main: () => <Main />
         },
         {
+            id: 2,
             path: "/order-list",
             menu: 'Order list',
             main: () => <OrdersList />
         },
         {
+            id: 3,
             path: "/my-account",
             menu: 'My account',
             main: () => <Profile />
         },
         {
+            id: 4,
             path: "/add-blog",
             menu: 'Add blogs',
             main: () => <AddBlogs />
         },
         {
+            id: 5,
             path: "/add-theme",
             menu: 'Add themes',
             main: () => <AddTheme />
         },
         {
+            id: 6,
             path: "/add-admin",
             menu: 'Add admins',
             main: () => <AddAdmins />
         },
         {
+            id: 7,
             path: "/blog-list",
             menu: 'Blog list',
             main: () => <BlogsList />
         },
         {
+            id: 8,
             path: "/theme-list",
             menu: 'Theme list',
             main: () => <ThemeList />
         },
         {
+            id: 9,
             path: "/user-board",
             menu: 'Users board',
             main: () => <UsersList />
         },
         {
+            id: 10,
             path: "/admin-board",
             menu: 'Admins board',
             main: () => <AdminsList />
         },
         {
+            id: 11,
             path: "/extra-route",
             menu: 'Extra-route',
             main: () => <h2>Extra route contents</h2>
@@ -112,7 +129,11 @@ const Aside = () => {
                         <h1>Dashboard</h1>
                         <ul className="dash-navbar">
                             {
-                                routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
+                                routes.map(route => <li onClick={() => handleChange(route.id)} key={route.id}>
+                                    <Link to={route.path}
+                                        className={classId === route.id ? 'routeValue' : ''}
+                                    >{route.menu}</Link>
+                                </li>)
                             }
                         </ul>
                         <button onClick={() => setLoggedInUser({})} className="logout-btn"><ExitToAppIcon className="exit" /> Log out</button>

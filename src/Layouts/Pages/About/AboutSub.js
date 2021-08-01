@@ -11,33 +11,45 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { useState } from 'react';
 
 const AboutSub = () => {
+    const [classId, setClassId] = useState(1);
+
+    // Identity route link:
+    const handleChange = (addedId) => {
+        setClassId(addedId);
+    };
 
     // Sidebar menu routes:
     const routes = [
         {
+            id: 1,
             path: "/about",
             exact: true,
             menu: 'About',
             main: () => <Resume />
         },
         {
+            id: 2,
             path: "/contact",
             menu: 'Contact',
             main: () => <Contact />
         },
         {
+            id: 3,
             path: "/skills",
             menu: 'Skills',
             main: () => <Skills />
         },
         {
+            id: 4,
             path: "/experience",
             menu: 'Experience',
             main: () => <Experience />
         },
         {
+            id: 5,
             path: "/portfolio",
             menu: 'Portfolio',
             main: () => <Portfolio />
@@ -51,7 +63,11 @@ const AboutSub = () => {
                     <div className="about-aside">
                         <ul className="about-navbar">
                             {
-                                routes.map(route => <li key={route.length}><Link to={route.path}>{route.menu}</Link></li>)
+                                routes.map(route => <li onClick={() => handleChange(route.id)} key={route.id}>
+                                    <Link to={route.path}
+                                        className={classId === route.id ? 'classValue' : ''}
+                                    >{route.menu}</Link>
+                                </li>)
                             }
                         </ul>
                     </div>

@@ -37,8 +37,8 @@
 }
 
 .dash-navbar {
-    list-style: circle;
-    padding-inline-start: 30px;
+    list-style: none;
+    padding-inline-start: 15px;
 }
 
 .dash-navbar li {
@@ -46,7 +46,6 @@
 }
 
 .dash-navbar li a {
-    color: #999;
     font-weight: 600;
     text-decoration: none;
 }
@@ -54,6 +53,8 @@
 .dash-navbar li a:hover {
     color: #66b1ee;
     cursor: pointer;
+    margin-left: -5px;
+    transition: all .5s;
 }
 
 .logout-btn {
@@ -80,6 +81,11 @@
     border-radius: 50%;
     margin: 10px 0;
     cursor: pointer;
+}
+
+.routeValue {
+    color: red;
+    border-bottom: 1px solid red;
 }
 
 @media (max-width: 768px) {

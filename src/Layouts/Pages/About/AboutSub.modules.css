@@ -9,7 +9,6 @@
 
 .about-navbar li {
     padding: 0 15px;
-    margin-right: 10px;
     border-right: 1px solid #dddddd;
 }
 
@@ -24,8 +23,8 @@
     text-decoration: none;
 }
 
-.about-navbar li a:hover {
-    color: #000;
+.classValue {
+    border-bottom: 2px solid #66b1ee;
 }
 
 @media (max-width: 768px) {
