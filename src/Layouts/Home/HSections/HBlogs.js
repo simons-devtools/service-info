@@ -21,7 +21,7 @@ const HBlogs = () => {
             <Container>
                 <div className="blog-header">
                     <h1>My blog services</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
+                    <p>This is my blog sample section. You can also learn web development on my blog services</p>
                 </div>
                 <div className="blogs-content">
                     {

@@ -9,7 +9,7 @@ const Learn = () => {
                 <div className="learn-more-body">
                     <h1>Anything is wrong or report me?</h1>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum odio nemo <br />
+                        Easy to used dolor sit amet consectetur adipisicing elit. Voluptates illum odio nemo <br />
                         repellendus minima beatae cumque, accusantium saepe cum assumenda.
                     </p>
                     <button className="learn-btn">comming soon</button>

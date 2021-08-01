@@ -14,7 +14,7 @@ const HAbout = () => {
                 {/* Header contents */}
                 <div className="home-about-header">
                     <h1>How to get and learn?</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
+                    <p>This is my two kind of section overview. You can (1) get apps and (2) read blog posts.</p>
                 </div>
 
                 <div className="home-about-body">
@@ -24,13 +24,13 @@ const HAbout = () => {
                             <div className="two-column-about-content">
                                 <img src={appIcon} alt="" />
                                 <h4>About my all applications</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
+                                <p>You can also find a list of your favorite web applications? Pls don't wory, I can help you.</p>
                                 <Link to="/ecommerce">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
                                 <img src={webIcon} alt="" />
                                 <h4>Learn with my blog posts</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
+                                <p>You can also find a list of web apps related blog posts? Don't wory, please follow the link.</p>
                                 <Link to="/blogs">Read More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                         </div>

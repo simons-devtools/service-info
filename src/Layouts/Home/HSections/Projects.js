@@ -29,7 +29,7 @@ const Projects = () => {
             <Container>
                 <div className="projects-header">
                     <h1>My project sample</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
+                    <p>Projects and work sample section. You can also like that? Please follow the link on my projects</p>
                 </div>
                 <div className="projects-content">
                     {

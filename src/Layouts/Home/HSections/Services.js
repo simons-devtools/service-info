@@ -22,7 +22,7 @@ const Services = () => {
             <Container>
                 <div className="services-header">
                     <h1>I am provided</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
+                    <p>I'am really interested in working with your any kind of services.</p>
                 </div>
                 <div className="services-body">
                     <div className="services-content">
