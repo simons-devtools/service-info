@@ -23,7 +23,7 @@ const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
                     </strong>
                 </div>
                 <div className="handle-themes">
-                    <button className="themes-btn">#{element}</button>
+                    <strong className="themes-btn"><small>[{element}]</small></strong>
                     <button className="themes-btn" onClick={() => handleFeatureBtn(application)}>
                         <DetailsIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Detail
                     </button>
