@@ -12,24 +12,25 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                 {/* Modal left contents */}
                 <div className="modal-app-contents">
                     <div className="content-header">
-                        <h1>{name} Theme Details</h1>
+                        <h1>{name} template</h1>
                         <h4>
                             Brand: {brand} |
                             <small> Released: {date} |</small>
                             <small> Version: {version}</small>
                         </h4>
                         <img src={image} alt="" />
+                        <button className="order-btn">Theme source code</button>
                     </div>
                     {/* ..1 + 1.. */}
                     <div className="content-info">
-                        <h2>{name} contents details</h2>
+                        {/* <h2>{name} contents details</h2> */}
                         <ModalLeft modalApp={modalApp} />
                     </div>
                 </div>
 
                 {/* Modal right contents */}
                 <div className="modal-app-features">
-                    <button className="order-btn">Theme source code</button>
+                    {/* <button className="order-btn">Theme source code</button> */}
                     <div className="themes-features">
                         <ul>
                             <li>
@@ -68,7 +69,7 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                             </li>
                             <li>
                                 <strong>Sub total: </strong>
-                                <span>${price * discount / 100}</span>
+                                <span>${price - price * discount / 100}</span>
                             </li>
                         </ul>
                         <button

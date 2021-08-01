@@ -7,10 +7,12 @@
 /* Left contents styles */
 .modal-app-contents {
     flex-basis: 60%;
+    margin-right: 15px;
 }
 
 .content-header img {
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 .modal-btn {
@@ -34,14 +36,13 @@
 
 /* Right contents styles */
 .modal-app-features {
-    flex-basis: 35%;
+    flex-basis: 40%;
 }
 
 .themes-features ul {
     list-style: none;
     padding-inline-start: 0;
     border: 1px solid #e2ebf5;
-    border-top: 5px solid #66b1ee;
     padding: 10px 15px;
     margin: 10px 10px;
 }
