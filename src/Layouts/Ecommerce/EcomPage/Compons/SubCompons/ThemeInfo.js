@@ -1,7 +1,7 @@
 import React from 'react';
-import './ModalLeft.modules.css';
+import './ThemeInfo.modules.css';
 
-const ModalLeft = ({ modalApp }) => {
+const ThemeInfo = ({ modalApp }) => {
     return (
         <div className="contents-body">
             <h5>{modalApp.detail}</h5>
@@ -9,4 +9,4 @@ const ModalLeft = ({ modalApp }) => {
     );
 };
 
-export default ModalLeft;
+export default ThemeInfo;

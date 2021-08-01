@@ -1,0 +1,26 @@
+.themes-cart {
+    margin: 40px 0 5px 0;
+}
+
+.themes-cart ul {
+    list-style: none;
+    padding-inline-start: 0;
+    padding: 5px 15px;
+    margin: 10px 10px;
+    border: 1px solid #e2ebf5;
+    border-bottom: 5px solid #66b1ee;
+}
+
+.themes-cart ul li {
+    color: #999;
+    margin: 15px 0;
+    border-bottom: 1px solid #e2ebf5;
+}
+
+.themes-cart ul li:last-child {
+    border-bottom: none;
+}
+
+.themes-cart ul li span {
+    float: right;
+}

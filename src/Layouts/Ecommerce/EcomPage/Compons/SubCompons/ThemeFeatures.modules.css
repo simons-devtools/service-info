@@ -1,0 +1,21 @@
+.themes-features ul {
+    list-style: none;
+    padding-inline-start: 0;
+    border: 1px solid #e2ebf5;
+    padding: 10px 15px;
+    margin: 10px 10px;
+}
+
+.themes-features ul li {
+    color: #999;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2ebf5;
+}
+
+.themes-features ul li:last-child {
+    border-bottom: none;
+}
+
+.feature {
+    float: right;
+}
