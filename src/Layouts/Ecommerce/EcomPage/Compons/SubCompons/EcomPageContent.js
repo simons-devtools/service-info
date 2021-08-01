@@ -20,7 +20,7 @@ const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
                 <div className="themes-info">
                     <strong>
                         <span>{name}</span>
-                        <small>{brand}</small>
+                        <small>[{brand}]</small>
                     </strong>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor unde sit rerum cumque. Blanditiis ullam nam commodi in odio.....</p>
                 </div>

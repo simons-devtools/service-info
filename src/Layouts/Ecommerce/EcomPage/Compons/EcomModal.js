@@ -12,15 +12,13 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                 {/* Modal left contents */}
                 <div className="modal-app-contents">
                     <div className="content-header">
-                        <h1>{name}</h1>
+                        <h1>{name} Theme Details</h1>
                         <h4>
                             Brand: {brand} |
                             <small> Released: {date} |</small>
                             <small> Version: {version}</small>
                         </h4>
                         <img src={image} alt="" />
-                        <button className="modal-btn">Add cart</button>
-                        <button onClick={() => handleBuyBtn(modalApp)} className="modal-btn">Buy now</button>
                     </div>
                     {/* ..1 + 1.. */}
                     <div className="content-info">
@@ -29,18 +27,54 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                     </div>
                 </div>
 
-
                 {/* Modal right contents */}
                 <div className="modal-app-features">
-                    <div className="feature-header">
-                        <p><span className="strong">Price: </span><span>${price} - {discount}%</span></p>
-                        <p><span className="strong">Support: </span><span>Any time</span></p>
-                        <p><span className="strong">Demand: </span><span>high athurized</span></p>
-                        <p><span className="strong">Guarranty: </span><span>Life time</span></p>
+                    <button className="order-btn">Theme source code</button>
+                    <div className="themes-features">
+                        <ul>
+                            <li>
+                                <span>Theme version</span>
+                                <span className="feature">{version}</span>
+                            </li>
+                            <li>
+                                <span>React version</span>
+                                <span className="feature">4.6 and 5.0.1</span>
+                            </li>
+                            <li>
+                                <span>Last update</span>
+                                <span className="feature">Jun 01, 2021</span>
+                            </li>
+                            <li>
+                                <span>Created on</span>
+                                <span className="feature">{date}</span>
+                            </li>
+                            <li>
+                                <span>Theme brand</span>
+                                <span className="feature">{brand}</span>
+                            </li>
+                        </ul>
                     </div>
-                    {/* ..1 + 1.. */}
-                    <div className="feature-info">
-                        <ModalRight modalApp={modalApp} />
+                    {/* ............. */}
+                    <div className="themes-cart">
+                        {/* <button className="order-btn">Theme demo link</button> */}
+                        <ul>
+                            <li>
+                                <strong>Price: </strong>
+                                <span>${price}</span>
+                            </li>
+                            <li>
+                                <strong>Discount: </strong>
+                                <span>{discount}%</span>
+                            </li>
+                            <li>
+                                <strong>Sub total: </strong>
+                                <span>${price * discount / 100}</span>
+                            </li>
+                        </ul>
+                        <button
+                            onClick={() => handleBuyBtn(modalApp)}
+                            className="order-btn">Procced to checkout
+                        </button>
                     </div>
                 </div>
             </div>

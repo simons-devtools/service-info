@@ -1,42 +1,52 @@
 .themes-container {
-    width: 395px;
-    margin-bottom: 20px;
+    width: 390px;
+    margin: 15px 0;
     background-color: #fff;
     border-radius: 5px;
 }
 
 .themes-container:hover {
-    margin-top: -10px;
+    margin-top: -5px;
     box-shadow: #00000029 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
     transition: .5s;
 }
 
 .themes img {
-    width: 395px;
+    width: 100%;
     height: 200px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .themes-wrapper {
-    padding: 10px 12px 20px 12px;
+    padding-top: 10px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+}
+
+.handle-themes {
+    padding: 15px 0;
 }
 
 .themes-info strong span {
+    color: #175891;
     font-size: 20px;
 }
 
 .themes-info p {
     color: #000;
+    line-height: 30px;
 }
 
 .themes-info strong small {
+    color: #d81212;
     float: right;
 }
 
 .themes-btn {
     color: #fff;
-    padding: 8px 23px;
+    padding: 10px 23px;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -52,7 +62,7 @@
 }
 
 .more {
-    margin: 0 16px;
+    margin: 0 14px;
     background-color: #175891;
 }
 
@@ -68,11 +78,5 @@
 @media (max-width: 768px) {
     .themes-container {
         width: 100%;
-    }
-    .themes img {
-        width: 100%;
-    }
-    .themes-btn {
-        padding: 8px 14px;
     }
 }
