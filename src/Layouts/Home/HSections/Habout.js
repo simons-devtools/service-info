@@ -13,7 +13,7 @@ const HAbout = () => {
             <Container>
                 {/* Header contents */}
                 <div className="home-about-header">
-                    <h1>Who I am?</h1>
+                    <h1>How to get and learn?</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, libero.</p>
                 </div>
 
@@ -25,7 +25,7 @@ const HAbout = () => {
                                 <img src={appIcon} alt="" />
                                 <h4>About my all applications</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur. Necessitatibus cat praesentium website cat.</p>
-                                <Link to="/blogs">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
+                                <Link to="/ecommerce">Show More<ArrowRightAltIcon className="see-more-icons" /></Link>
                             </div>
                             <div className="two-column-about-content">
                                 <img src={webIcon} alt="" />

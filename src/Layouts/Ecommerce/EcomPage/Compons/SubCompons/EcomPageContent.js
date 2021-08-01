@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './EcomPageContent.modules.css';
-import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
 import DetailsIcon from '@material-ui/icons/Details';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
-    const { name, brand, image, url } = application;
+    const { name, price, brand, image, url } = application;
 
     // For the live demo:
     let element = url ? <a href={url}>Demo</a> : <Link to="/ecommerce">Demo</Link>;
@@ -22,24 +21,16 @@ const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
                         <span>{name}</span>
                         <small>[{brand}]</small>
                     </strong>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor unde sit rerum cumque. Blanditiis ullam nam commodi in odio.....</p>
                 </div>
                 <div className="handle-themes">
-                    <button className="themes-btn live">
-                        <DesktopWindowsIcon style={{ verticalAlign: 'middle', fontSize: 'medium' }} /> {element}
+                    <button className="themes-btn">#{element}</button>
+                    <button className="themes-btn" onClick={() => handleFeatureBtn(application)}>
+                        <DetailsIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Detail
                     </button>
-                    <button
-                        className="themes-btn more"
-                        onClick={() => handleFeatureBtn(application)}
-                    >
-                        <DetailsIcon style={{ verticalAlign: 'middle', fontSize: 'medium' }} /> More details
+                    <button className="themes-btn" onClick={() => handleBuyBtn(application)}>
+                        <ShoppingCartOutlinedIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Buy
                     </button>
-                    <button
-                        className="themes-btn shop"
-                        onClick={() => handleBuyBtn(application)}
-                    >
-                        <ShoppingCartIcon style={{ verticalAlign: 'middle', fontSize: 'medium' }} /> Buy
-                    </button>
+                    <span className="price">${price}</span>
                 </div>
             </div>
         </div>

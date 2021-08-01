@@ -12,7 +12,7 @@ const Learn = () => {
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum odio nemo <br />
                         repellendus minima beatae cumque, accusantium saepe cum assumenda.
                     </p>
-                    <button className="learn-btn">Learn More</button>
+                    <button className="learn-btn">comming soon</button>
                 </div>
             </Container>
         </section>

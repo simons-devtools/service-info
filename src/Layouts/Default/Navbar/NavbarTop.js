@@ -5,13 +5,23 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const NavbarTop = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    // console.log(loggedInUser);
+
     return (
         <Container>
             <nav className="navbar-top-wrapper">
                 <ul className="navbar-top-left">
-                    <li><Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link></li>
+                    <li>
+                        {
+                            loggedInUser.isSiggedIn ? <img src={loggedInUser.photo} alt="" className="profile" /> :
+                                <Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link>
+                        }
+                    </li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/login">Login</Link></li>

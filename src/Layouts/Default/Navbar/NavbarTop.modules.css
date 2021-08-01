@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     align-items: center;
 }
 
@@ -11,6 +11,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-inline-start: 0;
+}
+
+.profile {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #c2c2c2;
+    border-radius: 50%;
+    vertical-align: middle;
 }
 
 .navbar-top-left li {
