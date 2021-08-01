@@ -96,11 +96,11 @@ const BlogsList = () => {
             {/* Main content below */}
             <div className="list-container">
                 <table>
-                    <tr>
-                        <th>Image</th>
+                    <tr className="mobile">
+                        <th>Blog Images</th>
                         <th>Author</th>
-                        <th>Title</th>
-                        <th>Category</th>
+                        <th>Blog Posts Title</th>
+                        <th>Blogs Category</th>
                         <th>Date</th>
                         <th><SettingsEthernetIcon
                             style={{ verticalAlign: 'middle' }} />

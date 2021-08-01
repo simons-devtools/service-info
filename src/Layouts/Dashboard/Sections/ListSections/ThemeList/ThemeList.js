@@ -94,12 +94,12 @@ const ThemeList = () => {
             </div>
 
             {/* Main content below */}
-            <div className="list-container">
+            <div className="list-container theme-list">
                 <table>
-                    <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Brand</th>
+                    <tr className="mobile">
+                        <th> Theme Images</th>
+                        <th>Theme Name</th>
+                        <th>Theme Brand</th>
                         <th>Category</th>
                         <th>Price</th>
                         <th><SettingsEthernetIcon
