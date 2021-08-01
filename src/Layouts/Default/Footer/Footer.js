@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="footer-body">
                         <div>
                             <div className="footer-info">
-                                <h2>My project information</h2>
+                                <h3>Project information - all times</h3>
                                 <ul>
                                     <li><LocationOnIcon className="f-icons" /> Tanore, Rajshahi, Dhaka, Bangladesh 3062</li>
                                     <li><PhoneIcon className="f-icons" /> +880 1799-867752</li>
@@ -36,30 +36,30 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer-info">
-                            <h2>E-commerce</h2>
+                            <h3>E-commerce (e)</h3>
                             <ul>
-                                <li><Link to="/">Contact Me</Link></li>
+                                <li><Link to="/">Contact With Me</Link></li>
                                 <li><Link to="/">Track Your Order</Link></li>
                                 <li><Link to="/">Start A Return</Link></li>
                                 <li><Link to="/">Email Preferences</Link></li>
                             </ul>
                         </div>
                         <div className="footer-info">
-                            <h2>Blogger info</h2>
+                            <h3>Bloggers (b)</h3>
                             <ul>
                                 <li><Link to="/">Privacy Policy</Link></li>
                                 <li><Link to="/">Privacy Policy FAQs</Link></li>
                                 <li><Link to="/">Terms of Use</Link></li>
-                                <li><Link to="/">Request Personal Information</Link></li>
+                                <li><Link to="/">Request Personal Info</Link></li>
                             </ul>
                         </div>
                         <div className="footer-info">
-                            <h2>Support info</h2>
+                            <h3>Support section</h3>
                             <ul>
-                                <li>Sat - Thu: 9am - 10pm BD</li>
+                                <li>Sat - Thu/ 9am - 10pm</li>
                                 <li>Friday: Closed</li>
                                 <li>Root# Rajshahi, Dhaka</li>
-                                <li>Footer menu items</li>
+                                <li>Thank for visiting this site.</li>
                             </ul>
                         </div>
                     </div>
