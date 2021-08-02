@@ -24,8 +24,8 @@ const NavbarTop = () => {
                     </li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/account/login">Login</Link></li>
+                    <li><Link to="/account/register">Register</Link></li>
                 </ul>
                 <ul className="navbar-top-right">
                     <li className="phone"><PhoneIcon className="right-icon" style={{ fontSize: 'medium' }} /> +880 1799-867752</li>
