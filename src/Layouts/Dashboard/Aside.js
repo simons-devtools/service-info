@@ -13,6 +13,7 @@ import UsersList from './Sections/ListSections/UsersList/UsersList';
 import AdminsList from './Sections/ListSections/AdminsList/AdminsList';
 import OrdersList from './Sections/ListSections/OrdersList/OrdersList';
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import {
@@ -26,80 +27,47 @@ const Aside = () => {
     const [toggle, setToggle] = useState(false);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [classId, setClassId] = useState(1);
+    const [admins, setAdmins] = useState(false);
+
+    useEffect(() => {
+        fetch('https://childserver.herokuapp.com/checkAdmins', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(res => res.json())
+            .then(data => setAdmins(data))
+    })
 
     // Identity route link:
     const handleChange = (addedId) => {
         setClassId(addedId);
     };
 
-    // Sidebar menu routes:
+    // Admins route menu routes:
     const routes = [
         {
             id: 1,
-            path: "/dashboard",
-            exact: true,
-            menu: 'Dashboard',
-            main: () => <Main />
+            name: 'users',
+            users: [
+                { id: 1, path: "/dashboard", exact: true, menu: 'Dashboard', main: () => <Main /> },
+                { id: 2, path: "/my-order", menu: 'My order', main: () => <OrdersList /> },
+                { id: 3, path: "/my-account", menu: 'My account', main: () => <Profile /> },
+            ],
         },
         {
             id: 2,
-            path: "/order-list",
-            menu: 'Order list',
-            main: () => <OrdersList />
-        },
-        {
-            id: 3,
-            path: "/my-account",
-            menu: 'My account',
-            main: () => <Profile />
-        },
-        {
-            id: 4,
-            path: "/add-blog",
-            menu: 'Add blogs',
-            main: () => <AddBlogs />
-        },
-        {
-            id: 5,
-            path: "/add-theme",
-            menu: 'Add themes',
-            main: () => <AddTheme />
-        },
-        {
-            id: 6,
-            path: "/add-admin",
-            menu: 'Add admins',
-            main: () => <AddAdmins />
-        },
-        {
-            id: 7,
-            path: "/blog-list",
-            menu: 'Blog list',
-            main: () => <BlogsList />
-        },
-        {
-            id: 8,
-            path: "/theme-list",
-            menu: 'Theme list',
-            main: () => <ThemeList />
-        },
-        {
-            id: 9,
-            path: "/user-board",
-            menu: 'Users board',
-            main: () => <UsersList />
-        },
-        {
-            id: 10,
-            path: "/admin-board",
-            menu: 'Admins board',
-            main: () => <AdminsList />
-        },
-        {
-            id: 11,
-            path: "/extra-route",
-            menu: 'Extra-route',
-            main: () => <h2>Extra route contents</h2>
+            name: 'admins',
+            admins: [
+                { id: 4, path: "/add-blog", menu: 'Add blogs', main: () => <AddBlogs /> },
+                { id: 5, path: "/add-theme", menu: 'Add themes', main: () => <AddTheme /> },
+                { id: 6, path: "/add-admin", menu: 'Add admins', main: () => <AddAdmins /> },
+                { id: 7, path: "/blog-list", menu: 'Blog list', main: () => <BlogsList /> },
+                { id: 8, path: "/theme-list", menu: 'Theme list', main: () => <ThemeList /> },
+                { id: 9, path: "/user-board", menu: 'Users board', main: () => <UsersList /> },
+                { id: 10, path: "/admin-board", menu: 'Admins board', main: () => <AdminsList /> },
+                { id: 11, path: "/extra-route", menu: 'Extra-route', main: () => <h2>Extra route contents</h2> },
+            ],
         },
     ];
 
@@ -125,30 +93,53 @@ const Aside = () => {
             </div>
             <Router>
                 <div className="dash-nav-wrapper">
+                    {/* Sidebar menu routes */}
                     <div id="dashMenu" className="dash-nav-aside">
                         <h1>Dashboard</h1>
                         <ul className="dash-navbar">
                             {
-                                routes.map(route => <li onClick={() => handleChange(route.id)} key={route.id}>
-                                    <Link to={route.path}
-                                        className={classId === route.id ? 'routeValue' : ''}
-                                    >{route.menu}</Link>
-                                </li>)
+                                routes && routes.map(route => route.name === 'users' ? route.users.map(user => <li onClick={() => handleChange(user.id)} key={user.id}>
+                                    <Link to={user.path}
+                                        className={classId === user.id ? 'routeValue' : ''}
+                                    >{user.menu}</Link>
+                                </li>) : ''
+                                )
+                            }
+                            {admins &&
+                                routes && routes.map(route => route.name === 'admins' ? route.admins.map(admin => <li onClick={() => handleChange(admin.id)} key={admin.id}>
+                                    <Link to={admin.path}
+                                        className={classId === admin.id ? 'routeValue' : ''}
+                                    >{admin.menu}</Link>
+                                </li>) : ''
+                                )
                             }
                         </ul>
                         <button onClick={() => setLoggedInUser({})} className="logout-btn"><ExitToAppIcon className="exit" /> Log out</button>
                     </div>
 
+                    {/* Components routes */}
                     <div className="dash-nav-main">
                         <Switch>
-                            {routes.map((route, index) => (
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    children={<route.main />}
-                                />
-                            ))}
+                            {
+                                routes && routes.map(route => route.name === 'users' ? route.users.map((user, index) => (
+                                    <Route
+                                        key={index}
+                                        path={user.path}
+                                        exact={user.exact}
+                                        children={<user.main />}
+                                    />
+                                )) : '')
+                            }
+                            {admins &&
+                                routes && routes.map(route => route.name === 'admins' ? route.admins.map((admin, index) => (
+                                    <Route
+                                        key={index}
+                                        path={admin.path}
+                                        exact={admin.exact}
+                                        children={<admin.main />}
+                                    />
+                                )) : '')
+                            }
                         </Switch>
                     </div>
                 </div>
