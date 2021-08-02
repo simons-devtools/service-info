@@ -52,10 +52,10 @@
         margin: 0;
     }
     .navbar-main li {
-        margin-right: 10px;
+        margin-right: 12px;
         letter-spacing: 0;
     }
-    .navbar-main img {
-        display: none;
+    .brand img {
+        padding-top: 5px;
     }
 }

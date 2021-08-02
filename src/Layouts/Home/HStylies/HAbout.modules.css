@@ -9,7 +9,7 @@
 }
 
 .home-about-header h1 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -71,6 +71,9 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .home-about-header h1 {
+        line-height: 35px;
+    }
     .home-about-left-bottom-content {
         flex-wrap: wrap;
         flex-direction: column;
@@ -83,5 +86,7 @@
     }
     .home-about-right img {
         width: 100%;
+        height: 100%;
+        margin-top: 15px;
     }
 }

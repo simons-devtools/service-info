@@ -158,8 +158,7 @@ const OrderCrossing = ({ modalTwoApp, handleModalClose, paymentMethod, setPaymen
                             />
                         </div> :
                         <form className="Form payment-body-input" onSubmit={handleSubmit}>
-                            <h4 style={{ color: '#66b1ee' }}>Your choosen theme total price: ${modalTwoApp.price - modalTwoApp.price * modalTwoApp.discount / 100}</h4>
-                            <h2>Your payment information</h2>
+                            <strong style={{ marginLeft: '5px' }}>Payment Information | Price: ${modalTwoApp.price - modalTwoApp.price * modalTwoApp.discount / 100}</strong>
                             <fieldset className="FormGroup">
                                 <Field
                                     label="Name"

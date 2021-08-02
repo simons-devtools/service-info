@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="footer-bottom-body">
                 <Container>
                     <div className="footer-bottom-content">
-                        <p>&copy; Copyright 2021 - All rights reserved by mr. simon</p>
+                        <p>&copy; Copyright 2021 - All right reserved by MsimonH</p>
                         <p>Template by OS Templates</p>
                     </div>
                 </Container>

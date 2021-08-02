@@ -44,4 +44,7 @@
     .blogs-content {
         flex-direction: column;
     }
+    .blog {
+        margin: 15px 0;
+    }
 }

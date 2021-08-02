@@ -38,4 +38,8 @@
     .services-content {
         flex-wrap: wrap;
     }
+    .service img {
+        width: 150px;
+        height: 150px;
+    }
 }

@@ -1,14 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './EcomPageContent.modules.css';
 import DetailsIcon from '@material-ui/icons/Details';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
     const { name, price, brand, image, url } = application;
-
-    // For the live demo:
-    let element = url ? <a href={url}>Demo</a> : <Link to="/ecommerce">Demo</Link>;
 
     return (
         <div className="themes-container">
@@ -23,14 +19,18 @@ const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
                     </strong>
                 </div>
                 <div className="handle-themes">
-                    <strong className="themes-btn"><small>[{element}]</small></strong>
-                    <button className="themes-btn" onClick={() => handleFeatureBtn(application)}>
+                    <button className="themes-btn">[<a href={url} target={`_blank`}>Demo</a>]</button>
+                    <button
+                        className="themes-btn"
+                        onClick={() => handleFeatureBtn(application)}>
                         <DetailsIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Detail
                     </button>
-                    <button className="themes-btn" onClick={() => handleBuyBtn(application)}>
+                    <button
+                        className="themes-btn"
+                        onClick={() => handleBuyBtn(application)}>
                         <ShoppingCartOutlinedIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Buy
                     </button>
-                    <span className="price">${price}</span>
+                    <strong><small className="price">[ ${price} ]</small></strong>
                 </div>
             </div>
         </div>
