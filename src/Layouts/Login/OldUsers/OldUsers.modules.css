@@ -2,20 +2,52 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 10%;
 }
 
-.login-txt {
+.login-txt img {
     width: 100%;
-    color: #fff;
+    height: 240px;
 }
 
 .login-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
-    padding: 20px 15px;
+    padding: 20px 30px;
+    margin-bottom: 15px;
     background-color: #fff;
+    text-align: center;
+    box-shadow: #959da533 0px 0px 10px;
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 .login-wrapper input {
@@ -23,7 +55,9 @@
     height: 20px;
     padding: 5px 10px;
     margin: 10px 0;
-    border: 2px solid #cecece;
+    background-color: transparent;
+    border: 2px solid #dcdcdc;
+    border-radius: 20px;
 }
 
 .login-wrapper input:hover {
@@ -39,24 +73,37 @@
 
 .create-account {
     padding-right: 20px;
+    border-right-width: 2px;
+    border-right-style: double;
+    border-right-color: #dcdcdc;
+    border-radius: 20px;
 }
 
 .login-account {
-    padding-left: 35px;
-    border-left: 2px solid #cecece;
+    padding-left: 20px;
+    border-left-width: 2px;
+    border-left-style: double;
+    border-left-color: #dcdcdc;
+    border-radius: 20px;
 }
 
 .submit-btn {
     width: 50%;
     height: 35px;
     font-size: 16px;
-    border: 2px solid #66b1ee;
+    border: 2px solid #96cefc;
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .provider-account img {
-    height: 27px;
-    padding: 5px;
-    border: 2px solid #66b1ee;
+    height: 26px;
+    padding: 5.4px;
+    border: 2px solid #96cefc;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-right: none;
     background-color: aliceblue;
     margin-bottom: -16px;
@@ -66,14 +113,39 @@
 .provider-account button {
     width: 203px;
     font-size: 14px;
-    padding: 10px 30px;
-    border: 2px solid #66b1ee;
+    padding: 10px 0;
+    border: 2px solid #96cefc;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
     background-color: aliceblue;
     cursor: pointer;
 }
 
+.submit-btn:hover, .provider-account img:hover, .provider-account button:hover {
+    border: 2px solid #66b1ee;
+    transition: all .5s;
+}
+
 @media (max-width: 768px) {
-    .login-container {
+    .login-container, .login-wrapper {
         flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .login-txt {
+        font-size: 14px;
+        text-align: center;
+        display: block;
+    }
+    .login-txt, .create-account {
+        padding-right: 0;
+    }
+    .login-account {
+        padding-left: 0;
+        border-left: none;
+    }
+    .provider-account {
+        padding-bottom: 20px;
     }
 }
