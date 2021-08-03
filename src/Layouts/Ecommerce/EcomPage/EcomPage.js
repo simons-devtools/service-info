@@ -7,8 +7,13 @@ import MultiplePageApp from './Compons/MultiplePageApp';
 import EcommerceWebApp from './Compons/EcommerceWebApp';
 import EcomModal from './Compons/EcomModal';
 import OrderCrossing from '../OrderCrossing/OrderCrossing';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
+import { useHistory } from 'react-router-dom';
 
 const EcomPage = ({ applications }) => {
+    const history = useHistory();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [modalApp, setModalApp] = useState([]);
     const [modalTwoApp, setModalTwoApp] = useState({});
     const [paymentMethod, setPaymentMethod] = useState(null);
@@ -22,10 +27,15 @@ const EcomPage = ({ applications }) => {
 
     // Handle Buy modal button:
     const handleBuyBtn = (addedApp) => {
-        handleModalClose();
-        const myModalTwo = document.getElementById('myModalTwo');
-        myModalTwo.style.display = 'block';
-        setModalTwoApp(addedApp);
+        if (loggedInUser.isSiggedIn) {
+            handleModalClose();
+            const myModalTwo = document.getElementById('myModalTwo');
+            myModalTwo.style.display = 'block';
+            setModalTwoApp(addedApp);
+        }
+        else {
+            history.push("/account/login");
+        }
     }
 
     // Handle modal close button:
