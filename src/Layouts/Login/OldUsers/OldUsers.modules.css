@@ -1,42 +1,79 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-txt {
+    width: 100%;
+    color: #fff;
+}
+
 .login-wrapper {
-    width: 50%;
-    height: 100%;
-    margin-top: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 15px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px 15px;
     background-color: #fff;
-    border-top: 10px solid red;
-    -webkit-animation-name: flash;
-    animation-name: flash;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
 }
 
-@-webkit-keyframes flash {
-    0%, 50%, 100% {
-        opacity: 1;
-    }
-    25%, 75% {
-        opacity: 0;
-    }
+.login-wrapper input {
+    width: 220px;
+    height: 20px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: 2px solid #cecece;
 }
 
-@keyframes flash {
-    0%, 50%, 100% {
-        opacity: 1;
-    }
-    25%, 75% {
-        opacity: 0;
-    }
+.login-wrapper input:hover {
+    border: 2px solid #aaaaaa;
+    transition: all .5s;
+}
+
+.login-wrapper input:focus {
+    outline: none;
+    border: 2px solid #66b1ee;
+    transition: all .5s;
+}
+
+.create-account {
+    padding-right: 20px;
+}
+
+.login-account {
+    padding-left: 35px;
+    border-left: 2px solid #cecece;
+}
+
+.submit-btn {
+    width: 50%;
+    height: 35px;
+    font-size: 16px;
+    border: 2px solid #66b1ee;
+}
+
+.provider-account img {
+    height: 27px;
+    padding: 5px;
+    border: 2px solid #66b1ee;
+    border-right: none;
+    background-color: aliceblue;
+    margin-bottom: -16px;
+    cursor: pointer;
+}
+
+.provider-account button {
+    width: 203px;
+    font-size: 14px;
+    padding: 10px 30px;
+    border: 2px solid #66b1ee;
+    background-color: aliceblue;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .login-wrapper {
-        width: 90%;
-        height: 100%;
+    .login-container {
+        flex-direction: column;
     }
 }
