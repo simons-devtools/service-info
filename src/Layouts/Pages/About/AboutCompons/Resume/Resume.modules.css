@@ -48,6 +48,11 @@
     width: 150px;
 }
 
+.cv-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .cv-btn {
     color: #fff;
     background-color: #66b1ee;
@@ -82,7 +87,7 @@
     margin-right: 10px;
 }
 
-.follow-option ul li:hover {
+.follow-option ul li a:hover {
     color: #66b1ee;
     cursor: pointer;
 }
