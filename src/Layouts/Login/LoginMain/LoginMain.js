@@ -4,7 +4,7 @@ import image from '../../../Assets/Extra-img/login.png';
 import NewUsers from '../NewUsers/NewUsers';
 import OldUsers from '../OldUsers/OldUsers';
 
-const LoginMain = ({ googleSignIn }) => {
+const LoginMain = ({ googleSignIn, googleSignOut }) => {
     // Handle form Submition:
     const handleForm = () => {
         const loginModal = document.getElementById("loginModal");
@@ -20,6 +20,7 @@ const LoginMain = ({ googleSignIn }) => {
             </div>
 
             <div id="loginModal" className="login-wrapper">
+                {/* New users */}
                 <div className="create-account">
                     <h3>SignUp</h3>
                     <small>Create your new account</small>
@@ -29,6 +30,7 @@ const LoginMain = ({ googleSignIn }) => {
                     />
                 </div>
 
+                {/* Old users */}
                 <div className="login-account">
                     <h3>Login</h3>
                     <small>Login your account</small>
