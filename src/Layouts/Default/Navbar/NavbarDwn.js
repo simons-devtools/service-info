@@ -1,10 +1,18 @@
 import React from 'react';
 import './NavbarDwn.modules.css';
+import logo from '../../../Assets/Icons/logo.png';
 import { Container } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import logo from '../../../Assets/Icons/logo.png';
 
 const NavbarDwn = () => {
+    // Theme Main Routes:
+    const routes = [
+        { id: 1, name: 'Documentation', path: '/' },
+        { id: 2, name: 'Blogs', path: '/blogs' },
+        { id: 3, name: 'Applications', path: '/ecommerce' },
+        { id: 4, name: 'Dashboard', path: '/dashboard' },
+    ];
+
     return (
         <nav className="navbar-main-wrapper">
             <Container>
@@ -15,11 +23,11 @@ const NavbarDwn = () => {
                         </Link>
                     </div>
                     <ul className="navbar-main">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/account/login">Login</Link></li>
-                        <li><Link to="/blogs">Blogs</Link></li>
-                        <li><Link to="/ecommerce">Applications</Link></li>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        {
+                            routes.map(route => <li key={route.id}>
+                                <Link to={route.path}>{route.name}</Link>
+                            </li>)
+                        }
                     </ul>
                 </div>
             </Container>

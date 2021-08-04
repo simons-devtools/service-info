@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useContext } from 'react';
 import { useState } from 'react';
 import '../ListStyles.modules.css';
+import image from '../../../../../Assets/Extra-img/empty.png';
 import OrderStatus from './OrderStatus';
 import { UserContext } from '../../../../../App';
 
@@ -61,7 +62,7 @@ const AdminsList = () => {
                     <th>Action</th>
                 </tr>
                 {
-                    orders.map(order =>
+                    orders && orders.length > 0 ? orders.map(order =>
                         <tr>
                             <td><img src={order.photo} alt="" /></td>
                             <td>{order.shipment.email}</td>
@@ -73,7 +74,10 @@ const AdminsList = () => {
                                 <button onClick={() => handleStatus(order)} className="btn-modify">Update</button>
                             </td>
                         </tr>
-                    )
+                    ) : <tr>
+                        <td><img src={image} alt="" style={{ height: '150px' }} /></td>
+                        <td>Your order is empty</td>
+                    </tr>
                 }
             </table>
         </div>

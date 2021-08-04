@@ -30,6 +30,7 @@
 
 .project {
     position: relative;
+    cursor: grab;
 }
 
 .child-div {
