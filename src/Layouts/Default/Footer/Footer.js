@@ -59,7 +59,7 @@ const Footer = () => {
                                 <li>Sat - Thu/ 9am - 10pm</li>
                                 <li>Friday: Closed</li>
                                 <li>Root# Rajshahi, Dhaka</li>
-                                <li>Thank for visiting this site.</li>
+                                <li>Thanks for visited this site.</li>
                             </ul>
                         </div>
                     </div>
