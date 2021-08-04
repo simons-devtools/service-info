@@ -1,8 +1,18 @@
 import React from 'react';
 import './OldUsers.modules.css';
 import google from '../../../Assets/Icons/google.png';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
+import { useHistory } from 'react-router-dom';
 
-const OldUsers = ({ user, googleSignIn, handleForm }) => {
+const OldUsers = ({ googleSignIn, handleForm }) => {
+    const history = useHistory();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const handleSignOutBtn = () => {
+        setLoggedInUser({});
+        history.push('/');
+    }
+
     return (
         <div>
             <div className="own-account">
@@ -12,10 +22,18 @@ const OldUsers = ({ user, googleSignIn, handleForm }) => {
             </div>
             <small>Or_ signIn google account</small>
             <div onClick={handleForm} className="provider-account">
-                <span onClick={googleSignIn}>
-                    <img src={google} alt="" />
-                    <button>Sign In Google Account</button>
-                </span>
+                {
+                    loggedInUser.isSiggedIn ?
+                        <span
+                            onClick={handleSignOutBtn}>
+                            <img src={google} alt="" />
+                            <button>Sign Out Google Account</button>
+                        </span> :
+                        <span onClick={googleSignIn}>
+                            <img src={google} alt="" />
+                            <button>Sign In Google Account</button>
+                        </span>
+                }
             </div>
         </div>
     );

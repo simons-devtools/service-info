@@ -24,7 +24,12 @@ const NavbarTop = () => {
                     </li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/about">Contact</Link></li>
-                    <li><Link to="/account/login">Login</Link></li>
+                    <li>
+                        {
+                            loggedInUser.isSiggedIn ? <span onClick={() => setLoggedInUser({})}>Log out</span> :
+                                <Link to="/account/login">Login</Link>
+                        }
+                    </li>
                     <li><Link to="/account/login">Register</Link></li>
                 </ul>
                 <ul className="navbar-top-right">

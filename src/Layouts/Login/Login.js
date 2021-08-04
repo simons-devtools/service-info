@@ -33,7 +33,6 @@ const Login = () => {
         const googleProvider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(googleProvider)
             .then((res) => {
-                // console.log(res.user);
                 const { photoURL, displayName, email } = res.user;
                 const siggedInUser = {
                     isSiggedIn: true,
@@ -41,10 +40,11 @@ const Login = () => {
                     email: email,
                     photo: photoURL
                 }
-                // setUser(siggedInUser);
                 setLoggedInUser(siggedInUser);
                 storeAuthToken(); // Store Auth Token
-                // console.log(siggedInUser);
+                setTimeout(() => {
+                    alert('Now you are successfully signed in.');
+                }, 2000);
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -59,7 +59,6 @@ const Login = () => {
                 // Send token to your backend via HTTPS
                 sessionStorage.setItem('token', idToken);
                 history.replace(from);
-                // console.log(idToken);
             })
             .catch((error) => {
                 console.log(error);
@@ -78,7 +77,6 @@ const Login = () => {
                 }
                 setUser(siggedOutUser);
                 setLoggedInUser(siggedOutUser);
-                // console.log(siggedOutUser);
             })
             .catch(error => {
                 console.log(error);
@@ -90,7 +88,6 @@ const Login = () => {
             <LoginMain
                 user={user}
                 googleSignIn={googleSignIn}
-                googleSignOut={googleSignOut}
             />
         </Container>
     );

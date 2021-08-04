@@ -4,7 +4,7 @@ import image from '../../../Assets/Extra-img/login.png';
 import NewUsers from '../NewUsers/NewUsers';
 import OldUsers from '../OldUsers/OldUsers';
 
-const LoginMain = ({ googleSignIn, googleSignOut }) => {
+const LoginMain = ({ googleSignIn }) => {
     // Handle form Submition:
     const handleForm = () => {
         const loginModal = document.getElementById("loginModal");

@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* padding-top: 5px; */
     align-items: center;
 }
 
@@ -29,15 +28,16 @@
     text-transform: uppercase;
 }
 
-.navbar-top-left li a {
+.navbar-top-left li a, .navbar-top-left li span {
     color: #c2c2c2;
     font-size: 10px;
     font-weight: 600;
     text-decoration: none;
 }
 
-.navbar-top-left li a:hover {
+.navbar-top-left li a:hover, .navbar-top-left li span:hover {
     color: #bd1010;
+    cursor: pointer;
 }
 
 .navbar-top-left li:last-child {

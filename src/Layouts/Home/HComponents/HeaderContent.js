@@ -14,10 +14,10 @@ const HeaderContent = () => {
                     like to create a new application for your portfolio and business site? Don't worry!
                 </p>
                 <Link to="/ecommerce">
-                    <button type="button" className="outline-btn">My Applications</button>
+                    <button type="button" className="outline-btn">Applications</button>
                 </Link>
                 <Link to="/blogs">
-                    <button type="button" className="outline-btn">Read my blog</button>
+                    <button type="button" className="outline-btn">Blog posts</button>
                 </Link>
             </article>
         </Container>
