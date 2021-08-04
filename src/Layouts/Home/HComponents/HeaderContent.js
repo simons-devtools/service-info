@@ -8,10 +8,10 @@ const HeaderContent = () => {
         <Container>
             <article>
                 <h2>Normally to usefull and managements</h2>
-                <h1>Welcome to my personal business site</h1>
+                <h1>Welcome to my portfolio & business site</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta facere repellat <br />
-                    sed architecto dolorum est natus ex ipsum nemo animi dolore....
+                    It's my business website that will help you get started with new web applications. Would you <br /> 
+                    like to create a new application for your portfolio and business site? Don't worry!
                 </p>
                 <Link to="/ecommerce">
                     <button type="button" className="outline-btn">My Applications</button>
