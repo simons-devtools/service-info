@@ -63,6 +63,7 @@
 
 .experience-info ul li small {
     color: #f83d3d;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

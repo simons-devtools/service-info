@@ -30,7 +30,7 @@ const Resume = () => {
             <div className="resume-body">
                 <h2>Mr. simon Hembrom</h2>
                 <h4>Full stack web developer</h4>
-                <p>I am Junior Web developer able to build a Web presence from the ground up - from concept, navigation, layout and programming to UX and SEO. Skilled at writing well-designed, testable and efficient code using current version.</p>
+                <p>I am a Junior Web developer able to build a Web presence from the ground up - from concept, navigation, layout, and programming to UX and SEO. Skilled at writing well-designed, testable, and efficient code using the current version.</p>
                 <ul className="about-info">
                     {
                         aboutMe.map(about =>

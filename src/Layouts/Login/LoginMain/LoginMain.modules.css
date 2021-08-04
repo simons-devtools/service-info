@@ -138,12 +138,9 @@
         text-align: center;
         display: block;
     }
-    .login-txt, .create-account {
-        padding-right: 0;
-    }
-    .login-account {
-        padding-left: 0;
-        border-left: none;
+    .create-account, .login-account {
+        padding: 0;
+        border: none;
     }
     .provider-account {
         padding-bottom: 20px;
