@@ -4,7 +4,8 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
-import OldUsers from './OldUsers/OldUsers';
+import { Container } from '@material-ui/core';
+import LoginMain from './LoginMain/LoginMain';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -85,13 +86,13 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <OldUsers
+        <Container>
+            <LoginMain
                 user={user}
                 googleSignIn={googleSignIn}
                 googleSignOut={googleSignOut}
             />
-        </div>
+        </Container>
     );
 };
 
