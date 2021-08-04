@@ -23,7 +23,7 @@ const CommentForm = ({ singleBlog }) => {
 
         if (!loggedInUser.isSiggedIn) {
             alert('Hey! Please sign in after follow this form.');
-            history.push('/login');
+            history.push('/account/login');
         }
         else {
             fetch('http://localhost:5000/addComments', {
@@ -34,7 +34,8 @@ const CommentForm = ({ singleBlog }) => {
                 body: JSON.stringify(commentsData)
             })
                 .then(res => {
-                    alert('Your are successfully review our project');
+                    alert('Your are successfully review my project blog.');
+                    history.push('/blogs');
                 });
         }
     };
