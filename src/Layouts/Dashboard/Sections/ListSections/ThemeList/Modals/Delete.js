@@ -4,7 +4,7 @@ import './ModalStyles.modules.css';
 const Delete = ({ singleThemeId, modalClose }) => {
     // Delete the single theme:
     const handleDeleteBtn = (addedId) => {
-        fetch(`http://localhost:5000/deleteTheme/${addedId}`, {
+        fetch(`https://hnomism52server.herokuapp.com/deleteTheme/${addedId}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -12,7 +12,7 @@ const BlogSingle = () => {
     // console.log('Single blog=', singleBlog);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blog-single/${blogId}`)
+        fetch(`https://hnomism52server.herokuapp.com/blog-single/${blogId}`)
             .then(res => res.json())
             .then(data => setSingleBlog(data))
     }, [blogId])

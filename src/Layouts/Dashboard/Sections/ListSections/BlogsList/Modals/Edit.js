@@ -26,7 +26,7 @@ const Edit = ({ singleBlog, modalClose }) => {
             ],
         };
         // console.log(modifyData);
-        fetch(`http://localhost:5000/updateBlog/${_id}`, {
+        fetch(`https://hnomism52server.herokuapp.com/updateBlog/${_id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(modifyData)

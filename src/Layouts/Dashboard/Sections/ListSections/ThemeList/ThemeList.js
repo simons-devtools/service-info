@@ -18,7 +18,7 @@ const ThemeList = () => {
 
     // Loaded the all themes:
     useEffect(() => {
-        fetch('http://localhost:5000/themes')
+        fetch('https://hnomism52server.herokuapp.com/themes')
             .then(response => response.json())
             .then(data => setThemes(data))
     }, [])

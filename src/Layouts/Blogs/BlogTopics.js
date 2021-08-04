@@ -12,7 +12,7 @@ const BlogTopics = () => {
 
     // Loaded the (same-topics) blogs:
     useEffect(() => {
-        fetch(`http://localhost:5000/bloggers/${blogTopics}`)
+        fetch(`https://hnomism52server.herokuapp.com/bloggers/${blogTopics}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [blogTopics])

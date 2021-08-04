@@ -8,7 +8,7 @@ const AdminsList = () => {
 
     // Loaded the all admins:
     useEffect(() => {
-        fetch('http://localhost:5000/admins')
+        fetch('https://hnomism52server.herokuapp.com/admins')
             .then(response => response.json())
             .then(data => setAdmins(data))
     }, [])

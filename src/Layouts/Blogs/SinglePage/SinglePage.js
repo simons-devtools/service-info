@@ -16,7 +16,7 @@ const SinglePage = ({ singleBlog }) => {
 
     // Loaded the blog single comments:
     useEffect(() => {
-        fetch('http://localhost:5000/comments')
+        fetch('https://hnomism52server.herokuapp.com/comments')
             .then(res => res.json())
             .then(data => setComments(data))
     }, [])

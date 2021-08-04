@@ -24,7 +24,7 @@ const AddEcommerce = () => {
                 data.tag4,
             ],
         };
-        const url = `http://localhost:5000/addBlogs`;
+        const url = `https://hnomism52server.herokuapp.com/addBlogs`;
         // console.log(blogsData);
         fetch(url, {
             method: 'POST',

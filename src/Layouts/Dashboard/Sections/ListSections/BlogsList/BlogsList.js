@@ -18,7 +18,7 @@ const BlogsList = () => {
 
     // Loaded the all blog:
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://hnomism52server.herokuapp.com/blogs')
             .then(response => response.json())
             .then(data => setBlogs(data))
     }, [])

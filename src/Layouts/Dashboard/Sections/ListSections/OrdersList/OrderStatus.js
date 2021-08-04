@@ -13,7 +13,7 @@ const OrderStatus = ({ singleOrder, handleCancel }) => {
         };
         // console.log(updateData);
 
-        fetch(`http://localhost:5000/updateOrder/${_id}`, {
+        fetch(`https://hnomism52server.herokuapp.com/updateOrder/${_id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updateData)

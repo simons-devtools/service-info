@@ -1,5 +1,5 @@
 import React from 'react';
-import HAbout from './HSections/HAbout';
+import Habout from './HSections/Habout';
 import Header from './HSections/Header';
 import Services from './HSections/Services';
 import Projects from './HSections/Projects';
@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <main>
             <Header />
-            <HAbout />
+            <Habout />
             <Services />
             <Projects />
             <Learn />

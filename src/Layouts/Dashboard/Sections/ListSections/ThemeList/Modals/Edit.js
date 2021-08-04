@@ -24,7 +24,7 @@ const Edit = ({ singleTheme, modalClose }) => {
             brand: data.brand || brand,
         };
         // console.log(modifyData);
-        fetch(`http://localhost:5000/updateTheme/${_id}`, {
+        fetch(`https://hnomism52server.herokuapp.com/updateTheme/${_id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(modifyData)

@@ -22,7 +22,7 @@ const AddEcommerce = () => {
             image: photoUrl,
             discount: data.discount,
         };
-        const url = `http://localhost:5000/addThemes`;
+        const url = `https://hnomism52server.herokuapp.com/addThemes`;
         // console.log(themesData);
         fetch(url, {
             method: 'POST',

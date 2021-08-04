@@ -4,7 +4,7 @@ import './ModalStyles.modules.css';
 const Delete = ({ singleBlogId, modalClose }) => {
     // Delete the single blog:
     const handleDeleteBtn = (addedId) => {
-        fetch(`http://localhost:5000/deleteBlog/${addedId}`, {
+        fetch(`https://hnomism52server.herokuapp.com/deleteBlog/${addedId}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

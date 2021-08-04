@@ -14,7 +14,7 @@ const AdminsList = () => {
 
     // Loaded the all orders:
     useEffect(() => {
-        fetch('http://localhost:5000/orders?email=' + loggedInUser.email, {
+        fetch('https://hnomism52server.herokuapp.com/orders?email=' + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

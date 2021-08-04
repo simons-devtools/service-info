@@ -19,7 +19,7 @@ const Contact = () => {
             description: data.description,
         };
 
-        fetch('http://localhost:5000/addContact', {
+        fetch('https://hnomism52server.herokuapp.com/addContact', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

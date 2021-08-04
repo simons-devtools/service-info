@@ -9,7 +9,7 @@ const Ecommerce = () => {
     const [applications, setApplications] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/themes')
+        fetch('https://hnomism52server.herokuapp.com/themes')
             .then(res => res.json())
             .then(data => setApplications(data))
     }, [])

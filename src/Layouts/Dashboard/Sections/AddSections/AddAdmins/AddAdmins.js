@@ -17,7 +17,7 @@ const AddEcommerce = () => {
             biodata: data.biodata,
             image: photoUrl,
         };
-        const url = `http://localhost:5000/addAdmins`;
+        const url = `https://hnomism52server.herokuapp.com/addAdmins`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -11,7 +11,7 @@ const HBlogs = () => {
 
     // Loaded the blog post for home page:
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://hnomism52server.herokuapp.com/blogs')
             .then(response => response.json())
             .then(data => setBlogs(data))
     }, [])

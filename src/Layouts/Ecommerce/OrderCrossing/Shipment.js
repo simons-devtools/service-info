@@ -25,7 +25,7 @@ const Shipment = ({ modalTwoApp, handleModalClose, paymentMethod }) => {
             orderId: paymentMethod.id,
             status: 'pending'
         };
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://hnomism52server.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

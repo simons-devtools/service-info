@@ -26,7 +26,7 @@ const CommentForm = ({ singleBlog }) => {
             history.push('/account/login');
         }
         else {
-            fetch('http://localhost:5000/addComments', {
+            fetch('https://hnomism52server.herokuapp.com/addComments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
