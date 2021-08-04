@@ -1,19 +1,30 @@
 import React from 'react';
 import { useEffect } from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import '../ListStyles.modules.css';
 import OrderStatus from './OrderStatus';
+import { UserContext } from '../../../../../App';
 
 const AdminsList = () => {
     const [orders, setOrders] = useState([]);
     const [singleOrder, setSingleOrder] = useState({});
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     // Loaded the all orders:
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
-            .then(response => response.json())
-            .then(data => setOrders(data))
-    }, [])
+        fetch('http://localhost:5000/orders?email=' + loggedInUser.email, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${sessionStorage.getItem('token')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                setOrders(data);
+            })
+    }, [loggedInUser.email])
 
     // Handle status modal open button:
     const handleStatus = (addedOrder) => {
