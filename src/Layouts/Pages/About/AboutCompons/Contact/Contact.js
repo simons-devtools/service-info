@@ -28,7 +28,7 @@ const Contact = () => {
         })
             .then(res => {
                 // console.log(res);
-                alert('Your information is added to the mongodb contacts storage!');
+                alert('Your information is send to the MsimonH.');
             });
     };
 
