@@ -21,6 +21,7 @@ const AddEcommerce = () => {
             version: data.version,
             image: photoUrl,
             discount: data.discount,
+            features: data.features,
         };
         const url = `https://hnomism52server.herokuapp.com/addThemes`;
         // console.log(themesData);
@@ -67,13 +68,14 @@ const AddEcommerce = () => {
                         <input type="brand" placeholder="Brand" {...register("brand", { required: true })} /> <br />
                         <input type="category" placeholder="Category" {...register("category", { required: true })} /> <br />
                         <input type="author" placeholder="Author" {...register("author", { required: true })} /> <br />
+                        <input type="date" {...register("date", { required: true })} /> <br />
                     </div>
                     <div className="middle-input">
-                        <input type="file" onChange={handleImageUpload} /> <br />
-                        <input type="date" {...register("date", { required: true })} /> <br />
                         <input type="url" placeholder="Url" {...register("url", { required: true })} /> <br />
                         <input type="version" placeholder="Version" {...register("version", { required: true })} /> <br />
+                        <input type="file" onChange={handleImageUpload} /> <br />
                         <input type="discount" placeholder="Discount" {...register("discount", { required: true })} /> <br />
+                        <input type="features" placeholder="Features" {...register("features", { required: true })} /> <br />
                     </div>
                     <div className="right-input">
                         <textarea type="detail" placeholder="Theme detail" {...register("detail", { required: true })} />
