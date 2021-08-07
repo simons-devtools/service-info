@@ -12,12 +12,22 @@
     padding-inline-start: 0;
 }
 
-.profile {
+.profile-photo {
     width: 22px;
     height: 22px;
     border: 1px solid #c2c2c2;
     border-radius: 50%;
     vertical-align: middle;
+}
+
+.profile-txt {
+    width: 30px;
+    height: 30px;
+    padding: 3px 8px;
+    border-radius: 50%;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #bd1010;
 }
 
 .navbar-top-left li {

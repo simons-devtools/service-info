@@ -1,39 +1,29 @@
 import React from 'react';
 import './OldUsers.modules.css';
 import google from '../../../Assets/Icons/google.png';
-import { useContext } from 'react';
-import { UserContext } from '../../../App';
-import { useHistory } from 'react-router-dom';
 
-const OldUsers = ({ googleSignIn, handleForm }) => {
-    const history = useHistory();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const handleSignOutBtn = () => {
-        setLoggedInUser({});
-        history.push('/');
-    }
+const OldUsers = (props) => {
+    const { handleSubmit, newUser, handleBlur, setNewUser, handleForm, googleSignIn } = props;
 
     return (
         <div>
-            <div className="own-account">
-                <input type="email" placeholder="Email" /> <br />
-                <input type="password" placeholder="Password" /> <br />
+            <form onSubmit={handleSubmit}>
+                <input type="email" name="email" onBlur={handleBlur} placeholder="example@gmail.com" required /> <br />
+                <input type="password" name="password" onBlur={handleBlur} placeholder="example => 'a-z' + '0-9' + 'a-z' > 8" required /> <br />
                 <button type="submit" className="submit-btn">Login</button>
+            </form>
+
+            {/* For the toggle/conditional checkbox */}
+            <div className="toggle-checkbox">
+                <small>You have no account? </small>
+                <small onClick={() => setNewUser(!newUser)} style={{ color: 'red', textDecoration: 'underline', cursor: 'pointer' }}>yes</small>
             </div>
-            <small>Or_ signIn google account</small>
+
             <div onClick={handleForm} className="provider-account">
-                {
-                    loggedInUser.isSiggedIn ?
-                        <span
-                            onClick={handleSignOutBtn}>
-                            <img src={google} alt="" />
-                            <button>Sign Out Google Account</button>
-                        </span> :
-                        <span onClick={googleSignIn}>
-                            <img src={google} alt="" />
-                            <button>Sign In Google Account</button>
-                        </span>
-                }
+                <span onClick={googleSignIn}>
+                    <img src={google} alt="" />
+                    <button>Sign In Google Account</button>
+                </span>
             </div>
         </div>
     );

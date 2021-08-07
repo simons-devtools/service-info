@@ -18,7 +18,9 @@ const NavbarTop = () => {
                 <ul className="navbar-top-left">
                     <li>
                         {
-                            loggedInUser.isSiggedIn ? <img src={loggedInUser.photo} alt="" className="profile" /> :
+                            loggedInUser.isSiggedIn ?
+                                loggedInUser.photo ? <img src={loggedInUser.photo} alt="" className="profile-photo" /> :
+                                    <strong className="profile-txt">{loggedInUser.name[0]}</strong> :
                                 <Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link>
                         }
                     </li>
@@ -30,7 +32,9 @@ const NavbarTop = () => {
                                 <Link to="/account/login">Login</Link>
                         }
                     </li>
-                    <li><Link to="/account/login">Register</Link></li>
+                    {
+                        loggedInUser.isSiggedIn ? <li><Link to="/">Register</Link></li> : <li><Link to="/account/login">Register</Link></li>
+                    }
                 </ul>
                 <ul className="navbar-top-right">
                     <li className="phone"><PhoneIcon className="right-icon" style={{ fontSize: 'medium' }} /> +880 1799-867752</li>
