@@ -2,7 +2,7 @@ import React from 'react';
 import './MultiplePageApp.modules.css';
 import EcomPageContent from './SubCompons/EcomPageContent';
 
-const MultiplePageApp = ({ applications, handleFeatureBtn, handleBuyBtn }) => {
+const MultiplePageApp = ({ applications, handleFeatureBtn }) => {
     return (
         <section className="multiple-page-app-wrapper">
             <h2>Multiple page applications</h2>
@@ -13,7 +13,6 @@ const MultiplePageApp = ({ applications, handleFeatureBtn, handleBuyBtn }) => {
                         key={app._id}
                         application={app}
                         handleFeatureBtn={handleFeatureBtn}
-                        handleBuyBtn={handleBuyBtn}
                     /> : '')
                 }
             </div>

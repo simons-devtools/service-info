@@ -20,7 +20,6 @@ const EcomModal = ({ modalApp, handleBuyBtn }) => {
                             <small> Version: {version}</small>
                         </h4>
                         <img src={image} alt="" />
-                        <button className="order-btn">Theme source code</button>
                     </div>
                     <div className="content-info">
                         <ThemeInfo modalApp={modalApp} />

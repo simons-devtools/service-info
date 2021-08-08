@@ -3,7 +3,7 @@ import './OnePageApp.modules.css';
 import loading from '../../../../Assets/Icons/load.gif';
 import EcomPageContent from './SubCompons/EcomPageContent';
 
-const OnePageApp = ({ applications, handleFeatureBtn, handleBuyBtn }) => {
+const OnePageApp = ({ applications, handleFeatureBtn }) => {
     return (
         <section className="one-page-app-wrapper">
             <h2>Single page applications</h2>
@@ -15,7 +15,6 @@ const OnePageApp = ({ applications, handleFeatureBtn, handleBuyBtn }) => {
                             key={app._id}
                             application={app}
                             handleFeatureBtn={handleFeatureBtn}
-                            handleBuyBtn={handleBuyBtn}
                         /> : '')
                 }
             </div>

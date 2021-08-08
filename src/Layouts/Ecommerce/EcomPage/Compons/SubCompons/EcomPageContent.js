@@ -1,10 +1,11 @@
 import React from 'react';
 import './EcomPageContent.modules.css';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import DetailsIcon from '@material-ui/icons/Details';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
-const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
-    const { name, price, brand, image, url } = application;
+const EcomPageContent = ({ application, handleFeatureBtn }) => {
+    const { name, price, brand, image, url, code } = application;
 
     return (
         <div className="themes-container">
@@ -20,15 +21,15 @@ const EcomPageContent = ({ application, handleFeatureBtn, handleBuyBtn }) => {
                 </div>
                 <div className="handle-themes">
                     <button className="themes-btn">[<a href={url} target={`_blank`}>Demo</a>]</button>
+                    <button className="themes-btn">
+                        <ArrowBackIosIcon style={{ verticalAlign: 'middle', fontSize: 'small' }} />
+                        <a href={code} target={`_blank`}>Code</a>
+                        <ArrowForwardIosIcon style={{ verticalAlign: 'middle', fontSize: 'small' }} />
+                    </button>
                     <button
                         className="themes-btn"
                         onClick={() => handleFeatureBtn(application)}>
                         <DetailsIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Detail
-                    </button>
-                    <button
-                        className="themes-btn"
-                        onClick={() => handleBuyBtn(application)}>
-                        <ShoppingCartOutlinedIcon style={{ verticalAlign: 'middle', fontSize: 'large' }} />Buy
                     </button>
                     <strong><small className="price">[ ${price} ]</small></strong>
                 </div>

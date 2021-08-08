@@ -2,13 +2,13 @@ import React from 'react';
 import './ThemeFeatures.modules.css';
 
 const ThemeFeatures = ({ modalApp }) => {
-    const { version, date, brand } = modalApp;
+    const { version, date, brand, react, relaced } = modalApp;
 
     // Themes features bundle:
     const themeFeatures = [
         { id: 1, name: 'Theme version', value: version },
-        { id: 2, name: 'React version', value: '4.6 and 5.0.1' },
-        { id: 3, name: 'Last update', value: 'Jun 01, 2021' },
+        { id: 2, name: 'React version', value: react },
+        { id: 3, name: 'Last update', value: relaced },
         { id: 4, name: 'Created on', value: date },
         { id: 5, name: 'Theme brand', value: brand },
     ];
