@@ -18,9 +18,9 @@ const Footer = () => {
                     <div className="footer-body">
                         <div>
                             <div className="footer-info">
-                                <h3>Project information - all times</h3>
+                                <h3>Project information - contact</h3>
                                 <ul>
-                                    <li><LocationOnIcon className="f-icons" /> Tanore, Rajshahi, Dhaka, Bangladesh 3062</li>
+                                    <li><LocationOnIcon className="f-icons" />Rajshahi, Dhaka, Bangladesh 3062</li>
                                     <li><PhoneIcon className="f-icons" /> +880 1799-867752</li>
                                     <li><MailOutlineIcon className="f-icons" /> simon.hembrom52@gmail.com</li>
                                 </ul>

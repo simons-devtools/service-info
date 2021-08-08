@@ -1,11 +1,11 @@
 import React from 'react';
 import '../HStylies/Services.modules.css';
 import { Container } from '@material-ui/core';
-import consult from '../../../Assets/Home-images/consult.jpg';
-import portfolio from '../../../Assets/Home-images/portfolio.jpg';
-import blog from '../../../Assets/Home-images/blog.png';
-import ecommerce from '../../../Assets/Home-images/ecommerce.jpg';
-import bigCommerce from '../../../Assets/Home-images/bigCommerce.png';
+import consult from '../../../Assets/Home-images/Services/consult.jpg';
+import portfolio from '../../../Assets/Home-images/Services/portfolio.jpg';
+import blog from '../../../Assets/Home-images/Services/blog.png';
+import ecommerce from '../../../Assets/Home-images/Services/ecommerce.jpg';
+import bigCommerce from '../../../Assets/Home-images/Services/bigCommerce.png';
 import ServiceContent from '../HComponents/ServiceContent';
 
 const Services = () => {

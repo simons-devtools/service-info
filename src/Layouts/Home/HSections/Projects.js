@@ -2,14 +2,14 @@ import React from 'react';
 import '../HStylies/Projects.modules.css';
 import { Container } from '@material-ui/core';
 import ProjectContent from '../HComponents/ProjectContent';
-import project1 from '../../../Assets/Extra-img/project-1.png';
-import project2 from '../../../Assets/Extra-img/project-2.png';
-import project3 from '../../../Assets/Extra-img/project-3.png';
-import project4 from '../../../Assets/Extra-img/project-4.png';
-import project5 from '../../../Assets/Extra-img/project-5.png';
-import project6 from '../../../Assets/Extra-img/project-6.png';
-import project7 from '../../../Assets/Extra-img/project-7.png';
-import project8 from '../../../Assets/Extra-img/project-8.png';
+import project1 from '../../../Assets/Home-images/Projects/project-1.png';
+import project2 from '../../../Assets/Home-images/Projects/project-2.png';
+import project3 from '../../../Assets/Home-images/Projects/project-3.png';
+import project4 from '../../../Assets/Home-images/Projects/project-4.png';
+import project5 from '../../../Assets/Home-images/Projects/project-5.png';
+import project6 from '../../../Assets/Home-images/Projects/project-6.png';
+import project7 from '../../../Assets/Home-images/Projects/project-7.png';
+import project8 from '../../../Assets/Home-images/Projects/project-8.png';
 
 
 const Projects = () => {
