@@ -3,14 +3,17 @@ import './LoginMain.modules.css';
 import image from '../../../Assets/Extra-img/login.png';
 import NewUsers from '../NewUsers/NewUsers';
 import OldUsers from '../OldUsers/OldUsers';
+import { useHistory } from 'react-router-dom';
 
 const LoginMain = (props) => {
     const { user, googleSignIn, handleSubmit, newUser, handleBlur, setNewUser } = props;
+    const history = useHistory();
 
     // Handle form Submition:
     const handleForm = () => {
-        const loginModal = document.getElementById("loginModal");
-        loginModal.style.display = "none";
+        history.push('/');
+        // const loginModal = document.getElementById("loginModal");
+        // loginModal.style.display = "none";
     }
 
     return (
@@ -38,10 +41,10 @@ const LoginMain = (props) => {
                                 <h3>Login</h3>
                                 <small>Login your account</small>
                                 <OldUsers
-                                    handleSubmit={handleSubmit}
-                                    newUser={newUser}
                                     handleBlur={handleBlur}
+                                    newUser={newUser}
                                     setNewUser={setNewUser}
+                                    handleSubmit={handleSubmit}
                                     googleSignIn={googleSignIn}
                                     handleForm={handleForm}
                                 />

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
-
 body {
     padding: 0;
     margin: 0;
@@ -12,4 +11,11 @@ body {
 
 section {
     margin: 50px 0;
+}
+
+.loading {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

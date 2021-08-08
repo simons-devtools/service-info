@@ -21,7 +21,7 @@ const NavbarTop = () => {
                             loggedInUser.isSiggedIn ?
                                 loggedInUser.photo ? <img src={loggedInUser.photo} alt="" className="profile-photo" /> :
                                     <strong className="profile-txt">{loggedInUser.name[0]}</strong> :
-                                <Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'medium' }} /></Link>
+                                <Link to="/"><HomeIcon className="left-icon" style={{ fontSize: 'large' }} /></Link>
                         }
                     </li>
                     <li><Link to="/about">About</Link></li>

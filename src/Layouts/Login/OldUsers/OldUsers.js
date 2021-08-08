@@ -16,7 +16,7 @@ const OldUsers = (props) => {
             {/* For the toggle/conditional checkbox */}
             <div className="toggle-checkbox">
                 <small>You have no account? </small>
-                <small onClick={() => setNewUser(!newUser)} style={{ color: 'red', textDecoration: 'underline', cursor: 'pointer' }}>yes</small>
+                <small onClick={() => setNewUser(!newUser)} style={{ color: 'red', textDecoration: 'underline', cursor: 'pointer' }}>click</small>
             </div>
 
             <div onClick={handleForm} className="provider-account">

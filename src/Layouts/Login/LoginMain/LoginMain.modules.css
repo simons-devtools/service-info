@@ -53,6 +53,33 @@
     justify-content: space-evenly;
 }
 
+.create-account {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .login-wrapper input {
     width: 220px;
     height: 20px;
@@ -89,6 +116,9 @@
     height: 26px;
     padding: 5.4px;
     margin-bottom: -14px;
+    border-right: 2px solid #66b1ee;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     cursor: pointer;
 }
 
