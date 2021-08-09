@@ -56,18 +56,6 @@ const Login = () => {
             });
     }
 
-    const storeAuthToken = () => {
-        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-            .then((idToken) => {
-                // Send token to your backend via HTTPS
-                sessionStorage.setItem('token', idToken);
-                history.replace(from);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }
-
     // Google Sign Out Func
     const googleSignOut = () => {
         firebase.auth().signOut()
@@ -126,6 +114,7 @@ const Login = () => {
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     updateUserProfile(name);
+                    storeAuthToken(); // Store Auth Token
                     setTimeout(() => {
                         history.replace(from);
                     }, 2000);
@@ -160,6 +149,7 @@ const Login = () => {
                     }
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
+                    storeAuthToken(); // Store Auth Token
                     setTimeout(() => {
                         history.replace(from);
                     }, 2000);
@@ -188,6 +178,19 @@ const Login = () => {
         user.updateProfile({ displayName: name })
             .then((res) => {
                 console.log('User profile updated', res);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
+    // User login token set the local storage:
+    const storeAuthToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+            .then((idToken) => {
+                // Send token to your backend via HTTPS
+                sessionStorage.setItem('token', idToken);
+                history.replace(from);
             })
             .catch((error) => {
                 console.log(error);
