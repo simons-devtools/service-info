@@ -30,8 +30,7 @@ const Aside = () => {
     const [admins, setAdmins] = useState(false);
 
     useEffect(() => {
-        // fetch('https://childserver.herokuapp.com/checkAdmins', {
-        fetch('http://localhost:5000/checkAdmins', {
+        fetch('https://childserver.herokuapp.com/checkAdmins', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
