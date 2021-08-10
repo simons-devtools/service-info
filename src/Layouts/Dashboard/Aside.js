@@ -36,13 +36,7 @@ const Aside = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => {
-                if (data.length > 0) {
-                    setAdmins(true)
-                } else {
-                    setAdmins(false)
-                }
-            })
+            .then(data => setAdmins(data))
     })
 
     // Identity route link:
