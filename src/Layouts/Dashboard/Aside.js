@@ -30,13 +30,20 @@ const Aside = () => {
     const [admins, setAdmins] = useState(false);
 
     useEffect(() => {
-        fetch('https://childserver.herokuapp.com/checkAdmins', {
+        // fetch('https://childserver.herokuapp.com/checkAdmins', {
+        fetch('http://localhost:5000/checkAdmins', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => setAdmins(data))
+            .then(data => {
+                if (data.length > 0) {
+                    setAdmins(true)
+                } else {
+                    setAdmins(false)
+                }
+            })
     })
 
     // Identity route link:

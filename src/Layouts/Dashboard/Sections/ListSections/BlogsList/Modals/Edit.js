@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './ModalStyles.modules.css';
 import { useForm } from "react-hook-form";
 
-const Edit = ({ singleBlog, modalClose }) => {
+const Edit = ({ singleBlog, modalClose, setMessage }) => {
     const { _id, author, category, title, description, date, topics, tags, image } = singleBlog;
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
@@ -34,7 +34,10 @@ const Edit = ({ singleBlog, modalClose }) => {
             .then(response => {
                 // console.log(response);
                 modalClose('Edit');
-                alert('Your blog is updated to the mongodb blogs storage!');
+                setMessage({
+                    isSuccess: true,
+                    text: 'Your are successfully done',
+                });
             });
     };
 

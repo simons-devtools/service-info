@@ -1,7 +1,7 @@
 import React from 'react';
 import './ModalStyles.modules.css';
 
-const Delete = ({ singleThemeId, modalClose }) => {
+const Delete = ({ singleThemeId, modalClose, setMessage }) => {
     // Delete the single theme:
     const handleDeleteBtn = (addedId) => {
         fetch(`https://hnomism52server.herokuapp.com/deleteTheme/${addedId}`, {
@@ -11,7 +11,10 @@ const Delete = ({ singleThemeId, modalClose }) => {
             .then(result => {
                 // console.log('Deleted is', result);
                 modalClose('Delete');
-                alert('Your are deleted this theme from database storage!!');
+                setMessage({
+                    isSuccess: true,
+                    text: 'Your are successfully done',
+                });
             })
     }
 

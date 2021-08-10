@@ -111,13 +111,10 @@ const Login = () => {
                         success: true,
                         error: '',
                     }
+                    updateUserProfile(name);
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
-                    updateUserProfile(name);
                     storeAuthToken(); // Store Auth Token
-                    setTimeout(() => {
-                        history.replace(from);
-                    }, 2000);
                 })
                 .catch((error) => {
                     const { name, email, photo } = { ...user };
@@ -150,9 +147,6 @@ const Login = () => {
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
                     storeAuthToken(); // Store Auth Token
-                    setTimeout(() => {
-                        history.replace(from);
-                    }, 2000);
                 })
                 .catch((error) => {
                     const { name, email, photo } = { ...user };
@@ -196,10 +190,6 @@ const Login = () => {
                 console.log(error);
             });
     }
-
-    // .....
-    // console.log('User', user);
-    console.log('LoggedInUser', loggedInUser.error);
 
     return (
         <Container>

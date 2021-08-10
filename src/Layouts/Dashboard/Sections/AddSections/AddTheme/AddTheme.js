@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import '../AddStyles.modules.css.css';
+import Notification from '../../../../Default/Notification/Notification';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
+    const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
     // Handle form Submition:
     const onSubmit = (data) => {
@@ -35,7 +37,10 @@ const AddEcommerce = () => {
             body: JSON.stringify(themesData)
         })
             .then(res => {
-                alert('Your theme is added to the mongodb products storage!');
+                setMessage({
+                    isSuccess: res,
+                    text: 'Your are successfully done',
+                });
             });
     };
 
@@ -87,6 +92,7 @@ const AddEcommerce = () => {
                     </div>
                 </div>
             </form>
+            {message.isSuccess && <Notification message={message} />}
         </div>
     );
 };

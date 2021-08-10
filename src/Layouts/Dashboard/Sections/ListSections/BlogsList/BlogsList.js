@@ -7,6 +7,7 @@ import Options from './Options';
 import View from './Modals/View';
 import Edit from './Modals/Edit';
 import Delete from './Modals/Delete';
+import Notification from '../../../../Default/Notification/Notification';
 
 const BlogsList = () => {
     const [blogs, setBlogs] = useState([]);
@@ -15,6 +16,7 @@ const BlogsList = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const [optionValue, setOptionValue] = useState('');
+    const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
     // Loaded the all blog:
     useEffect(() => {
@@ -83,12 +85,14 @@ const BlogsList = () => {
                     <Edit
                         singleBlog={singlePost}
                         modalClose={modalClose}
+                        setMessage={setMessage}
                     />
                 </div>
                 <div id="optionDelete" className="option">
                     <Delete
                         singleBlogId={singlePost._id}
                         modalClose={modalClose}
+                        setMessage={setMessage}
                     />
                 </div>
             </div>
@@ -127,7 +131,8 @@ const BlogsList = () => {
                     }
                 </table>
             </div>
-        </div >
+            {message.isSuccess && <Notification message={message} />}
+        </div>
     );
 };
 

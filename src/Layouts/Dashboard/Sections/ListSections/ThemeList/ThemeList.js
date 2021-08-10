@@ -7,6 +7,7 @@ import Options from './Options';
 import View from './Modals/View';
 import Edit from './Modals/Edit';
 import Delete from './Modals/Delete';
+import Notification from '../../../../Default/Notification/Notification';
 
 const ThemeList = () => {
     const [themes, setThemes] = useState([]);
@@ -15,6 +16,7 @@ const ThemeList = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const [optionValue, setOptionValue] = useState('');
+    const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
     // Loaded the all themes:
     useEffect(() => {
@@ -83,12 +85,14 @@ const ThemeList = () => {
                     <Edit
                         singleTheme={singlePost}
                         modalClose={modalClose}
+                        setMessage={setMessage}
                     />
                 </div>
                 <div id="optionDelete" className="option">
                     <Delete
                         singleThemeId={singlePost._id}
                         modalClose={modalClose}
+                        setMessage={setMessage}
                     />
                 </div>
             </div>
@@ -127,6 +131,7 @@ const ThemeList = () => {
                     }
                 </table>
             </div >
+            {message.isSuccess && <Notification message={message} />}
         </div>
     );
 };

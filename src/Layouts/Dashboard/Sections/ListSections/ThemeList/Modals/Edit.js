@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './ModalStyles.modules.css';
 import { useForm } from "react-hook-form";
 
-const Edit = ({ singleTheme, modalClose }) => {
+const Edit = ({ singleTheme, modalClose, setMessage }) => {
     const { _id, name, price, category, image, date, detail, relaced, version, author, discount, brand, url, react, code } = singleTheme;
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
@@ -35,7 +35,10 @@ const Edit = ({ singleTheme, modalClose }) => {
             .then(response => {
                 // console.log(response);
                 modalClose('Edit');
-                alert('Your theme is updated to the mongodb themes storage!');
+                setMessage({
+                    isSuccess: true,
+                    text: 'Your are successfully done',
+                });
             });
     };
 

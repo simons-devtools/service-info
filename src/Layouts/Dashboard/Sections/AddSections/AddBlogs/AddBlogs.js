@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import '../AddStyles.modules.css.css';
+import Notification from '../../../../Default/Notification/Notification';
 
 const AddEcommerce = () => {
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
+    const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
     // Handle form Submition:
     const onSubmit = (data) => {
@@ -34,7 +36,10 @@ const AddEcommerce = () => {
             body: JSON.stringify(blogsData)
         })
             .then(res => {
-                alert('Your blog is added to the mongodb blogs storage!');
+                setMessage({
+                    isSuccess: res,
+                    text: 'Your are successfully done',
+                });
             });
     };
 
@@ -60,7 +65,7 @@ const AddEcommerce = () => {
         <div className="form-main-div">
             <h2>Add blogs to the cloud storage</h2>
             <small>Note: Topics must be have [ 1. creative-design / 2. font-end / 3. back-end / 4. data-storage / 5. basic-javaScript ]</small>
-            
+
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-contents">
                     <div className="left-input">
@@ -85,6 +90,7 @@ const AddEcommerce = () => {
                     </div>
                 </div>
             </form>
+            {message.isSuccess && <Notification message={message} />}
         </div>
     );
 };
