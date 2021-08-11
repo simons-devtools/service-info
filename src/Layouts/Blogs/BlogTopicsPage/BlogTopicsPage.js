@@ -3,6 +3,7 @@ import '../BlogPage/BlogPage.modules.css';
 import { Container } from '@material-ui/core';
 import Widget from '../Widget/Widget';
 import BlogContent from '../BlogPage/Compons/BlogContent';
+import loading from '../../../Assets/Icons/load.gif';
 
 const BlogTopicsPage = ({ blogs }) => {
     // console.log(blogs)
@@ -13,10 +14,11 @@ const BlogTopicsPage = ({ blogs }) => {
                 {/* Blogs contents */}
                 <div className="blog-contents">
                     {
-                        blogs.map(blog => <BlogContent
-                            key={blog._id}
-                            blog={blog}
-                        />)
+                        blogs.length <= 0 ? <img src={loading} alt="" className="loading" /> :
+                            blogs.map(blog => <BlogContent
+                                key={blog._id}
+                                blog={blog}
+                            />)
                     }
                 </div>
 
