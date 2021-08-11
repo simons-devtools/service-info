@@ -3,24 +3,23 @@
     height: 24px;
     letter-spacing: 2px;
     padding: 6px 10px 6px 10px;
-    border: 1px solid #66b1aa;
+    border: 1px solid #66b1ee;
 }
 
 .search-input:focus {
     outline: none;
-    border: 1px solid #66b1ee;
 }
 
 .search-submit {
     width: 46px;
     height: 39px;
     color: azure;
-    background-color: #66b1aa;
-    border: 1px solid #66b1aa;
+    background-color: #66b1ee;
+    border: 1px solid #66b1ee;
     vertical-align: middle;
 }
 
 .search-submit:hover {
-    background-color: #66b1ee;
+    background-color: #66b1cc;
     cursor: pointer;
 }
