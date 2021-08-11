@@ -8,20 +8,22 @@ import Widget from '../Widget/Widget';
 const BlogPage = ({ blogs }) => {
     return (
         <Container>
-            <section className="blog-wrapper">
-                {/* Blogs contents */}
-                <div className="blog-contents">
-                    {
-                        blogs.length <= 0 ? <img src={loading} alt="" className="loading" /> :
-                            blogs.map(blog => <BlogContent key={blog._id} blog={blog} />)
-                    }
-                </div>
+            {
+                blogs.length <= 0 ? <img src={loading} alt="" className="loading" /> :
+                    <section className="blog-wrapper">
+                        {/* Blogs contents */}
+                        <div className="blog-contents">
+                            {
+                                blogs.map(blog => <BlogContent key={blog._id} blog={blog} />)
+                            }
+                        </div>
 
-                {/* Blogs widgets */}
-                <div className="blog-widgets">
-                    <Widget />
-                </div>
-            </section>
+                        {/* Blogs widgets */}
+                        <div className="blog-widgets">
+                            <Widget />
+                        </div>
+                    </section>
+            }
         </Container>
     );
 };

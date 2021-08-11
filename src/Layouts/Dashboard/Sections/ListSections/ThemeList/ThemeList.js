@@ -7,6 +7,7 @@ import Options from './Options';
 import View from './Modals/View';
 import Edit from './Modals/Edit';
 import Delete from './Modals/Delete';
+import Loader from '../../../../Default/Loader/Loader';
 import Notification from '../../../../Default/Notification/Notification';
 
 const ThemeList = () => {
@@ -18,6 +19,15 @@ const ThemeList = () => {
     const [optionValue, setOptionValue] = useState('');
     const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
+    // For the loading func:
+    const [loading, setLoading] = React.useState(false);
+    const handleToggle = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+    };
+    
     // Loaded the all themes:
     useEffect(() => {
         fetch('https://hnomism52server.herokuapp.com/themes')
@@ -86,6 +96,7 @@ const ThemeList = () => {
                         singleTheme={singlePost}
                         modalClose={modalClose}
                         setMessage={setMessage}
+                        handleToggle={handleToggle}
                     />
                 </div>
                 <div id="optionDelete" className="option">
@@ -93,6 +104,7 @@ const ThemeList = () => {
                         singleThemeId={singlePost._id}
                         modalClose={modalClose}
                         setMessage={setMessage}
+                        handleToggle={handleToggle}
                     />
                 </div>
             </div>
@@ -130,7 +142,8 @@ const ThemeList = () => {
                         )
                     }
                 </table>
-            </div >
+            </div>
+            <Loader open={loading} />
             {message.isSuccess && <Notification message={message} />}
         </div>
     );

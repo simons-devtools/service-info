@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import './ModalStyles.modules.css';
 import { useForm } from "react-hook-form";
 
-const Edit = ({ singleBlog, modalClose, setMessage }) => {
+const Edit = ({ singleBlog, modalClose, setMessage, handleToggle }) => {
     const { _id, author, category, title, description, date, topics, tags, image } = singleBlog;
     const { register, handleSubmit } = useForm();
     const [photoUrl, setPhotoUrl] = useState(null);
 
     // Handle form Submition:
     const onSubmit = (data) => {
+        handleToggle();
         const modifyData = {
             title: data.title || title,
             category: data.category || category,

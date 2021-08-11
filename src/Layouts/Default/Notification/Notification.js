@@ -28,11 +28,10 @@ const Notification = ({ message }) => {
             style={{
                 position: 'fixed',
                 bottom: '5%',
-                width: '210px',
+                width: '235px',
                 color: '#fff',
-                fontSize: '14px',
+                fontSize: '16px',
                 backgroundColor: '#43a047',
-                borderRadius: '5px',
                 padding: '5px 10px',
                 boxShadow: '0 1px 4px 0 #999',
             }}

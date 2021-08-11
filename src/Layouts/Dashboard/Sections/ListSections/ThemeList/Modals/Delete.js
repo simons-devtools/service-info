@@ -1,9 +1,10 @@
 import React from 'react';
 import './ModalStyles.modules.css';
 
-const Delete = ({ singleThemeId, modalClose, setMessage }) => {
+const Delete = ({ singleThemeId, modalClose, setMessage, handleToggle }) => {
     // Delete the single theme:
     const handleDeleteBtn = (addedId) => {
+        handleToggle();
         fetch(`https://hnomism52server.herokuapp.com/deleteTheme/${addedId}`, {
             method: 'DELETE'
         })

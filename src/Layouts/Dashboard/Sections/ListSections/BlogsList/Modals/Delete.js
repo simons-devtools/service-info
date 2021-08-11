@@ -1,9 +1,10 @@
 import React from 'react';
 import './ModalStyles.modules.css';
 
-const Delete = ({ singleBlogId, modalClose, setMessage }) => {
+const Delete = ({ singleBlogId, modalClose, setMessage, handleToggle }) => {
     // Delete the single blog:
     const handleDeleteBtn = (addedId) => {
+        handleToggle();
         fetch(`https://hnomism52server.herokuapp.com/deleteBlog/${addedId}`, {
             method: 'DELETE'
         })

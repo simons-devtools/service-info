@@ -7,6 +7,7 @@ import Options from './Options';
 import View from './Modals/View';
 import Edit from './Modals/Edit';
 import Delete from './Modals/Delete';
+import Loader from '../../../../Default/Loader/Loader';
 import Notification from '../../../../Default/Notification/Notification';
 
 const BlogsList = () => {
@@ -18,6 +19,15 @@ const BlogsList = () => {
     const [optionValue, setOptionValue] = useState('');
     const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
+    // For the loading func:
+    const [loading, setLoading] = React.useState(false);
+    const handleToggle = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+    };
+    
     // Loaded the all blog:
     useEffect(() => {
         fetch('https://hnomism52server.herokuapp.com/blogs')
@@ -86,6 +96,7 @@ const BlogsList = () => {
                         singleBlog={singlePost}
                         modalClose={modalClose}
                         setMessage={setMessage}
+                        handleToggle={handleToggle}
                     />
                 </div>
                 <div id="optionDelete" className="option">
@@ -93,6 +104,7 @@ const BlogsList = () => {
                         singleBlogId={singlePost._id}
                         modalClose={modalClose}
                         setMessage={setMessage}
+                        handleToggle={handleToggle}
                     />
                 </div>
             </div>
@@ -131,6 +143,7 @@ const BlogsList = () => {
                     }
                 </table>
             </div>
+            <Loader open={loading} />
             {message.isSuccess && <Notification message={message} />}
         </div>
     );

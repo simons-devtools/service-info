@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import '../AddStyles.modules.css.css';
+import Loader from '../../../../Default/Loader/Loader';
 import Notification from '../../../../Default/Notification/Notification';
 
 const AddEcommerce = () => {
@@ -9,8 +10,18 @@ const AddEcommerce = () => {
     const [photoUrl, setPhotoUrl] = useState(null);
     const [message, setMessage] = useState({ isSuccess: false, text: '' });
 
+    // For the loading func:
+    const [open, setOpen] = React.useState(false);
+    const handleToggle = () => {
+        setOpen(true);
+        setTimeout(() => {
+            setOpen(false);
+        }, 1000);
+    };
+
     // Handle form Submition:
     const onSubmit = (data) => {
+        handleToggle();
         const themesData = {
             name: data.name,
             price: data.price,
@@ -92,6 +103,7 @@ const AddEcommerce = () => {
                     </div>
                 </div>
             </form>
+            <Loader open={open} />
             {message.isSuccess && <Notification message={message} />}
         </div>
     );
