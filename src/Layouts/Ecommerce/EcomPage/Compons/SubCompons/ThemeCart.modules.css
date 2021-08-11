@@ -24,3 +24,8 @@
 .themes-cart ul li span {
     float: right;
 }
+
+.unavailable {
+    color: #999;
+    cursor: not-allowed;
+}

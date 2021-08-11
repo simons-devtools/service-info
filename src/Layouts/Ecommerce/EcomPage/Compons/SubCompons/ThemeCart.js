@@ -2,7 +2,7 @@ import React from 'react';
 import './ThemeCart.modules.css';
 
 const ThemeCart = ({ modalApp, handleBuyBtn }) => {
-    const { price, discount, } = modalApp;
+    const { price, discount, brand } = modalApp;
 
     return (
         <div className="themes-cart">
@@ -20,10 +20,15 @@ const ThemeCart = ({ modalApp, handleBuyBtn }) => {
                     <span>${price - price * discount / 100}</span>
                 </li>
             </ul>
-            <button
-                onClick={() => handleBuyBtn(modalApp)}
-                className="order-btn">Procced to checkout
-            </button>
+            {
+                brand && brand.length > 0 && brand === 'Available' ? <button
+                    onClick={() => handleBuyBtn(modalApp)}
+                    className="order-btn">Procced to checkout
+                </button> :
+                    <button
+                        className="order-btn unavailable">Theme Not Available
+                    </button>
+            }
         </div>
     );
 };
