@@ -18,7 +18,7 @@ const Widget = () => {
     }, [])
 
     return (
-        <div style={{ position: 'sticky', top: '0', margin: '18px 0' }}>
+        <div style={{ position: 'sticky', top: '2%', margin: '18px 0' }}>
             <BSearch />
             <Categories blogs={newBlogs} />
             <LatestPost blogs={newBlogs} />
