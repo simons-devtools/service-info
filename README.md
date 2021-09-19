@@ -2,7 +2,6 @@
 
 This project was created on react.js and node.js [Live link.....](https://msimon.netlify.app).
 
-## Project featured
 ## MsimonH — Website | Client-code | Server-code
 August 2021 — September 2021
 
