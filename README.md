@@ -1,4 +1,4 @@
-## E-commerce and portfolio project overview
+## Service-info project overview
 This project was created on react.js and node.js - (August 2021 — September 2021)
 
 1. Built a MERN stack web application with a dynamic service section and feedback section.
