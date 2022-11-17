@@ -1,8 +1,5 @@
 ## E-commerce and portfolio project overview
-
 This project was created on react.js and node.js [Live link.....](https://msimon.netlify.app).
-
-## MsimonH — Website | Client-code | Server-code
 August 2021 — September 2021
 
 1. Built a MERN stack web application with a dynamic service section and feedback section.
@@ -16,7 +13,5 @@ React.js, REST-API, React-router, Firebase, Node.js, Express.js, MongoDB, Materi
 
 
 ## Available Scripts
-
 In the project directory, you can run:
-
 ### `npm start`
