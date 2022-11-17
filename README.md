@@ -1,4 +1,5 @@
 ## E-commerce and portfolio project overview
+
 This project was created on react.js and node.js [Live link.....](https://msimon.netlify.app).
 August 2021 — September 2021
 
@@ -9,9 +10,5 @@ August 2021 — September 2021
 5. An admin can add a new service that will be visible in the services & can make a new admin.
 
 ## Technology Used:
+
 React.js, REST-API, React-router, Firebase, Node.js, Express.js, MongoDB, Material-UI, Netlify.
-
-
-## Available Scripts
-In the project directory, you can run:
-### `npm start`
